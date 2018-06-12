@@ -1,13 +1,8 @@
-This project includes a mix of the following:
-
-- Open source work by the U.S. government that is in the public domain contributed under the National Institute of Standards and Technology License.
-- Open source work contributed by members of the public based on the CC0 1.0 Universal license.
-
 # This project is in the worldwide public domain
 
 This project includes a mix of the following:
 
-- Open source work by the United States government. This work is in the public domain within the United States under the [National Institute of Standards and Technology License](#national-institute-of-standards-and-technology-license). Additionally, we waive copyright and related rights for the work worldwide through the CC0 1.0 Universal public domain dedication.
+- Open source work by the United States government. This work is in the public domain within the United States under the [National Institute of Standards and Technology License](#national-institute-of-standards-and-technology-license). Additionally, NIST waives copyright and related rights for the work worldwide through the CC0 1.0 Universal public domain dedication.
 - Open source work produced by members of the public based on the [CC0 1.0 Universal license](#cc0-10-universal-license).
 
 # National Institute of Standards and Technology License
