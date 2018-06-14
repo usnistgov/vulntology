@@ -6,6 +6,8 @@ An identifier for another known Vulnerability that can be used in conjunction wi
 
 ### The vulnerability-identifier attribute
 
+**Cardinality**: Zero or many
+
 An identifier for a vulnerability supplied by a source.
 
 Examples include a knowledge base article number, patch number, a bug tracking database identifier or a common identifier such as a Common Vulnerabilities and Exposures (CVE) identifier. CVE is a widely adopted identifier used across many organizations.

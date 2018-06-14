@@ -6,6 +6,8 @@ Representation of a source of information for the related item
 
 ### The source attribute
 
+**Cardinality**: One or many
+
 The name of the source which provided the information related to the Vulnerability.
 
 Data elements:

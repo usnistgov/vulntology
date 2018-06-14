@@ -6,6 +6,8 @@ An identifier for another known Vulnerability that can be used in conjunction wi
 
 ### The number attribute
 
+**Cardinality**: One or many
+
 A scenario is the placeholder to allow a description of the conditions surrounding the possible use of a vulnerability. Vulnerability must have a least one Scenario, with multiple possible Scenarios being common. A single Vulnerability can likely be exploited by many different approaches with possible varying impacts. For example, a remote exploit could rely on user interaction to be downloaded whilst a local attacker could use the same vulnerability to obtain the same or similar impact.
 
 Data elements:
