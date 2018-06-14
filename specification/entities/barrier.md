@@ -27,7 +27,7 @@ The barrier attribute value must be one of the following values or sub-values. A
 - **Specialized Condition**:  The exploit scenario requires specific, non-default configuration settings within the vulnerable software. For example, the use of a non-standard port for a networked service like ssh.
 
 Data elements:
-- value: (required) A unique namespace-qualified identifier for the Vulnerability.
+- value: (required) A unique namespace-qualified identifier for the barrier.
 
 Example:
 ```

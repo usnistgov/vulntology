@@ -4,7 +4,7 @@ Describes protection mechanisms that may limit the impact or actions that can be
 
 ## Attributes
 
-### The number attribute
+### The *mitigation* attribute
 
 **Cardinality**: Zero or many
 
@@ -18,11 +18,9 @@ The mitigation attribute value must be one of the following values
 - **Sandboxed**:  The product is deployed within a sandbox.
   
 Data elements:
-- namespace: (required) The specific grouping of unique identifiers. 
-- value: (required) A unique namespace-qualified identifier for each mitigation.
+- value: (required) A unique identifier for each mitigation.
 
 Example:
 ```
-Namespace: https://csrc.nist.gov/publications/nistir8138/mitigation 
 Value: ASLR
 ```

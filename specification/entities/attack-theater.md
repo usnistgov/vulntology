@@ -1,10 +1,10 @@
-# Attack Theater Entity
+# Attack Theatre Entity
 
 Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface.
 
 ## Attributes
 
-### The *theater* attribute
+### The *attack theatre* attribute
 
 **Cardinality**: One
 
@@ -27,11 +27,9 @@ The theater attribute value must be one of the following values or sub-values. A
 - **physical**:  The exploit scenario requires the attacker’s physical presence at the target.
 
 Data elements:
-- namespace: (required) The specific grouping of unique identifiers. 
-- value: (required) A unique namespace-qualified identifier for the Vulnerability.
+- value: (required) A unique namespace-qualified identifier for the attack theatre.
 
 Example:
 ```
-namespace: vulntology.nist.gov
 value: Remote
 ```

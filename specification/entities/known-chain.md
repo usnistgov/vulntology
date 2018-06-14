@@ -4,7 +4,7 @@ An identifier for another known Vulnerability that can be used in conjunction wi
 
 ## Attributes
 
-### The vulnerability-identifier attribute
+### The *vulnerability-identifier* attribute
 
 **Cardinality**: Zero or many
 

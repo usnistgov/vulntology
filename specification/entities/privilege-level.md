@@ -19,7 +19,7 @@ The privilege level attribute value must be one of the following values
   
 Data elements:
 - namespace: (required) The specific grouping of unique identifiers. 
-- value: (required) A unique namespace-qualified identifier for each privilege level.
+- value: (required) A unique identifier for each privilege level.
 
 Example:
 ```

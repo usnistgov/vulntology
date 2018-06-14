@@ -4,7 +4,7 @@ The software and/or hardware configurations that are known to be vulnerable to e
 
 ## Attributes
 
-### The product attribute
+### The *product* attribute
 
 **Cardinality**: One or many
 

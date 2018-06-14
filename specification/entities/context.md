@@ -19,8 +19,7 @@ The conceptual entity where the impacts are realized from successful exploitatio
 - **Physical Hardware**:  The actual physical hardware such as the logic gates within processors, the sectors of a disk or cells within memory.
 
 Data elements:
-- namespace: (required) The specific grouping of unique identifiers. 
-- value: (required) A unique namespace-qualified identifier for the Context.
+- value: (required) A unique identifier for the context.
 
 Example:
 ```

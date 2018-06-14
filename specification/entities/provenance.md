@@ -4,7 +4,7 @@ Representation of a source of information for the related item
 
 ## Attributes
 
-### The source attribute
+### The *source* attribute
 
 **Cardinality**: One or many
 

@@ -16,7 +16,7 @@ Valid Values:
  
   
 Data elements:
-- value: (required) A unique namespace-qualified identifier for each privilege level.
+- value: (required) A unique identifier for each Victim Type attribute.
 
 Example:
 ```

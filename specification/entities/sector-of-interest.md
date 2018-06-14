@@ -4,7 +4,7 @@ Supplemental information identifying potential sectors or use cases where the Vu
 
 ## Attributes
 
-### The sector attribute
+### The *sector-of-interest* attribute
 
 **Cardinality**: Zero or many
 
@@ -12,7 +12,7 @@ Supplemental information identifying potential sectors or use cases where the Vu
 
 Data elements:
 - namespace: (required) The specific grouping of unique identifiers. 
-- value:  (required) A unique numerical identifier for a given Scenario of the Vulnerability.
+- value:  (required) A unique identifier for a given sector of interest.
 
 Example:
 ```

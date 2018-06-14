@@ -17,7 +17,7 @@ The privilege level attribute value must be one of the following values
  - **Malicious Website Content**:  A website that has been crafted in a way that causes a target program to operate in an unintended fashion or is used to simulate a site that the target user trusts.
  
 Data elements:
-- value: (required) A unique namespace-qualified identifier for each Engineering Method.
+- value: (required) A unique identifier for each Engineering Method.
 
 Example:
 ```
