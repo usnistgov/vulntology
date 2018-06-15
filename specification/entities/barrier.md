@@ -16,7 +16,7 @@ The barrier attribute value must be one of the following values or sub-values. A
 - **Precondition Required**:  Information about the target is necessary in order to exploit the vulnerability on a specific target. For example, the hostname of the device may be necessary in order to exploit the vulnerability on that device.
 - **Privilege Required**:  The exploit scenario requires an attacker to have certain privileges prior to successful exploitation attempts.
   - **Multiple Authentication**: Exploiting the vulnerability requires that the attacker authenticate two or more times, even if the same credentials are used each time. An example is an attacker authenticating to an operating system in addition to providing credentials to access an application hosted on that system.
-  - **Privilege Level**:Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](privilege-level.md)
+  - **Privilege Level**: Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](privilege-level.md).
 - **Race Condition**:  The exploit scenario includes requiring an attacker to take advantage of a race condition.
   - **No Control**:  An attacker has no control over how the race condition will be triggered. The attacker must be fortunate to encounter the race condition.
   - **Partial Control**:  An attacker is able to start one or more of the inputs which take part in the race condition but does not have control over all inputs. For example a vulnerability exists in the processing of a particular type of input on the intial start-up of a device and an attacker must supply that input during the period when the device is starting up and the attacker has no control over when the device starts up
@@ -27,7 +27,7 @@ The barrier attribute value must be one of the following values or sub-values. A
 - **Specialized Condition**:  The exploit scenario requires specific, non-default configuration settings within the vulnerable software. For example, the use of a non-standard port for a networked service like ssh.
 
 Data elements:
-- value: (required) A unique namespace-qualified identifier for the barrier.
+- value: (required) A unique identifier for the barrier.
 
 Example:
 ```

@@ -23,7 +23,6 @@ Data elements:
 
 Example:
 ```
-Namespace: https://csrc.nist.gov/publications/nistir8138/context
 value: HostOS
 ```
 ## Relationships

@@ -18,11 +18,9 @@ The privilege level attribute value must be one of the following values
  - **Administrator**:  Representative of when the privilege allows complete or nearly complete access to the context. Common terms include Admin, Administrator, Root, System or Kernel.
   
 Data elements:
-- namespace: (required) The specific grouping of unique identifiers. 
 - value: (required) A unique identifier for each privilege level.
 
 Example:
 ```
-Namespace: https://csrc.nist.gov/publications/nistir8138/mitigation 
 Value: Administrator
 ```

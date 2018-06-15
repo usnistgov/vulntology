@@ -9,7 +9,7 @@ The method or mechanism used to manipulate a user into interacting with a malici
 **Cardinality**: One or many
 
 Valid Values:
-The privilege level attribute value must be one of the following values
+The engineering method attribute value must be one of the following values
 
  - **Malicious Application**:  An application that has been modified or crafted to perform operations that are unintended by the victim
  - **Malicious File**:  A file that has been crafted in a way that causes a target program to operate in an unintended fashion
@@ -17,7 +17,7 @@ The privilege level attribute value must be one of the following values
  - **Malicious Website Content**:  A website that has been crafted in a way that causes a target program to operate in an unintended fashion or is used to simulate a site that the target user trusts.
  
 Data elements:
-- value: (required) A unique identifier for each Engineering Method.
+- value: (required) A unique identifier for each engineering method.
 
 Example:
 ```
