@@ -18,4 +18,8 @@ In addition to those responsible for an organization’s vulnerability managemen
 
 All of these stakeholders need a common language to describe and characterize vulnerabilities as well as a way to express what information is needed to perform their activities. The framework in this document intends to provide this common language and to provide a way for stakeholders to describe required information.
 
-A high level illustration that depicts the core differences between what is generally understood as the current model for a vulnerability and what this document proposes as enhancements to that model is provided with the following [figure](../figures/high-level-model.pdf). The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
+A high level illustration that depicts the core differences between what is generally understood as the current model for a vulnerability and what this document proposes as enhancements to that model is provided with the following figure. 
+
+*[High Level Model](../figures/high-level-model.pdf)* 
+
+The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
