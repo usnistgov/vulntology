@@ -9,5 +9,7 @@ A list of identifiers or an applicability language which allows for the descript
 
 ### Example Values
 
-- 2001-06.com.acme_ACME_Application-1.01
-- cpe:2.3:a:acme:acme_application:1.0.1
+```
+2001-06.com.acme_ACME_Application-1.01
+cpe:2.3:a:acme:acme_application:1.0.1
+```
