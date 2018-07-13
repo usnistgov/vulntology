@@ -1,6 +1,6 @@
 # Physical Impact Values
 
-Used when exploitation of the Vulnerability could result in a tangible impact to the physical device or machinery controlled by or through the Context, or the surrounding environment, which could be other nearby devices, machinery or people.
+Used when exploitation of the Vulnerability could result in a tangible impact to a physical device, machinery, the surrounding environment, or people.
 
 ## Values
 
