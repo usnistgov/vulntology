@@ -21,7 +21,7 @@ A list of Objects defined by the Vulntology framework is located under the [obje
 
 ## Values
 
-A list of value sets defined by the Vulntology framework is located under the [values](../values) directory. Values are contained withing Type and SubType classes such as [AttackTheatreType](../values/attack-theatre-type.md). 
+A list of value sets defined by the Vulntology framework is located under the [values](../values) directory. Values are contained withing Type and SubType classes such as [AttackTheatreType](../values/attack-theater-type.md). 
 
 ## Visuals and Examples
 
