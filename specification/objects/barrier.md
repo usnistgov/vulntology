@@ -7,16 +7,16 @@ Types that are listed indented that do not have references to a specific set of 
 	
   - **Authentication/Authorization**:<br />
      *Type Specific Properties* <br />
-     **Privilege Level**: Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. (See [Privilege Levels](../values/privilege-level-type.md))
+     **Privileges Needed**: The privileges that are needed relative to the type of barrier being overcome. (See [Privilege Levels](../values/privilege-level-type.md)) <br /> *Each Authentication/Authorization Barrier has one Privilege Level*
     - **Impersonation**:
 	  - **SocialEngineering**: The exploit scenario requires that an attacker perform some type of social engineering to achieve a successful exploit attempt. Typically, an attacker convinces a victim to interact with a malicious resource.<br />
 	  *Type Specific Properties* <br />
-	  **Privilege Context**: The context to which the privileges are related (See [Context Types](../values/context-type.md)).<br />
-	  **Engineering Method**: The method or mechanism used to manipulate a user into interacting with a malicious resource. (See [Engineering Method](../values/engineering-method-type.md)).
+	  **Privilege Context**: The context to which the privileges are related (See [Context Types](../values/context-type.md)).<br /> *Each Social Engineering relates to one context.* <br />
+	  **Engineering Method**: The method or mechanism used to manipulate a user into interacting with a malicious resource. (See [Engineering Method](../values/engineering-method-type.md)). <br /> *Each Social Engineering has one or more Engineering Methods.*
 	  - **Man-in-the-Middle**:  The exploit scenario requires that an adversary perform a Man-in-the-Middle (MitM) attack. MitM attacks involve an adversary positioning themselves inside a communication channel between two or more parties. This is usually accomplished by exploiting a trust mechanism and tricking both ends of the communication channel into believing that they are communicating with the intended party. Once successfully injected into a communication channel, the MitM is capable of sensitive data disclosure, modification of data being transmitted, transmission of false data to either party (impersonation) or denial of communication to either party.
 	- **Privileges Required**: <br />
 	*Type Specific Properties* <br />
-	**Privilege Context**: The context to which the privileges are related (See [Context Types](../values/context-type.md)).
+	**Privilege Context**: The context to which the privileges are related (See [Context Types](../values/context-type.md)). <br /> *Each Privileges Required relates to one context.* <br />
 	- **Encryption**: DESCRIPTION NEEDED
   - **Obfuscation**: DESCRIPTION NEEDED
     - **ASLR**: Some form of Address space layout randomization (ASLR) is in use that must be defeated to recognize impacts
@@ -28,7 +28,7 @@ Types that are listed indented that do not have references to a specific set of 
     - **Precondition Required**:  Information about the target is necessary in order to exploit the vulnerability on a specific target. For example, the hostname of the device may be necessary in order to exploit the vulnerability on that device.
   - **Boundary Protections**:  DESCRIPTION NEEDED<br />
   *Type Specific Properties* <br />
-  **Privilege Context**: The context to which the boudary is related(See [Context Types](../values/context-type.md)).
+  **Privilege Context**: The context to which the boudary is related(See [Context Types](../values/context-type.md)). <br /> *Each Boundary Protection relates to  one Context.*
     - **Sandbox**:  The product is deployed within a sandbox that must be broken out from to recognize impacts
     - **Container**:  The product is deployed within a type of container that must be broken out from to recognize impacts
     - **Virtualization?**:  
