@@ -22,4 +22,4 @@ A high level illustration that depicts the core differences between what is gene
 
 *[High Level Model](../figures/high-level-model.pdf)* 
 
-The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
+The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents. Green represents new data points typically not captured. 
