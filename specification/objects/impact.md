@@ -12,7 +12,7 @@ An Impact is a recognized result of an Action for a given Vulnerability Scenario
 
     *Type Specific Properties*
   - **hasLogicalImpact**: Impacts that occur to the digital aspects of the software. These are considered for assessing traditional notions of confidentiality, integrity and availability. (See [Logical Impact Types](../values/logical-impact-type.md))  <br />
-*Each Logical Impact has One Logical Impact Type resulting from an Action's Impact*
+*Each Logical Impact has one Logical Impact Type resulting from an Action's Impact*
   - **Location**: Designating the specific area or location impacted. Serves as supplemental information (See [Locations](../values/location-type.md)). <br />
   *Each Logical Impact has one or many locations where the impact can occur*
 
@@ -20,4 +20,4 @@ An Impact is a recognized result of an Action for a given Vulnerability Scenario
 
   *Type Specific Properties*
   - **hasPhysicalImpact**: A tangible impact to a physical device, machinery, the surrounding environment, or people. (See [Physical Impact Types](../values/physical-impact-type.md) <br />
-Each Impact has Zero or many Physical Impact Types will result from an Action's Impact
+Each Impact has zero or one Physical Impact Types that will result from an Action's Impact
