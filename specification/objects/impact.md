@@ -3,8 +3,8 @@
 An Impact is a recognized result of an Action for a given Vulnerability Scenario. 
 
 ## Properties
-- **Scope**: Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface. (See [Impact Method Types](../values/impact-method-type.md)) <br />*Each Action has one or many Impact Methods.*
-- **Criticality**: The type, category, or weakness of the Vulnerability. When choosing a value, the most applicable types should be selected based on the type system used. (See [Context Type](../values/context-type.md)) <br />*Each Action has one Affected Context.*
+- **Scope**:  A coarse measure of the level of impact an exploit could have on a target. (See [Scope](../values/scope.md)) <br />*Each Impact has one Scope.*
+- **Criticality**: A measure of the relative importance of the associated Scope. (See [Criticality](../values/criticality.md)) <br />*Each Impact has one Criticality.*
 
 ## Types of Impact
 
