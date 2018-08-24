@@ -1,4 +1,4 @@
-# Sector of Interest Type Values
+# Sector of Interest Values
 
 Supplemental information identifying potential sectors of industry or use cases where the Vulnerability could have an impact.
 

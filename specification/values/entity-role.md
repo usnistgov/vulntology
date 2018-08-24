@@ -1,4 +1,4 @@
-# Entity Role Type
+# Entity Role Values
 
 Describes the role an associated Context performs in the vulnerability scenario being described.
 

@@ -1,4 +1,4 @@
-# Engineering Method Type Values
+# Engineering Method Values
 
 The method or mechanism used to manipulate a user into interacting with a malicious resource.
 

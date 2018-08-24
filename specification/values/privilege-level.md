@@ -1,4 +1,4 @@
-# Privilege Level Type Values
+# Privilege Level Values
 
 Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments.
 

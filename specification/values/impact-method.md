@@ -1,4 +1,4 @@
-# Impact Method Type
+# Impact Method Values
 
 A description of the method used to exploit a vulnerability providing some additional information on the impact of exploitation. These are intended to be high level concepts that lead to more granular impacts as referenced in the logical and physical impact entities.
 

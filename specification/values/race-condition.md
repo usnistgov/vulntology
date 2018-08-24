@@ -1,4 +1,4 @@
-# Race Condition Type Values
+# Race Condition Values
 
 Provides additional detail on the level of likely control an adversary has to trigger the vulnerable race condition. Note that this is only a description of how much control an attacker has over the inputs involved in the race condition and not an indication of the reproducibility of triggering the race condition itself.
 

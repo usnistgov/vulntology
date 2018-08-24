@@ -1,4 +1,4 @@
-# Context Type Values
+# Context Values
 
 The conceptual entity where the impacts are realized from successful exploitation of a security vulnerability. Different impacts can be realized by multiple contexts from multiple scenarios.
 

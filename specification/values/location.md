@@ -1,4 +1,4 @@
-# Location Type Values
+# Location Values
 
 Designates the specific area or location impacted. Serves as supplemental information..
 

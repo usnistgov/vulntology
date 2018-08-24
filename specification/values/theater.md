@@ -1,5 +1,5 @@
-# Attack Theatre Types
-Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface.
+# Theatres
+The Theatre or Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface.
 
 ## Values
 
