@@ -4,7 +4,7 @@ A scenario describes the conditions surrounding the possible use of a vulnerabil
 
 ## Properties
 - **Attack Theater** (one): Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface. (See [Theater](../values/theater.md))
-- **Vulnerability Weakness** (one): The type, category, or weakness of the Vulnerability. When choosing a value, the most applicable types should be selected based on the type system used. (See [Vulnerability Weakness](../values/vulnerability-weakness.md))
+- **Exploited Weakness** (one): The weakness causing the Vulnerability. When choosing a value, the most applicable weaknesse should be selected. (See [Exploited Weakness](../values/exploited-weakness.md))
 
 
 ## Relationships
