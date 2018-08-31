@@ -6,6 +6,8 @@ The vulntology framework is composed of simple components described below:
 
 **Objects**: A Conceptual entity; Objects can be related to other objects, have types, and properties. A list of Objects defined by the Vulntology framework is located under the [objects](../objects) directory. Each object, such as [Vulnerability](../objects/vulnerability.md) can have multiple properties and/or relationships with other components. 
 
+**Type/SubType**: Types and subtypes are categorizations and/or groupings of values. Subtypes are applicable to a specific value within a parent Type.
+
 **Values**: An explicit characteristic used to describe a detail of a Type or SubType. A list of value sets defined by the Vulntology framework is located under the [values](../values) directory. Values are contained within Type and SubType groups such as [Theatre](../values/theater.md).
 
 **Relationships**: A connection relating one object to another. relationships retain an expected cardinality or One to Many or Zero to Many.
