@@ -2,14 +2,14 @@
 
 This project includes a mix of the following:
 
-- Open source work by the United States government. This work is in the public domain within the United States under the [National Institute of Standards and Technology License](#national-institute-of-standards-and-technology-license). Additionally, NIST waives copyright and related rights for the work worldwide through the CC0 1.0 Universal public domain dedication.
+- Open source work by the United States government. This work is in the public domain within the United States under the [National Institute of Standards and Technology License](#national-institute-of-standards-and-technology-license). Additionally, we waive copyright and related rights for the work worldwide through the CC0 1.0 Universal public domain dedication.
 - Open source work produced by members of the public based on the [CC0 1.0 Universal license](#cc0-10-universal-license).
 
 # National Institute of Standards and Technology License
 
 Portions of this software were developed by employees of the National Institute
 of Standards and Technology (NIST), an agency of the Federal Government.
-Pursuant to [title 17 section 105 of the United States Code](https://www.gpo.gov/fdsys/granule/USCODE-2010-title17/USCODE-2010-title17-chap1-sec105), works of NIST employees are
+Pursuant to [title 17 section 105 of the United States Code](https://www.govinfo.gov/content/pkg/USCODE-2010-title17/html/USCODE-2010-title17-chap1-sec105.htm), works of NIST employees are
 not subject to copyright protection in the United States and are considered to
 be in the public domain. Permission to freely use, copy, modify, and distribute
 this software and its documentation without fee is hereby granted, provided that
