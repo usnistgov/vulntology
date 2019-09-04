@@ -1,0 +1,85 @@
+the Vulntology# Contributing to the Vulntology Project
+
+This page is for potential contributors to the Vulntology project. It provides basic information on the roject, describes the main ways people can make contributions, explains how to report issues relating to the project and projecta rtifacts, and lists pointers to additional sources of information.
+
+## Project approach
+
+We use an agile approach for developing the Vulntology, where we focus on implementing the 20% of the functionality that solves 80% of the problem. We’re trying to focus on the core capabilities that are needed to provide the greatest amount of benefit. Because we’re working on a small set of capabilities, this allows us to make very fast progress. We’re building the features that we believe solve the biggest problems to provide the most value. We provide extension points that allow uncovered cases to be supported by others.
+
+We track our current work items using GitHub [project cards](https://github.com/usnistgov/vulntology/projects). Our active project is typically the lowest numbered open project within the previously referenced page.
+
+## Contribution options
+
+The Vulntology project is producing several types of deliverables, including the following:
+- *Documentation* to define the Vulntology model and how it can be used in an operational setting
+- *Examples* that illustrate the use of the vulntology
+
+Additionally, we are interested in the development of XML, RDF, JSON, and YAML models for the Vulntology, and tooling that can produce Vulntology-based data using these formats.
+
+Contributions are welcome in any of these areas. For information on the project's current needs and priorities, see the project's GitHub issue tracker (discussed below). Please refer to the [guide on how to contribute to open source](https://opensource.guide/how-to-contribute/) for general information on contributing to an open source project.
+
+## Issue reporting and handling
+
+All requests for changes and enhancements to the Vulntology are initiated through the project's [GitHub issue tracker](https://github.com/usnistgov/vulntology/issues). To initiate a request, please [create a new issue](https://help.github.com/articles/creating-an-issue/). The following issue templates exist for creating a new issue:
+* [User Story](https://github.com/usnistgov/vulntology/issues/new?template=feature_request.md&labels=enhancement%2C+User+Story): Use to describe a new feature or capability to be added to the Vulntology.
+* [Defect Report](https://github.com/usnistgov/vulntology/issues/new?template=bug_report.md&labels=bug): Use to report a problem with an existing Vulntology feature or capability.
+* [Question](https://github.com/usnistgov/vulntology/issues/new?labels=question&template=question.md): Use to ask a question about the Vulntology.
+
+The Vulntology project team regularly reviews the open issues, prioritizes their handling, and updates the issue statuses, proving comments on the current status as needed.
+
+## Communications mechanisms
+
+The *vulntology-dev@nist.gov* mailing list supports communication among parties interested in contributing to the development of or exchanging ideas related to  the Vulntology. Subscribe/unsubscribe by visiting the [Vulntology Development Google Group](https://groups.google.com/a/list.nist.gov/forum/#!forum/vulntology-dev).
+
+## Contributing to the Vulntology GitHub repository
+
+This project uses a typical GitHub fork and pull request [workflow](https://guides.github.com/introduction/flow/). To establish a development environment for contributing to the Vulntology project, you must do the following:
+
+1. Fork the Vulntology repository to your personal workspace. Please refer to the Github [guide on forking a repository](https://help.github.com/articles/fork-a-repo/) for more details.
+1. Create a feature branch from the master branch for making changes. You can [create a branch in your personal repository](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/) directly on GitHub or create the branch using a Git client. For example, the ```git branch working``` command can be used to create a branch named *working*.
+1. You will need to make your modifications by adding, removing, and changing the content in the branch, then staging your changes using the ```git add``` and ```git rm``` commands.
+1. Once you have staged your changes, you will need to commit them. When committing, you will need to include a commit message. The commit message should describe the nature of your changes (e.g., added new feature X which supports Y). You can also reference an issue from the Vulntology repository by using the hash symbol. For example, to reference issue #34, you would include the text "#34". The full command would be: ```git commit -m "added new feature X which supports Y addressing issue #34"```.
+1. Next, you must push your changes to your personal repo. You can do this with the command: ```git push```.
+1. Finally, you can [create a pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+
+### Repository structure
+
+This repository consists of the following directories and files pertaining to the Vulntology project:
+
+- [.github](.github): Contains GitHub issue and pull request templates for the Vulntology project.
+- [specification](specification): The current Vulntology specification, described in a collection of Markdown pages.
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): This file contains a code of conduct for the Vulntology project contributors.
+- [CONTRIBUTING.md](CONTRIBUTING.md): This file is for potential contributors to the Vulntology project. It provides basic information on the Vulntology project, describes the main ways people can make contributions, explains how to report issues with the Vulntology, and lists pointers to additional sources of information. It also has instructions on establishing a development environment for contributing to the Vulntology project and using GitHub project cards to track development sprints.
+- [LICENSE.md](LICENSE.md): This file contains license and copyright information for the files in the Vulntology GitHub repository.
+- [USERS.md](USERS.md): This file explains which types of users are most likely to benefit from use of the Vulntology.
+
+
+## Contributing to a Development Sprint
+
+The Vulntology project is using the GitHub [project cards](https://github.com/usnistgov/vulntology/projects) feature to track development sprints as part of the core Vulntology work stream. A typical development sprint lasts roughly a month, with some sprints lasting slightly less or more to work around major holidays or events attended by the core project team. The active sprint is typically the lowest numbered open project within the previously referenced page.
+
+### User Stories
+
+Each development sprint consists of a set of [user stories](https://github.com/usnistgov/vulntology/issues?q=is%3Aopen+is%3Aissue+label%3A%22User+Story%22), that represent features, actions, or enhancements that are intended to be developed during the sprint. Each user story is based on a [template](https://github.com/usnistgov/vulntology/issues/new?template=feature_request.md&labels=enhancement%2C+User+Story) and describes the basic problem or need to be addressed, a set of detailed goals to accomplish, any dependencies that must be addressed to start or complete the user story, and the criteria for acceptance of the contribution.
+
+The goals in a user story will be bulleted, indicating that each goal can be worked on in parallel, or numbered, indicating that each goal must be worked on sequentially. Each goal will be assigned to one or more individuals to accomplish.
+
+Note: A user story that is not part of a specific development sprint can still be worked on at any time by any project contributor. When a user story is not assigned to sprint, its status will not be tracked as part of our sprint management efforts, but when completed will still be considered as a possible contribution to the project.
+
+### Reporting User Story Status
+
+When working on a goal that is part of a user story you will want to provide a periodic report on any progress that has been made until that goal has been completed. This status must be reported as a comment to the associated user story issue. For a user story that is part of a development sprint, status reports will typically be made by close of business the day before the weekly status meeting (typically held on Wednesdays). Each contributor will enter their own status update weekly indicating an estimated completion percentage against each goal to which they are assigned. Progress on goals will be tracked by the NIST Vulntology team and will be used to update the project cards for the current sprint.
+
+When describing any open issues encountered use an "\@mention" of the individual who needs to respond to the issue. This will ensure that the individual is updated with this status. Please also raise any active, unresolved issues on the weekly status calls.
+
+### Project Status
+
+The project cards for each sprint will be in one of the following states:
+
+- "To do" - The user story has been assigned to the sprint, but work has not started.
+- "In progress" - Work has started on the user story, but development of the issue has not completed.
+- "Review in Progress" - All goals for the user story have been completed and one or more pull requests have been submitted for all associated work. The NIST team will review the pull requests to ensure that all goals and acceptance criteria have been met.
+- "Reviewer Approved" - All reviews of a pull request related to a user story have been completed. The pull request still needs to be merged.
+- "Done" - Once the contributed work has been reviewed and the pull request has been merged, the user story will be marked as "Done".
+
+Note: A pull request must be submitted for all goals before an issue will be moved to the "under review" status. If any goals or acceptance criteria have not been met, then the user story will be commented on to provide feedback, and the issue will be returned to the "In progress" state.
