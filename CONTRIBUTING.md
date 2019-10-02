@@ -1,4 +1,4 @@
-the Vulntology# Contributing to the Vulntology Project
+# Contributing to the Vulntology Project
 
 This page is for potential contributors to the Vulntology project. It provides basic information on the roject, describes the main ways people can make contributions, explains how to report issues relating to the project and projecta rtifacts, and lists pointers to additional sources of information.
 
