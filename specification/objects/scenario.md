@@ -16,3 +16,5 @@ A scenario describes the conditions surrounding the possible use of a vulnerabil
 * blockedBy (zero or many): [Barriers](barrier.md) may increase the difficulty of a Scenario.
 
 * hasAction (one or many): [Actions](action.md) will occur within a Scenario
+
+![Scenario Graph](../figures/graphsnippets/ScenarioSnippet.png "Scenario Graph")

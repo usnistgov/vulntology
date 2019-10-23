@@ -10,3 +10,5 @@ Representation of a source of information. The source which provided the informa
 ## Relationships
 
 N/A
+
+![Provenance Graph](../figures/graphsnippets/ProvenanceSnippet.png "Provenance Graph")

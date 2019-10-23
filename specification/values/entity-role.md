@@ -7,3 +7,4 @@ Describes the role an associated Context performs in the vulnerability scenario 
 - **Primary Authorization**:  Associated Context is the main or initial authorization scope of the vulnerability scenario. See section 2.2 in [CVSSV3] for a full description of authorization scope.
 - **Secondary Authorization**:  Associated Context is a secondary authorization scope of the vulnerability scenario. See section 2.2 in [CVSSV3] for a full description of authorization scope.
 
+![Entity Role Graph](../figures/graphsnippets/EntityRoleSnippet.png "Entity Role Graph")

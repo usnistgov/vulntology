@@ -9,3 +9,6 @@ Abstraction to assist in capturing relative privilege levels. The abstraction is
  - **User**:  Representative of a generic or basic user.
  - **Privileged**:  Representative of something more than a basic user, but not the full control of an Administrator
  - **Administrator**:  Representative of when the privilege allows complete or nearly complete access to the context. Common terms include Admin, Administrator, Root, System or Kernel.
+ 
+![Privilege Level Graph](../figures/graphsnippets/PrivilegeLevelSnippet1.png "Privilege Level Graph")
+![Privilege Level Graph](../figures/graphsnippets/PrivilegeLevelSnippet2.png "Privilege Level Graph")

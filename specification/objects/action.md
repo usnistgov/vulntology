@@ -11,3 +11,5 @@ An Action is what occurs within a given Scenario. Actions involve a high level i
 ## Relationships
 
 * resultsIn: (one or many) [Impacts](impact.md) will occur due to an Action. 
+
+![Action Graph](../figures/graphsnippets/ActionSnippet.png "Action Graph")

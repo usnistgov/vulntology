@@ -9,3 +9,5 @@ Supplemental information identifying potential sectors of industry or use cases 
 - **Finance**: The Vulnerability is found within software that relates to financial operations or activities.
 - **Automotive**: The Vulnerability affects software that interfaces or controls automobiles. 
 - **Public Administration**: The Vulnerability affects software that supports public administration. An example of this would be digital voting booths. 
+
+![Sector of Interest Graph](../figures/graphsnippets/SectorofInterestSnippet.png "Sector of Interest Graph")

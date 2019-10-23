@@ -8,3 +8,4 @@ A coarse measure of the level of impact an exploit could have on a target. In so
 - **Unlimited**:  There are no restrictions to the associated impact. This is inherently considered to be similar in severity to a limited scope, but high criticality.
 
 
+![Scope Graph](../figures/graphsnippets/ScopeSnippet.png "Scope Graph")

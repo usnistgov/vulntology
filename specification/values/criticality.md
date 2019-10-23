@@ -7,4 +7,4 @@ A measure of the relative importance of the associated Scope. This noun group is
 - **High**:  The impact relatively significant
 - **Low**:  The impact is relatively insignificant
 
-
+![Criticality Graph](../figures/graphsnippets/CriticalitySnippet.png "Criticality Graph")
