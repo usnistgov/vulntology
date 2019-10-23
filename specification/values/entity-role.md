@@ -4,7 +4,9 @@ Describes the role an associated Context performs in the vulnerability scenario 
 
 ## Values
 
-- **Primary Authorization**:  Associated Context is the main or initial authorization scope of the vulnerability scenario. See section 2.2 in [CVSSV3] for a full description of authorization scope.
-- **Secondary Authorization**:  Associated Context is a secondary authorization scope of the vulnerability scenario. See section 2.2 in [CVSSV3] for a full description of authorization scope.
+- **Primary Security Authority**:  Associated Context is the primary security authority of the vulnerability scenario. See [CVSS v3.1 Section 2.2](https://www.first.org/cvss/specification-document#2-2-Scope-S) for a full description of security authorities.
+- **Secondary Security Authority**:  Associated Context is a secondary security Authority of the vulnerability scenario. See [CVSS v3.1 Section 2.2](https://www.first.org/cvss/specification-document#2-2-Scope-S) for a full description of security authorities.
+- **Vulnerable Component**: Associated Context is considered to contain the vulnerability. 
+- **Impacted Component**:  Associated Context is is where impacts of the vulnerability are realized. The Impacted Component could also be the Vulnerable Component.
 
 ![Entity Role Graph](../figures/graphsnippets/EntityRoleSnippet.png "Entity Role Graph")
