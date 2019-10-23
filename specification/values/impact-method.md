@@ -17,3 +17,4 @@ Items that are indented represent more specific values that can be used to descr
   - **Failure to Verify Transmitter**:  The Context failed to ensure the entity on the transmitting end of the communication is the intended entity.
 
   
+![Impact Method Graph](../figures/graphsnippets/ImpactMethodSnippet.png "Impact Method Graph")

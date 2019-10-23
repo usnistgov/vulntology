@@ -8,3 +8,5 @@ The method or mechanism used to manipulate a user into interacting with a malici
  - **Malicious File**:  A file that has been crafted in a way that causes a target program to operate in an unintended fashion
  - **Malicious Link**:  A URL or hyperlink that has been crafted in a way that causes a target program or website to operate in an unintended fashion
  - **Malicious Website Content**:  A website that has been crafted in a way that causes a target program to operate in an unintended fashion or is used to simulate a site that the target user trusts.
+ 
+ ![Engineering Method Graph](../figures/graphsnippets/EngineeringMethodSnippet.png "Engineering Method Graph")

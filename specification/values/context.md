@@ -12,3 +12,4 @@ The conceptual entity where the impacts are realized from successful exploitatio
 - **Hypervisor**:  A program or operating system that coordinates the sharing of hardware resources for multiple operating systems. Each guest operating system appears to have its own processor, memory, and other resources to itself. However, the hypervisor is controlling the shared hardware resources, allocating what is needed to each operating system as necessary, and isolating the guest operating systems from each other.
 - **Physical Hardware**:  The actual physical hardware such as the logic gates within processors, the sectors of a disk or cells within memory.
 
+![Context Graph](../figures/graphsnippets/ContextSnippet.png "Context Graph")

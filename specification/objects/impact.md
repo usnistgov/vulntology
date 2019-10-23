@@ -21,3 +21,4 @@ An Impact is a recognized result of an Action for a given Vulnerability Scenario
   *Type Specific Properties*
   - **hasPhysicalImpact** (one): A tangible impact to a physical device, machinery, the surrounding environment, or people. (See [Physical Impact](../values/physical-impact.md) <br />
 
+![Impact Graph](../figures/graphsnippets/ImpactSnippet.png "Impact Graph")

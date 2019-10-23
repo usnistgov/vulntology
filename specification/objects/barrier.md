@@ -33,4 +33,4 @@ Types that are listed indented that do not have references to a specific set of 
     - **Container**:  The product is deployed within a type of container that must be broken out from to recognize impacts.
 
 
-  
+ ![Barrier Graph](../figures/graphsnippets/BarrierSnippet.png "Barrier Graph")

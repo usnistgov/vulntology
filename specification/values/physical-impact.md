@@ -17,3 +17,5 @@ Items that are indented represent more specific values that can be used to descr
   - **Assets**:  Exploitation of the Vulnerability enables excessive use of an asset. The excessive use could decrease the usable lifetime of the asset or unnecessarily consume fuel.
   - **Electricity**:  Exploitation of the Vulnerability enables excessive electricity usage
   - **Water**:  Exploitation of the Vulnerability enables excessive water usage
+
+![Physical Impact Graph](../figures/graphsnippets/PhysicalImpactSnippet.png "Physical Impact Graph")

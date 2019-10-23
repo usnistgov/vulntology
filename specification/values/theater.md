@@ -18,3 +18,5 @@ Items that are indented represent more specific values that can be used to descr
   - **Wireless**:  The attack must be launched from a wireless (802.11x) network.
 - **Local**:  The exploit scenario requires that the attack can only occur after the adversary has logical local access to a device such as through a console, Remote Desktop Protocol (RDP), Secure Shell (SSH), or Telnet login.
 - **Physical**:  The exploit scenario requires the attacker’s physical presence at the target.
+
+![Theatre Graph](../figures/graphsnippets/TheatreSnippet.png "Theatre Graph")
