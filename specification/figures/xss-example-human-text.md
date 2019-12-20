@@ -1,7 +1,7 @@
 # Human readable text based on XSS-Example.pdf
 
 This displays how human readable descriptions can be derived from a vulntological representation of a vulnerability. <br />
-This is a representation of the XSS-Example provided at [XSS-Example.pdf](xss-example.pdf)<br />
+This is a representation of the XSS-Example provided at [XSS-Example](xss-example.png) and embedded below.<br />
 
 Legend:<br />
 **Object**<br />
@@ -23,3 +23,5 @@ The [**first**] **impact** of the [**second**] **action** is a [*low*] *critical
 The [**second**] **impact** of the [**second**] **action** is a [*low*] *criticality*, [*limited*] *scope*, [*direct read*]. <br />
 
 ---
+
+![XSS-Example](xss-example.png "XSS-Example")
