@@ -1,6 +1,6 @@
 # Indictment Values
 
-Identfies if product/s listed are the origin of the fault or contain a dependency inherited through code of another source.
+Identifies if product/s listed are the origin of the fault or contain a dependency inherited through code of another source.
 
 ## Values
 
