@@ -12,6 +12,7 @@ Legend:<br />
 ---
 
 There is a **vulnerability**, *known as* [*CVE-2050-1234*]. It is of importance to the [*Industrial Control System*] and [*Health Care*] *sectors*.<br />
+The **vulnerability** is due to code that originates from [*Acme Acmeproduct 1.0.0.*] <br />
 The **vulnerability** [*CVE-2050-1234*] has [**one**] **scenario** that is an [*internet*] based [*cross-site scripting*]. <br />
 The [**first**] **scenario** is *evidenced by* [*www.acme.com*]<br />
 The [**first**] **scenario** *affects product* [*Acme Acmeproduct 1.0.0.*] <br />
