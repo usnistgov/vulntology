@@ -9,7 +9,7 @@ A scenario describes the conditions surrounding the possible use of a vulnerabil
 
 ## Relationships
 
-* provenBy (one or many):  [Provenance](provenance.md) will assist in proving a Vulnerability Scenario is legitimate. 
+* evidencedBy (one or many):  [Provenance](provenance.md) will assist in proving a Vulnerability Scenario is legitimate. 
 
 * affectsProduct (one or many): [Products](product.md) will be affected within a Scenario.
 
