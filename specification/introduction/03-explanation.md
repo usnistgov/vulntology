@@ -26,6 +26,4 @@ The graph above illustrates how all of the components defined in the vulntology 
 
 ### Examples
 
-To assist with understanding how all of the components would work together in a real world application, we have provided a generic Cross Site Scripting vulnerability in graph form. This can be viewed as [XSS Example Graph](../figures/xss-example.pdf).
-
-Additionally, to show how the same information is able to be made human readable please reference the [XSS Example Text](../figures/xss-example-human-text.docx)
+To assist with understanding how all of the components would work together in a real world application, we have provided a generic Cross Site Scripting vulnerability in both graph form and human readable text. The human readable text is derived from the graph format data. To show how both formats are displayed please reference the [XSS Example Text](../figures/xss-example-human-text.md)

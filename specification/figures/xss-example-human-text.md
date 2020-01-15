@@ -1,7 +1,6 @@
-# Human readable text based on XSS-Example.pdf
+# Human readable text based on XSS-Example.png
 
 This displays how human readable descriptions can be derived from a vulntological representation of a vulnerability. <br />
-This is a representation of the XSS-Example provided at [XSS-Example](xss-example.png) and embedded below.<br />
 
 Legend:<br />
 **Object**<br />
