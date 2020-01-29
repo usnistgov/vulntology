@@ -7,6 +7,7 @@ The software and/or hardware configurations that are known to be vulnerable to e
 - **Product Enumeration** (one or many): The enumeration of one or many products as dictated by the idenfication scheme. 
 
 
+
 ## Relationships
 
 N/A
