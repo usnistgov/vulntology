@@ -1,0 +1,398 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://csrc.nist.gov/ns/vulntology/1.0",
+    "type": "object",
+    "title": "",
+    "description": "a vulnerability entry",
+    "definitions": {
+        "UUID": {
+            "description": "The unique identifier for my object. (A UUID specified by RFC4122).",
+            "type": "string",
+            "format": "uuid"
+        },
+        "SectorOfInterest": {
+            "type": "string",
+            "enum": [
+                "Industrial Control System",
+                "Health Care",
+                "Finance",
+                "Automotive",
+                "Public Administration"
+            ]
+        },
+        "VulnerabilityIdentifier": {
+            "type": "object",
+            "required": [
+                "scheme",
+                "value"
+            ],
+            "properties": {
+                "scheme": {
+                    "oneOf": [
+                        {
+                            "$comment": "The extra pattern is not needed, since the 'uri' will cover this.",
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    ]
+                },
+                "value": {"type": "string"}
+            }
+        },
+        "Product": {
+            "type": "object",
+            "oneOf": [
+                {
+                    "required": [
+                        "scheme",
+                        "hasEnumeration"
+                    ]
+                },
+                {
+                    "required": [
+                        "scheme",
+                        "hasProductConfiguration"
+                    ]
+                }
+            ],
+            "properties": {
+                "scheme": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    ]
+                },
+                "hasEnumeration": {
+                    "type": "string"
+                },
+                "hasProductConfiguration": {
+                    "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_configurations",
+                    "$comment": "This is to reference the NVD configurations section, which requires much more complext JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way."
+                }
+            }
+        },
+        "Provenance": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                }
+            ]
+        },
+        "ExploitedWeakness": {
+            "type": "string",
+            "description": "CWE ID of the CWE that best describes the weakness used",
+            "minLength": 5,
+            "pattern": "^CWE-[0-9]+$"
+        },
+        "EngineeringMethod": {
+            "type": "string",
+            "enum": [
+                "Malicious Link",
+                "Malicious File",
+                "Malicious Website Content",
+                "Malicious Application"
+            ]
+        },
+        "PrivilegeLevel": {
+            "type": "string",
+            "enum": [
+                "Anonymous",
+                "Generic Trust",
+                "User",
+                "Privileged",
+                "Administrator"
+            ]
+        },
+        "Context": {
+            "type": "string",
+            "$comment": "Missing 'WebServer'",
+            "enum": [
+                "Hypervisor",
+                "Firmware",
+                "Host OS",
+                "Guest OS",
+                "Application",
+                "Application::Web Server",
+                "Application::Database",
+                "Application::Module",
+                "Application::Container",
+                "Channel",
+                "Physical Hardware"
+            ]
+        },
+        "ImpactMethod": {
+            "type": "string",
+            "enum": [
+                "Authentication Bypass",
+                "Code Execution",
+                "Context Escape",
+                "Trust Failure",
+                "Trust Failure::Failure to Establish Trust",
+                "Trust Failure::Failure to Verify Content",
+                "Trust Failure::Failure to Verify Receiver",
+                "Trust Failure::Failure to Verify Transmitter"
+            ]
+        },
+        "EntityRole": {
+            "type": "string",
+            "$comment": "Missing 'PrimaryAuthorizationScope'",
+            "enum": [
+                "Primary Security Authority",
+                "Secondary Security Authority",
+                "Vulnerable Component",
+                "Impacted Component"
+            ]
+        },
+        "criticality": {
+            "type": "string",
+            "enum": [
+                "Low",
+                "High"
+            ]
+        },
+        "scope": {
+            "type": "string",
+            "enum": [
+                "Limited",
+                "Unlimited"
+            ]
+        },
+        "LogicalImpact": {
+            "type": "object",
+            "required": [
+                "id",
+                "hasLogicalImpact",
+                "hasScope",
+                "hasCriticality"
+            ],
+            "properties": {
+                "id": {"$ref": "#/definitions/UUID"},
+                "hasLogicalImpact": {
+                    "$comment": "Why is this not a standalone type definition?",
+                    "type": "string",
+                    "enum": [
+                        "Logical Impact::Write-Direct",
+                        "Logical Impact::Read-Direct",
+                        "Logical Impact::Resource Removal",
+                        "Logical Impact::Service Interrupt",
+                        "Logical Impact::Service Interrupt::Shutdown",
+                        "Logical Impact::Service Interrupt::Reboot",
+                        "Logical Impact::Service Interrupt::Hang",
+                        "Logical Impact::Service Interrupt::Panic",
+                        "Logical Impact::Service Interrupt::Unrecoverable",
+                        "Logical Impact::Indirect Discloure",
+                        "Logical Impact::Privilege Escalation"
+                    ]
+                },
+                "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
+                "hasLocation": {
+                    "type": "string",
+                    "enum": [
+                        "File System",
+                        "Memory",
+                        "Network Traffic"
+                    ]
+                },
+                "hasCriticality": {"$ref": "#/definitions/criticality"},
+                "hasScope": {"$ref": "#/definitions/scope"}
+            }
+        },
+        "PhysicalImpact": {
+            "type": "object",
+            "required": [
+                "id",
+                "hasPhysicalImpact",
+                "hasCriticality",
+                "hasScope"
+            ],
+            "properties": {
+                "id": {"$ref": "#/definitions/UUID"},
+                "hasPhysicalImpact": {
+                    "type": "string",
+                    "enum": [
+                        "Physical Impact::Physical Resource Consumption",
+                        "Physical Impact::Physical Resource Consumption::Electricity",
+                        "Physical Impact::Physical Resource Consumption::Water",
+                        "Physical Impact::Physical Resource Consumption::Assets",
+                        "Physical Impact::Property Damage",
+                        "Physical Impact::Human Injury",
+                        "Physical Impact::Human Injury::Negligible",
+                        "Physical Impact::Human Injury::Minor",
+                        "Physical Impact::Human Injury::Serious",
+                        "Physical Impact::Human Injury::Critical",
+                        "Physical Impact::Human Injury::Catastrophic"
+                    ]
+                },
+                "hasCriticality": {"$ref": "#/definitions/criticality"},
+                "hasScope": {"$ref": "#/definitions/scope"}
+            }
+        },
+        "Barrier": {
+            "type": "object",
+            "required": [
+                "id",
+                "barrierType"
+            ],
+            "properties": {
+                "id": {"$ref": "#/definitions/UUID"},
+                "barrierType": {
+                    "type": "string",
+                    "enum": [
+                        "Obfuscation",
+                        "Obfuscation::ASLR",
+                        "Obfuscation::Dynamic Compilation",
+                        "State",
+                        "State::Race Condition",
+                        "State::Race Condition::No Control",
+                        "State::Race Condition::Partial Control",
+                        "State::Race Condition::Full Control",
+                        "State::Specialized Condition",
+                        "State::Environmental Condition",
+                        "State::Precondition Required",
+                        "Boundary Protections",
+                        "Boundary Protections::Sandbox",
+                        "Boundary Protections::Container",
+                        "Authentication/Authorization",
+                        "Authentication/Authorization::Impersonation",
+                        "Authentication/Authorization::Encryption",
+                        "Authentication/Authorization::Privileges Required",
+                        "Authentication/Authorization::Impersonation::Meddler-in-the-Middle",
+                        "Authentication/Authorization::Impersonation::Social Engineering"
+                    ]
+                },
+                "hasEngineeringMethod": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/EngineeringMethod"}
+                },
+                "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
+                "relatesToContext": {"$ref": "#/definitions/Context"}
+            }
+        },
+        "Action": {
+            "type": "object",
+            "required": [
+                "id",
+                "hasImpactMethod",
+                "affectsContext",
+                "hasEntityRole",
+                "resultsInLogicalImpact"
+            ],
+            "properties": {
+                "id": {"$ref": "#/definitions/UUID"},
+                "hasImpactMethod": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/ImpactMethod"}
+                },
+                "hasEscapeContext": {"$ref": "#/definitions/Context"},
+                "affectsContext": {"$ref": "#/definitions/Context"},
+                "hasEntityRole": {"$ref": "#/definitions/EntityRole"},
+                "resultsInLogicalImpact": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/LogicalImpact"}
+                },
+                "doesNotResultInLogicalImpact": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/LogicalImpact"}
+                },
+                "resultsInPhysicalImpact": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/PhysicalImpact"}
+                },
+                "doesNotResultInPhysicalImpact": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/PhysicalImpact"}
+                }
+            }
+        },
+        "Scenario": {
+            "type": "object",
+            "required": [
+                "id",
+                "requiresAttackTheatre",
+                "hasExploitedWeakness",
+                "evidencedBySource",
+                "hasAction"
+            ],
+            "properties": {
+                "id": {"$ref": "#/definitions/UUID"},
+                "requiresAttackTheatre": {
+                    "type": "string",
+                    "enum": [
+                        "Remote",
+                        "Internet",
+                        "Intranet",
+                        "Local Network",
+                        "Limited Remote",
+                        "Bluetooth",
+                        "Cellular",
+                        "Infrared",
+                        "Line of Sight",
+                        "Satellite",
+                        "Wireless",
+                        "Local",
+                        "Physical"
+                    ]
+                },
+                "hasExploitedWeakness": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/ExploitedWeakness"}
+                },
+                "evidencedBySource": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Provenance"}
+                },
+                "affectsProduct": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Product"}
+                },
+                "blockedByBarrier": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Barrier"}
+                },
+                "hasAction": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Action"}
+                }
+            }
+        },
+        "VulnerabilityType": {
+            "type": "object",
+            "required": [
+                "hasIdentity",
+                "hasOriginatingProduct",
+                "hasScenario"
+            ],
+            "properties": {
+                "hasSectorOfInterest": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {"$ref": "#/definitions/SectorOfInterest"}
+                },
+                "hasOriginatingProduct": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Product"}
+                },
+                "hasKnownChain": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
+                },
+                "hasIdentity": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
+                },
+                "hasScenario": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Scenario"}
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "properties": {
+        "Vulnerability": {"$ref": "#/definitions/VulnerabilityType"}
+    },
+    "required": ["Vulnerability"]
+}
