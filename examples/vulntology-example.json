@@ -1,0 +1,125 @@
+{
+    "$schema": "../schema/vulntology-json-schema-1.0-draft.json",
+    "Vulnerability": {
+        "hasIdentity": [
+            {
+                "scheme": "http://cve.mitre.org",
+                "value": "CVE-2050-1234"
+            }
+        ],
+        "hasSectorOfInterest": [
+            "Industrial Control System",
+            "Health Care"
+        ],
+        "hasOriginatingProduct": [
+            {
+                "scheme": "https://nist.gov/cpe/2.3",
+                "hasEnumeration": "cpe:2.3:a:acme:acmeproduct:1.0.0"
+            }
+        ],
+        "hasScenario": [
+            {
+                "id": "S1",
+                "requiresAttackTheatre": "Internet",
+                "hasExploitedWeakness": ["CWE-79"],
+                "evidencedBySource": [ "https://www.acme.com" ],
+                "affectsProduct": [
+                    {
+                        "scheme": "https://nist.gov/cpe/2.3",
+                        "hasEnumeration": "cpe:2.3:a:acme:acmeproduct:1.0.0"
+                    },
+                    {
+                        "scheme": "https://nvd.nist.gov/CPEAL",
+                        "$comment": "CPEAL is a fake placeholder for examples sake. We need a schema for this.",
+                        "hasProductConfiguration": [
+                            {
+                                "operator": "AND",
+                                "children": [
+                                    {
+                                        "operator": "OR",
+                                        "cpe_match": [
+                                            {
+                                                "vulnerable": true,
+                                                "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                                "versionEndIncluding": "32.0.0.114"
+                                            },
+                                            {
+                                                "vulnerable": true,
+                                                "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                                "versionEndIncluding": "32.0.0.114"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "operator": "OR",
+                                        "cpe_match": [
+                                            {
+                                                "vulnerable": false,
+                                                "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                                            },
+                                            {
+                                                "vulnerable": false,
+                                                "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "barrier": [
+                    {
+                        "id": "S1B1",
+                        "blockedByBarrier": "SocialEngineering",
+                        "hasEngineeringMethod": ["MaliciousLink"],
+                        "neededPrivileges": "User",
+                        "relatesToContext": "Application"
+                    },
+                    {
+                        "id": "S1B2",
+                        "blockedByBarrier": "PrivilegesRequired",
+                        "neededPrivileges": "User",
+                        "relatesToContext": "Application"
+                    }
+                ],
+                "hasAction": [
+                    {
+                        "id": "S1A1",
+                        "hasEntityRole": "PrimaryAuthorizationScope",
+                        "affectsContext": "Application::Web Server",
+                        "hasImpactMethod": ["Code Execution"],
+                        "resultsInLogicalImpact": [
+                            {
+                                "id": "S1A1I1",
+                                "hasLogicalImpact": "Logical Impact::Write-Direct",
+                                "hasScope": "Limited",
+                                "hasCriticality": "Low"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "S1A2",
+                        "hasEntityRole": "SecondaryAuthorizationScope",
+                        "affectsContext": "Browser",
+                        "hasImpactMethod": ["CodeExecution"],
+                        "resultsInLogicalImpact": [
+                            {
+                                "id": "S1A2I1",
+                                "hasLogicalImpact": "Write-Direct",
+                                "hasScope": "Limited",
+                                "hasCriticality": "Low"
+                            },
+                            {
+                                "id": "S1A2I2",
+                                "hasLogicalImpact": "Read-Direct",
+                                "hasScope": "Limited",
+                                "hasCriticality": "Low"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
