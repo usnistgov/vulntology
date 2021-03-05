@@ -27,58 +27,43 @@
                 "value"
             ],
             "properties": {
-                "scheme": {
-                    "oneOf": [
-                        {
-                            "$comment": "The extra pattern is not needed, since the 'uri' will cover this.",
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    ]
-                },
+                "scheme": {"$ref": "#/definitions/SimpleScheme"},
                 "value": {"type": "string"}
             }
         },
         "Product": {
             "type": "object",
-            "oneOf": [
+            "anyOf": [
                 {
-                    "required": [
-                        "scheme",
-                        "hasEnumeration"
-                    ]
+                    "required": ["hasEnumeration"]
                 },
                 {
-                    "required": [
-                        "scheme",
-                        "hasProductConfiguration"
-                    ]
+                    "required": ["hasCPEApplicabilityStatement"]
                 }
             ],
             "properties": {
-                "scheme": {
-                    "oneOf": [
-                        {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    ]
-                },
-                "hasEnumeration": {
-                    "type": "string"
-                },
-                "hasProductConfiguration": {
-                    "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_configurations",
-                    "$comment": "This is to reference the NVD configurations section, which requires much more complext JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way."
+                "scheme": {"$ref": "#/definitions/SimpleScheme"},
+                "hasEnumeration": {"$ref": "#/definitions/ProductEnumeration"},
+                "hasCPEApplicabilityStatement": {
+                    "type": "array",
+                    "items": {
+                        "$comment": "This is to reference the NVD configurations section, which requires much more complext JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way.",
+                        "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_node"
+                    }
                 }
             }
         },
-        "Provenance": {
-            "oneOf": [
-                {
-                    "type": "string",
-                    "format": "uri"
+        "ProductEnumeration": {
+            "properties": {
+                "scheme": {"$ref": "#/definitions/SimpleScheme"},
+                "values": {
+                    "type": "array",
+                    "items": {"type": "string"}
                 }
+            },
+            "required": [
+                "scheme",
+                "values"
             ]
         },
         "ExploitedWeakness": {
@@ -138,22 +123,21 @@
         },
         "EntityRole": {
             "type": "string",
-            "$comment": "Missing 'PrimaryAuthorizationScope'",
             "enum": [
-                "Primary Security Authority",
-                "Secondary Security Authority",
-                "Vulnerable Component",
-                "Impacted Component"
+                "Security Authority::Primary",
+                "Security Authority::Secondary",
+                "Component::Vulnerable",
+                "Component::Impacted"
             ]
         },
-        "criticality": {
+        "Criticality": {
             "type": "string",
             "enum": [
                 "Low",
                 "High"
             ]
         },
-        "scope": {
+        "Scope": {
             "type": "string",
             "enum": [
                 "Limited",
@@ -161,33 +145,69 @@
             ]
         },
         "LogicalImpact": {
-            "type": "object",
-            "required": [
-                "id",
-                "hasLogicalImpact",
-                "hasScope",
-                "hasCriticality"
+            "$comment": "Why is this not a standalone type definition?",
+            "type": "string",
+            "enum": [
+                "Logical Impact::Write-Direct",
+                "Logical Impact::Read-Direct",
+                "Logical Impact::Resource Removal",
+                "Logical Impact::Service Interrupt",
+                "Logical Impact::Service Interrupt::Shutdown",
+                "Logical Impact::Service Interrupt::Reboot",
+                "Logical Impact::Service Interrupt::Hang",
+                "Logical Impact::Service Interrupt::Panic",
+                "Logical Impact::Service Interrupt::Unrecoverable",
+                "Logical Impact::Indirect Discloure",
+                "Logical Impact::Privilege Escalation"
+            ]
+        },
+        "PhysicalImpact": {
+            "type": "string",
+            "enum": [
+                "Physical Impact::Physical Resource Consumption",
+                "Physical Impact::Physical Resource Consumption::Electricity",
+                "Physical Impact::Physical Resource Consumption::Water",
+                "Physical Impact::Physical Resource Consumption::Assets",
+                "Physical Impact::Property Damage",
+                "Physical Impact::Human Injury",
+                "Physical Impact::Human Injury::Negligible",
+                "Physical Impact::Human Injury::Minor",
+                "Physical Impact::Human Injury::Serious",
+                "Physical Impact::Human Injury::Critical",
+                "Physical Impact::Human Injury::Catastrophic"
+            ]
+        },
+        "Impact": {
+            "oneOf": [
+                {
+                    "required": [
+                        "id",
+                        "hasLogicalImpact",
+                        "hasScope",
+                        "hasCriticality"
+                    ]
+                },
+                {
+                    "required": [
+                        "id",
+                        "hasPhysicalImpact",
+                        "hasCriticality",
+                        "hasScope"
+                    ],
+                    "not": {
+                        "required": [
+                            "hasLocation",
+                            "gainedPrivileges"
+                        ]
+                    }
+                }
             ],
             "properties": {
                 "id": {"$ref": "#/definitions/UUID"},
-                "hasLogicalImpact": {
-                    "$comment": "Why is this not a standalone type definition?",
-                    "type": "string",
-                    "enum": [
-                        "Logical Impact::Write-Direct",
-                        "Logical Impact::Read-Direct",
-                        "Logical Impact::Resource Removal",
-                        "Logical Impact::Service Interrupt",
-                        "Logical Impact::Service Interrupt::Shutdown",
-                        "Logical Impact::Service Interrupt::Reboot",
-                        "Logical Impact::Service Interrupt::Hang",
-                        "Logical Impact::Service Interrupt::Panic",
-                        "Logical Impact::Service Interrupt::Unrecoverable",
-                        "Logical Impact::Indirect Discloure",
-                        "Logical Impact::Privilege Escalation"
-                    ]
-                },
-                "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
+                "hasCriticality": {"$ref": "#/definitions/Criticality"},
+                "hasScope": {"$ref": "#/definitions/Scope"},
+                "hasLogicalImpact": {"$ref": "#/definitions/LogicalImpact"},
+                "hasPhysicalImpact": {"$ref": "#/definitions/PhysicalImpact"},
                 "hasLocation": {
                     "type": "string",
                     "enum": [
@@ -196,38 +216,7 @@
                         "Network Traffic"
                     ]
                 },
-                "hasCriticality": {"$ref": "#/definitions/criticality"},
-                "hasScope": {"$ref": "#/definitions/scope"}
-            }
-        },
-        "PhysicalImpact": {
-            "type": "object",
-            "required": [
-                "id",
-                "hasPhysicalImpact",
-                "hasCriticality",
-                "hasScope"
-            ],
-            "properties": {
-                "id": {"$ref": "#/definitions/UUID"},
-                "hasPhysicalImpact": {
-                    "type": "string",
-                    "enum": [
-                        "Physical Impact::Physical Resource Consumption",
-                        "Physical Impact::Physical Resource Consumption::Electricity",
-                        "Physical Impact::Physical Resource Consumption::Water",
-                        "Physical Impact::Physical Resource Consumption::Assets",
-                        "Physical Impact::Property Damage",
-                        "Physical Impact::Human Injury",
-                        "Physical Impact::Human Injury::Negligible",
-                        "Physical Impact::Human Injury::Minor",
-                        "Physical Impact::Human Injury::Serious",
-                        "Physical Impact::Human Injury::Critical",
-                        "Physical Impact::Human Injury::Catastrophic"
-                    ]
-                },
-                "hasCriticality": {"$ref": "#/definitions/criticality"},
-                "hasScope": {"$ref": "#/definitions/scope"}
+                "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
             }
         },
         "Barrier": {
@@ -278,7 +267,7 @@
                 "hasImpactMethod",
                 "affectsContext",
                 "hasEntityRole",
-                "resultsInLogicalImpact"
+                "resultsInImpact"
             ],
             "properties": {
                 "id": {"$ref": "#/definitions/UUID"},
@@ -289,21 +278,13 @@
                 "hasEscapeContext": {"$ref": "#/definitions/Context"},
                 "affectsContext": {"$ref": "#/definitions/Context"},
                 "hasEntityRole": {"$ref": "#/definitions/EntityRole"},
-                "resultsInLogicalImpact": {
+                "resultsInImpact": {
                     "type": "array",
-                    "items": {"$ref": "#/definitions/LogicalImpact"}
+                    "items": {"$ref": "#/definitions/Impact"}
                 },
-                "doesNotResultInLogicalImpact": {
+                "doesNotResultInImpact": {
                     "type": "array",
-                    "items": {"$ref": "#/definitions/LogicalImpact"}
-                },
-                "resultsInPhysicalImpact": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/PhysicalImpact"}
-                },
-                "doesNotResultInPhysicalImpact": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/PhysicalImpact"}
+                    "items": {"$ref": "#/definitions/Impact"}
                 }
             }
         },
@@ -342,12 +323,9 @@
                 },
                 "evidencedBySource": {
                     "type": "array",
-                    "items": {"$ref": "#/definitions/Provenance"}
+                    "items": {"$ref": "#/definitions/ResourceReference"}
                 },
-                "affectsProduct": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/Product"}
-                },
+                "affectsProduct": {"$ref": "#/definitions/Product"},
                 "blockedByBarrier": {
                     "type": "array",
                     "items": {"$ref": "#/definitions/Barrier"}
@@ -371,10 +349,7 @@
                     "uniqueItems": true,
                     "items": {"$ref": "#/definitions/SectorOfInterest"}
                 },
-                "hasOriginatingProduct": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/Product"}
-                },
+                "hasOriginatingProduct": {"$ref": "#/definitions/Product"},
                 "hasKnownChain": {
                     "type": "array",
                     "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
@@ -389,6 +364,21 @@
                 }
             },
             "additionalProperties": false
+        },
+        "SimpleScheme": {
+            "type": "string",
+            "format": "uri",
+            "$comment": "Identifies the identification namespace, qualifying the values. For example, the if you are providing a CPE 2.3 identifer you would use 'https://csrc.nist.gov/ns/cpe/2.3' as the scheme.",
+            "examples": [
+                "https://csrc.nist.gov/ns/cpe/2.3",
+                "http://example.org/my-scheme",
+                "http://github.com/org/my-scheme"
+            ]
+        },
+        "ResourceReference": {
+            "type": "string",
+            "format": "uri-reference",
+            "$comment": "A URL pointing to a resolvable resource."
         }
     },
     "properties": {
