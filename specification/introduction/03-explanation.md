@@ -18,7 +18,7 @@ The vulntology framework is composed of simple components described below:
 
 ### Visuals
 
-To see at a very high level how the Vulntology framework builds on the current methodology of describing vulnerabilities. Refer to the [High Level Model](../figures/high-level-model.pdf).
+To see at a very high level how the Vulntology framework builds on the current methodology of describing vulnerabilities. Refer to the [High Level Model](../figures/high-level-view.png).
 
 ![vulntology-graph](../figures/vulntology-graph.png "Vultology Graph")
 
@@ -26,4 +26,4 @@ The graph above illustrates how all of the components defined in the vulntology 
 
 ### Examples
 
-To assist with understanding how all of the components would work together in a real world application, we have provided a generic Cross Site Scripting vulnerability in both graph form and human readable text. The human readable text is derived from the graph format data. To show how both formats are displayed please reference the [XSS Example Text](../figures/xss-example-human-text.md)
+To assist with understanding how all of the components would work together in a real world application, we have provided a generic Cross Site Scripting vulnerability in both graph form and human readable text. The human readable text is derived from the graph format data. To show how both formats are displayed please reference the [XSS Example Text](../../examples/xss-example-human-text.md)

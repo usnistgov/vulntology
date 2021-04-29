@@ -1,4 +1,4 @@
-# Theatres
+# Theatre Values
 The Theatre or Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface.
 
 ## Values
