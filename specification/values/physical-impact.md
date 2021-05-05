@@ -18,4 +18,4 @@ Items that are indented represent more specific values that can be used to descr
   - **Electricity**:  Exploitation of the Vulnerability enables excessive electricity usage
   - **Water**:  Exploitation of the Vulnerability enables excessive water usage
 
-![Physical Impact Graph](../figures/graphsnippets/PhysicalImpactSnippet.png "Physical Impact Graph")
+![Physical Impact Values Graph](../figures/graphsnippets/PhysicalImpactValuesSnippet.png "Physical Impact Values Graph")

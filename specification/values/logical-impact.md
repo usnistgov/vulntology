@@ -19,4 +19,4 @@ Items that are indented represent more specific values that can be used to descr
   - **Unrecoverable**:  The service interruption results in a complete and unrecoverable loss of the Context but is non-physical in nature. For example, the corruption of the firmware on a hardware device with no possibility of reload.
 - **Write (Direct)**:  The Vulnerability allows an adversary to cause a breach in the integrity of the Context through unauthorized modification or addition of data.
 
-![Logical Impact Graph](../figures/graphsnippets/LogicalImpactSnippet.png "Logical Impact Graph")
+![Logical Impact Values Graph](../figures/graphsnippets/LogicalImpactValuesSnippet.png "Logical Impact Values Graph")
