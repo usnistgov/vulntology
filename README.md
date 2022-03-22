@@ -24,4 +24,4 @@ The vulntology is not intended to be a general purpose format for describing vul
 There are [Introduction](specification/introduction/) materials available for a general overview of the Vulntology. For those already familiar you can look into the [Figures](specification/figures/), [Objects](specification/objects/) and/or [Values](specification/values/) sections.
 
 #### How to Help
-We are currently looking for assistance from organizations and people within the vulnerability management community. For those interested please refer to the [Contributing](Contributing.md) page.
+We are currently looking for assistance from organizations and people within the vulnerability management community. For those interested please refer to the [Contributing](CONTRIBUTING.md) page.
