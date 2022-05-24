@@ -266,7 +266,6 @@
                 "id",
                 "hasImpactMethod",
                 "affectsContext",
-                "hasEntityRole",
                 "resultsInImpact"
             ],
             "properties": {
@@ -293,7 +292,6 @@
             "required": [
                 "id",
                 "requiresAttackTheatre",
-                "hasExploitedWeakness",
                 "evidencedBySource",
                 "hasAction"
             ],
@@ -340,7 +338,6 @@
             "type": "object",
             "required": [
                 "hasIdentity",
-                "hasOriginatingProduct",
                 "hasScenario"
             ],
             "properties": {
