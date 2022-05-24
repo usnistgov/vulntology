@@ -177,47 +177,80 @@
                 "Physical Impact::Human Injury::Catastrophic"
             ]
         },
+        "LogicalImpactLocation": {
+            "type": "string",
+            "enum": [
+                "File System",
+                "Memory",
+                "Network Traffic"
+            ]
+        },
         "Impact": {
             "oneOf": [
                 {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "hasCriticality": {"$ref": "#/definitions/Criticality"},
+                        "hasScope": {"$ref": "#/definitions/Scope"},
+                        "hasLogicalImpact": {"const": "Logical Impact::Privilege Escalation"},
+                        "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
+                        "hasLocation": {"$ref": "#/definitions/LogicalImpactLocation"}
+                    },
+                    "required": [
+                        "id",
+                        "hasLogicalImpact",
+                        "hasScope",
+                        "hasCriticality",
+                        "gainedPrivileges"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "hasCriticality": {"$ref": "#/definitions/Criticality"},
+                        "hasScope": {"$ref": "#/definitions/Scope"},
+                        "hasLogicalImpact": {
+                            "type": "string",
+                            "enum": [
+                                "Logical Impact::Write-Direct",
+                                "Logical Impact::Read-Direct",
+                                "Logical Impact::Resource Removal",
+                                "Logical Impact::Service Interrupt",
+                                "Logical Impact::Service Interrupt::Shutdown",
+                                "Logical Impact::Service Interrupt::Reboot",
+                                "Logical Impact::Service Interrupt::Hang",
+                                "Logical Impact::Service Interrupt::Panic",
+                                "Logical Impact::Service Interrupt::Unrecoverable",
+                                "Logical Impact::Indirect Discloure"
+                            ]
+                        },
+                        "hasLocation": {"$ref": "#/definitions/LogicalImpactLocation"}
+                    },
                     "required": [
                         "id",
                         "hasLogicalImpact",
                         "hasScope",
                         "hasCriticality"
-                    ]
+                    ],
+                    "additionalProperties": false
                 },
                 {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "hasCriticality": {"$ref": "#/definitions/Criticality"},
+                        "hasScope": {"$ref": "#/definitions/Scope"},
+                        "hasPhysicalImpact": {"$ref": "#/definitions/PhysicalImpact"}
+                    },
                     "required": [
                         "id",
                         "hasPhysicalImpact",
                         "hasCriticality",
                         "hasScope"
                     ],
-                    "not": {
-                        "required": [
-                            "hasLocation",
-                            "gainedPrivileges"
-                        ]
-                    }
+                    "additionalProperties": false
                 }
-            ],
-            "properties": {
-                "id": {"$ref": "#/definitions/UUID"},
-                "hasCriticality": {"$ref": "#/definitions/Criticality"},
-                "hasScope": {"$ref": "#/definitions/Scope"},
-                "hasLogicalImpact": {"$ref": "#/definitions/LogicalImpact"},
-                "hasPhysicalImpact": {"$ref": "#/definitions/PhysicalImpact"},
-                "hasLocation": {
-                    "type": "string",
-                    "enum": [
-                        "File System",
-                        "Memory",
-                        "Network Traffic"
-                    ]
-                },
-                "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
-            }
+            ]
         },
         "Barrier": {
             "type": "object",
