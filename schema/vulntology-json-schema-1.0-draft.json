@@ -43,15 +43,16 @@
             ],
             "properties": {
                 "hasEnumeration": {"$ref": "#/definitions/ProductEnumeration"},
-                "hasCPEApplicabilityStatement": {
-                    "type": "array",
-                    "items": {
-                        "$comment": "This is to reference the NVD configurations section, which requires much more complext JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way.",
-                        "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_node"
-                    }
-                }
+                "hasCPEApplicabilityStatement": {"$ref": "#/definitions/CPEApplicabilityStatment"}
             }
         },
+		"CPEApplicabilityStatement": {
+                "type": "array",
+                "items": {
+                    "$comment": "This is to reference the NVD configurations section, which requires much more complext JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way.",
+                    "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_node"
+				}
+		},
         "ProductEnumeration": {
             "properties": {
                 "scheme": {"$ref": "#/definitions/SimpleScheme"},
