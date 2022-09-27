@@ -45,7 +45,6 @@
                 "scheme": {"$ref": "#/definitions/SimpleScheme"},
                 "hasEnumeration": {"$ref": "#/definitions/ProductEnumeration"},
                 "hasCPEApplicabilityStatement": {"$ref": "#/definitions/CPEApplicabilityStatment"}
-                }
             }
         },
 		"CPEApplicabilityStatement": {
