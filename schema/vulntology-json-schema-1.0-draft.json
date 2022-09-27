@@ -42,7 +42,6 @@
                 }
             ],
             "properties": {
-                "scheme": {"$ref": "#/definitions/SimpleScheme"},
                 "hasEnumeration": {"$ref": "#/definitions/ProductEnumeration"},
                 "hasCPEApplicabilityStatement": {
                     "type": "array",
@@ -93,7 +92,6 @@
         },
         "Context": {
             "type": "string",
-            "$comment": "Missing 'WebServer'",
             "enum": [
                 "Hypervisor",
                 "Firmware",
@@ -148,33 +146,33 @@
             "$comment": "Why is this not a standalone type definition?",
             "type": "string",
             "enum": [
-                "Logical Impact::Write-Direct",
-                "Logical Impact::Read-Direct",
-                "Logical Impact::Resource Removal",
-                "Logical Impact::Service Interrupt",
-                "Logical Impact::Service Interrupt::Shutdown",
-                "Logical Impact::Service Interrupt::Reboot",
-                "Logical Impact::Service Interrupt::Hang",
-                "Logical Impact::Service Interrupt::Panic",
-                "Logical Impact::Service Interrupt::Unrecoverable",
-                "Logical Impact::Indirect Discloure",
-                "Logical Impact::Privilege Escalation"
+                "Write-Direct",
+                "Read-Direct",
+                "Resource Removal",
+                "Service Interrupt",
+                "Service Interrupt::Shutdown",
+                "Service Interrupt::Reboot",
+                "Service Interrupt::Hang",
+                "Service Interrupt::Panic",
+                "Service Interrupt::Unrecoverable",
+                "Indirect Discloure",
+                "Privilege Escalation"
             ]
         },
         "PhysicalImpact": {
             "type": "string",
             "enum": [
-                "Physical Impact::Physical Resource Consumption",
-                "Physical Impact::Physical Resource Consumption::Electricity",
-                "Physical Impact::Physical Resource Consumption::Water",
-                "Physical Impact::Physical Resource Consumption::Assets",
-                "Physical Impact::Property Damage",
-                "Physical Impact::Human Injury",
-                "Physical Impact::Human Injury::Negligible",
-                "Physical Impact::Human Injury::Minor",
-                "Physical Impact::Human Injury::Serious",
-                "Physical Impact::Human Injury::Critical",
-                "Physical Impact::Human Injury::Catastrophic"
+                "Physical Resource Consumption",
+                "Physical Resource Consumption::Electricity",
+                "Physical Resource Consumption::Water",
+                "Physical Resource Consumption::Assets",
+                "Property Damage",
+                "Human Injury",
+                "Human Injury::Negligible",
+                "Human Injury::Minor",
+                "Human Injury::Serious",
+                "Human Injury::Critical",
+                "Human Injury::Catastrophic"
             ]
         },
         "LogicalImpactLocation": {
@@ -334,16 +332,16 @@
                     "type": "string",
                     "enum": [
                         "Remote",
-                        "Internet",
-                        "Intranet",
-                        "Local Network",
+                        "Remote::Internet",
+                        "Remote::Intranet",
+                        "Remote::Local Network",
                         "Limited Remote",
-                        "Bluetooth",
-                        "Cellular",
-                        "Infrared",
-                        "Line of Sight",
-                        "Satellite",
-                        "Wireless",
+                        "Limited Remote::Bluetooth",
+                        "Limited Remote::Cellular",
+                        "Limited Remote::Infrared",
+                        "Limited Remote::Line of Sight",
+                        "Limited Remote::Satellite",
+                        "Limited Remote::Wireless",
                         "Local",
                         "Physical"
                     ]
