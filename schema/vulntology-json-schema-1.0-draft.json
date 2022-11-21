@@ -191,7 +191,7 @@
                         "id": {"$ref": "#/definitions/UUID"},
                         "hasCriticality": {"$ref": "#/definitions/Criticality"},
                         "hasScope": {"$ref": "#/definitions/Scope"},
-                        "hasLogicalImpact": {"const": "Logical Impact::Privilege Escalation"},
+                        "hasLogicalImpact": {"const": "Privilege Escalation"},
                         "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
                         "hasLocation": {"$ref": "#/definitions/LogicalImpactLocation"}
                     },
