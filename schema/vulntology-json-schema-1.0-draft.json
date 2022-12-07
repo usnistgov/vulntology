@@ -44,7 +44,9 @@
             "properties": {
                 "hasEnumeration": {
                     "type": "array",
-                    "$ref": "#/definitions/ProductEnumeration"
+                    "items": {
+                        "$ref": "#/definitions/ProductEnumeration"
+                    }
                 },
                 "hasCPEApplicabilityStatement": {"$ref": "#/definitions/CPEApplicabilityStatement"}
             }
