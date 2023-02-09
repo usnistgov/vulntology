@@ -64,14 +64,14 @@
         "hasScenario": [
             {
                 "id": "S1",
-                "requiresAttackTheatre": "Internet",
+                "requiresAttackTheatre": "Remote::Internet",
                 "hasExploitedWeakness": ["CWE-79"],
                 "evidencedBySource": ["https://www.acme.com"],
                 "affectsProduct": {
-                    "hasEnumeration": {
+                    "hasEnumeration": [{
                         "scheme": "https://nist.gov/cpe/2.3",
                         "values": ["cpe:2.3:a:acme:acmeproduct:1.0.0"]
-                    },
+                        }],
                     "hasCPEApplicabilityStatement": [
                         {
                             "operator": "AND",
@@ -132,7 +132,7 @@
                         "resultsInImpact": [
                             {
                                 "id": "S1A1I1",
-                                "hasLogicalImpact": "Logical Impact::Write-Direct",
+                                "hasLogicalImpact": "Write-Direct",
                                 "hasScope": "Limited",
                                 "hasCriticality": "Low"
                             }
@@ -146,13 +146,13 @@
                         "resultsInImpact": [
                             {
                                 "id": "S1A2I1",
-                                "hasLogicalImpact": "Logical Impact::Write-Direct",
+                                "hasLogicalImpact": "Write-Direct",
                                 "hasScope": "Limited",
                                 "hasCriticality": "Low"
                             },
                             {
                                 "id": "S1A2I2",
-                                "hasLogicalImpact": "Logical Impact::Read-Direct",
+                                "hasLogicalImpact": "Read-Direct",
                                 "hasScope": "Limited",
                                 "hasCriticality": "Low",
                                 "hasLocation": "Memory"
@@ -160,7 +160,7 @@
                             {
                                 "$comment": "This is for testing constraints, and is not for cross-site scripting",
                                 "id": "S1A2I3",
-                                "hasLogicalImpact": "Logical Impact::Privilege Escalation",
+                                "hasLogicalImpact": "Privilege Escalation",
                                 "hasScope": "Limited",
                                 "hasCriticality": "Low",
                                 "gainedPrivileges": "Administrator"
@@ -168,7 +168,7 @@
                             {
                                 "$comment": "This is for testing constraints, and is not for cross-site scripting",
                                 "id": "S1A2I4",
-                                "hasPhysicalImpact": "Physical Impact::Physical Resource Consumption",
+                                "hasPhysicalImpact": "Physical Resource Consumption",
                                 "hasScope": "Limited",
                                 "hasCriticality": "Low"
                             }
