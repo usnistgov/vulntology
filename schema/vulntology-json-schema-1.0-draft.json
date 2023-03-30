@@ -331,7 +331,6 @@
             "required": [
                 "id",
                 "requiresAttackTheatre",
-                "hasExploitedWeakness",
                 "evidencedBySource",
                 "hasAction"
             ],
