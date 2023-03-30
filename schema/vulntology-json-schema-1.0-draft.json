@@ -304,6 +304,7 @@
                 "id",
                 "hasImpactMethod",
                 "affectsContext",
+                "hasEntityRole",
                 "resultsInImpact"
             ],
             "properties": {
@@ -376,7 +377,8 @@
             "type": "object",
             "required": [
                 "hasIdentity",
-                "hasScenario",
+                "hasOriginatingProduct",
+                "hasScenario"
             ],
             "properties": {
                 "hasSectorOfInterest": {
