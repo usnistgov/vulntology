@@ -331,7 +331,7 @@
                     "items": {"$ref": "#/definitions/Impact"}
                 },
                 "hasName": {
-                    "description": "A name or label to assist in identifying the action compared to other actions.",
+                    "description": "A name or label to assist in identifying the Action compared to other Actions.",
                     "$ref": "#/definitions/name"
                 }
             }
@@ -382,7 +382,7 @@
                     "items": {"$ref": "#/definitions/Action"}
                 },
                 "hasName": {
-                    "description": "A name or label to assist in identifying the action compared to other actions.",
+                    "description": "A name or label to assist in identifying the Scenario compared to other Scenarios.",
                     "$ref": "#/definitions/name"
                 }
             }
