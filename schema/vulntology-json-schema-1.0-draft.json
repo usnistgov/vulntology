@@ -123,7 +123,8 @@
                 "Trust Failure::Failure to Establish Trust",
                 "Trust Failure::Failure to Verify Content",
                 "Trust Failure::Failure to Verify Receiver",
-                "Trust Failure::Failure to Verify Transmitter"
+                "Trust Failure::Failure to Verify Transmitter",
+				"Privilege Escalation"
             ]
         },
         "EntityRole": {
@@ -162,8 +163,7 @@
                 "Service Interrupt::Hang",
                 "Service Interrupt::Panic",
                 "Service Interrupt::Unrecoverable",
-                "Indirect Discloure",
-                "Privilege Escalation"
+                "Indirect Discloure"
             ]
         },
         "PhysicalImpact": {
