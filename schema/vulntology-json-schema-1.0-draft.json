@@ -191,6 +191,7 @@
             ]
         },
         "Impact": {
+            "type": "object",
             "oneOf": [
                 {
                     "properties": {
@@ -259,44 +260,63 @@
         },
         "Barrier": {
             "type": "object",
-            "required": [
-                "id",
-                "barrierType"
-            ],
-            "properties": {
-                "id": {"$ref": "#/definitions/UUID"},
-                "barrierType": {
-                    "type": "string",
-                    "enum": [
-                        "Obfuscation",
-                        "Obfuscation::ASLR",
-                        "Obfuscation::Dynamic Compilation",
-                        "State",
-                        "State::Race Condition",
-                        "State::Race Condition::No Control",
-                        "State::Race Condition::Partial Control",
-                        "State::Race Condition::Full Control",
-                        "State::Specialized Condition",
-                        "State::Environmental Condition",
-                        "State::Precondition Required",
-                        "Boundary Protections",
-                        "Boundary Protections::Sandbox",
-                        "Boundary Protections::Container",
-                        "Authentication/Authorization",
-                        "Authentication/Authorization::Impersonation",
-                        "Authentication/Authorization::Encryption",
-                        "Authentication/Authorization::Privileges Required",
-                        "Authentication/Authorization::Impersonation::Meddler-in-the-Middle",
-                        "Authentication/Authorization::Impersonation::Social Engineering"
+            "oneOf": [
+                {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "barrierType": {"const": "Authentication/Authorization::Privileges Required"},
+                        "hasEngineeringMethod": {
+                            "type": "array",
+                            "items": {"$ref": "#/definitions/EngineeringMethod"}
+                        },
+                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
+                        "relatesToContext": {"$ref": "#/definitions/Context"}
+                    },
+                    "required": [
+                        "id",
+                        "barrierType",
+                        "neededPrivileges"
                     ]
                 },
-                "hasEngineeringMethod": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/EngineeringMethod"}
-                },
-                "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
-                "relatesToContext": {"$ref": "#/definitions/Context"}
-            }
+                {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "barrierType": {
+                            "type": "string",
+                            "enum": [
+                                "Obfuscation",
+                                "Obfuscation::ASLR",
+                                "Obfuscation::Dynamic Compilation",
+                                "State",
+                                "State::Race Condition",
+                                "State::Race Condition::No Control",
+                                "State::Race Condition::Partial Control",
+                                "State::Race Condition::Full Control",
+                                "State::Specialized Condition",
+                                "State::Environmental Condition",
+                                "State::Precondition Required",
+                                "Boundary Protections",
+                                "Boundary Protections::Sandbox",
+                                "Boundary Protections::Container",
+                                "Authentication/Authorization",
+                                "Authentication/Authorization::Impersonation",
+                                "Authentication/Authorization::Encryption",
+                                "Authentication/Authorization::Impersonation::Meddler-in-the-Middle",
+                                "Authentication/Authorization::Impersonation::Social Engineering"
+                            ]
+                        },
+                        "hasEngineeringMethod": {
+                            "type": "array",
+                            "items": {"$ref": "#/definitions/EngineeringMethod"}
+                        },
+                        "relatesToContext": {"$ref": "#/definitions/Context"}
+                    },
+                    "required": [
+                        "id",
+                        "barrierType"
+                    ]
+                }
+            ]
         },
         "Action": {
             "type": "object",
