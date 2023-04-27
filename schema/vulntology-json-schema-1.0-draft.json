@@ -331,7 +331,7 @@
                     "items": {"$ref": "#/definitions/Impact"}
                 },
                 "hasName": {
-                    "description": "A name or label to assist in identifying the Action compared to other Actions.",
+                    "description": "A name or label to assist in identifying a given Action in the context of the containing Vulnerability. This name should be unique across all sibling actions.",
                     "$ref": "#/definitions/name"
                 }
             }
@@ -382,7 +382,7 @@
                     "items": {"$ref": "#/definitions/Action"}
                 },
                 "hasName": {
-                    "description": "A name or label to assist in identifying the Scenario compared to other Scenarios.",
+                    "description": "A name or label to assist in identifying a given Scenario in the context of the containing Vulnerability. This name should be unique across all sibling scenarios.",
                     "$ref": "#/definitions/name"
                 }
             }
