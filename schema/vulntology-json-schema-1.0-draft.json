@@ -10,6 +10,12 @@
             "type": "string",
             "format": "uuid"
         },
+        "name": {
+            "description": "A 2-32 character name or label to assist humans in identifying the purpose of a given Scenario or Action object",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 32
+        },
         "SectorOfInterest": {
             "type": "string",
             "enum": [
@@ -323,6 +329,10 @@
                 "doesNotResultInImpact": {
                     "type": "array",
                     "items": {"$ref": "#/definitions/Impact"}
+                },
+                "hasName": {
+                    "description": "A name or label to assist in identifying a given Action in the context of the containing Vulnerability. This name should be unique across all sibling actions.",
+                    "$ref": "#/definitions/name"
                 }
             }
         },
@@ -370,6 +380,10 @@
                 "hasAction": {
                     "type": "array",
                     "items": {"$ref": "#/definitions/Action"}
+                },
+                "hasName": {
+                    "description": "A name or label to assist in identifying a given Scenario in the context of the containing Vulnerability. This name should be unique across all sibling scenarios.",
+                    "$ref": "#/definitions/name"
                 }
             }
         },
