@@ -119,17 +119,54 @@
                 "Physical Hardware"
             ]
         },
-        "ImpactMethod": {
+        "ImpactMethodType": {
             "type": "string",
             "enum": [
                 "Authentication Bypass",
                 "Code Execution",
-                "Context Escape",
                 "Trust Failure",
                 "Trust Failure::Failure to Establish Trust",
                 "Trust Failure::Failure to Verify Content",
                 "Trust Failure::Failure to Verify Receiver",
                 "Trust Failure::Failure to Verify Transmitter"
+            ]
+        },
+        "ImpactMethod": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "hasImpactMethodType": {"const": "Privilege Escalation"},
+                        "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
+                    },
+                    "required": [
+                        "hasImpactMethodType",
+                        "gainedPrivileges"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "hasImpactMethodType": {"const": "Context Escape"},
+                        "hasEscapeContext": {"$ref": "#/definitions/EscapeContext"}
+                    },
+                    "required": [
+                        "hasImpactMethodType",
+                        "hasEscapeContext"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "hasImpactMethodType": { "$ref": "#/definitions/ImpactMethodType"}
+                    },
+                    "required": [
+                        "hasImpactMethodType"
+                    ],
+                    "additionalProperties": false
+                }
             ]
         },
         "EntityRole": {
@@ -199,24 +236,6 @@
         "Impact": {
             "type": "object",
             "oneOf": [
-                {
-                    "properties": {
-                        "id": {"$ref": "#/definitions/UUID"},
-                        "hasCriticality": {"$ref": "#/definitions/Criticality"},
-                        "hasScope": {"$ref": "#/definitions/Scope"},
-                        "hasLogicalImpact": {"const": "Privilege Escalation"},
-                        "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
-                        "hasLocation": {"$ref": "#/definitions/LogicalImpactLocation"}
-                    },
-                    "required": [
-                        "id",
-                        "hasLogicalImpact",
-                        "hasScope",
-                        "hasCriticality",
-                        "gainedPrivileges"
-                    ],
-                    "additionalProperties": false
-                },
                 {
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
@@ -339,7 +358,6 @@
                     "type": "array",
                     "items": {"$ref": "#/definitions/ImpactMethod"}
                 },
-                "hasEscapeContext": {"$ref": "#/definitions/Context"},
                 "affectsContext": {"$ref": "#/definitions/Context"},
                 "hasEntityRole": {"$ref": "#/definitions/EntityRole"},
                 "resultsInImpact": {
