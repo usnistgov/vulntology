@@ -290,17 +290,47 @@
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
                         "barrierType": {"const": "Authentication/Authorization::Privileges Required"},
-                        "hasEngineeringMethod": {
-                            "type": "array",
-                            "items": {"$ref": "#/definitions/EngineeringMethod"}
-                        },
-                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"},
-                        "relatesToContext": {"$ref": "#/definitions/Context"}
+                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
                     },
                     "required": [
                         "id",
                         "barrierType",
                         "neededPrivileges"
+                    ]
+                },
+                {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "barrierType": {"const": "Authentication/Authorization::Impersonation::Social Engineering"},
+                        "hasEngineeringMethod": {
+                            "type": "array",
+                            "items": {"$ref": "#/definitions/EngineeringMethod"}
+                        },
+                        "relatesToContext": {"$ref": "#/definitions/Context"},
+                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
+                    },
+                    "required": [
+                        "id",
+                        "barrierType",
+                        "hasEngineeringMethod"
+                    ]
+                },
+                {
+                    "properties": {
+                        "id": {"$ref": "#/definitions/UUID"},
+                        "barrierType": {
+                            "oneOf": [
+                                {"const": "Boundary Protections"},
+                                {"const": "Boundary Protections::Container"},
+                                {"const": "Boundary Protections::Sandbox"}
+                            ]
+                        },
+                        "relatesToContext": {"$ref": "#/definitions/Context"}
+                    },
+                    "required": [
+                        "id",
+                        "barrierType",
+                        "relatesToContext"
                     ]
                 },
                 {
@@ -320,21 +350,12 @@
                                 "State::Specialized Condition",
                                 "State::Environmental Condition",
                                 "State::Precondition Required",
-                                "Boundary Protections",
-                                "Boundary Protections::Sandbox",
-                                "Boundary Protections::Container",
                                 "Authentication/Authorization",
                                 "Authentication/Authorization::Impersonation",
                                 "Authentication/Authorization::Encryption",
-                                "Authentication/Authorization::Impersonation::Meddler-in-the-Middle",
-                                "Authentication/Authorization::Impersonation::Social Engineering"
+                                "Authentication/Authorization::Impersonation::Meddler-in-the-Middle"
                             ]
-                        },
-                        "hasEngineeringMethod": {
-                            "type": "array",
-                            "items": {"$ref": "#/definitions/EngineeringMethod"}
-                        },
-                        "relatesToContext": {"$ref": "#/definitions/Context"}
+                        }
                     },
                     "required": [
                         "id",
