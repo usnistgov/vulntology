@@ -15,6 +15,8 @@ Items that are indented represent more specific values that can be used to descr
   - **Failure to Verify Content**:  The Context failed to ensure the content supplied is the expected content, is properly formatted and/or sanitized.
   - **Failure to Verify Receiver**:  The Context failed to ensure the entity on the receiving end of the communication is the intended entity.
   - **Failure to Verify Transmitter**:  The Context failed to ensure the entity on the transmitting end of the communication is the intended entity.
+- **Privilege Escalation**:  The Vulnerability allows an adversary to gain a level of privilege that was not intended. 
+  - **Privileges Gained**:  Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](privilege-level-type.md) <br /> *Each Privilege Escalation relates to one privilege level*.
 
   
 ![Impact Method Graph](../figures/graphsnippets/ImpactMethodSnippet.png "Impact Method Graph")

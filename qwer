@@ -1,0 +1,957 @@
+[33mcommit b9b55dc33dcd5d731cb5826bf6d8248ff6b574b7[m[33m ([m[1;36mHEAD -> [m[1;32mUpdateSchemaEnums[m[33m, [m[1;31morigin/testbranch[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Tue Mar 22 15:35:06 2022 -0400
+
+    Update README.md (#69)
+
+:100644 100644 80cb41a 1d0e863 M	README.md
+
+[33mcommit c52ebac2585e89585d4d71b5109cdaf1a848f008[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed May 5 13:21:39 2021 -0400
+
+    Update Figures, Examples, Objects, Values and Explanation to align with schema adjustments (#62)
+    
+    * updated graph, png and related snips
+    * updated graph again, related snips and many pngs to reflect changes after schema adjustments
+    * Fixed broken links on explanation and typo in theater.md
+    * Updated examples to align with recent changes
+
+:100644 100644 41f59ba 1cc9113 M	examples/xss-example-human-text.md
+:100644 100644 9466bae 645e725 M	examples/xss-example.png
+:100644 100644 43a45ca 29a6a75 M	examples/xss-example.vsdx
+:100644 000000 d8d650c 0000000 D	specification/figures/[DRAFT]_Vulntology_JSON_Instance_1.0.json
+:100644 000000 2a375ab 0000000 D	specification/figures/[DRAFT]_Vulntology_JSON_Schema_1.0.json
+:100644 100644 2f12ae9 30d81c6 M	specification/figures/graphsnippets/ActionSnippet.png
+:100644 100644 0cb6457 db2434b M	specification/figures/graphsnippets/BarrierSnippet.png
+:100644 100644 2463b94 1e44001 M	specification/figures/graphsnippets/ContextSnippet.png
+:100644 100644 d682e0a 4c8accc M	specification/figures/graphsnippets/CriticalitySnippet.png
+:100644 100644 4db2ccd 6cb23e8 M	specification/figures/graphsnippets/EngineeringMethodSnippet.png
+:100644 100644 cf50699 6534cc1 M	specification/figures/graphsnippets/EntityRoleSnippet.png
+:100644 100644 e784974 3764949 M	specification/figures/graphsnippets/ExploitedWeaknessSnippet.png
+:100644 100644 c50999e 6072908 M	specification/figures/graphsnippets/ImpactMethodSnippet.png
+:100644 100644 46edc35 2ba395a M	specification/figures/graphsnippets/ImpactSnippet.png
+:100644 100644 1983292 51df6aa M	specification/figures/graphsnippets/LocationSnippet.png
+:100644 100644 3e0903f bbae04d M	specification/figures/graphsnippets/LogicalImpactSnippet.png
+:000000 100644 0000000 3826fff A	specification/figures/graphsnippets/LogicalImpactValuesSnippet.png
+:100644 100644 8f76c31 12e7082 M	specification/figures/graphsnippets/PhysicalImpactSnippet.png
+:000000 100644 0000000 6fc997d A	specification/figures/graphsnippets/PhysicalImpactValuesSnippet.png
+:100644 100644 67f1aa4 6a2abbe M	specification/figures/graphsnippets/PrivilegeLevelSnippet1.png
+:100644 100644 11a8a00 95275a0 M	specification/figures/graphsnippets/PrivilegeLevelSnippet2.png
+:100644 100644 f864b56 8462786 M	specification/figures/graphsnippets/ProductSnippet.png
+:100644 000000 a9c5e72 0000000 D	specification/figures/graphsnippets/ProvenanceSnippet.png
+:100644 100644 dc93ed6 51a791a M	specification/figures/graphsnippets/RaceConditionSnippet.png
+:000000 100644 0000000 431656f A	specification/figures/graphsnippets/ResourceReferenceSnippet.png
+:100644 100644 342a693 4c5ea01 M	specification/figures/graphsnippets/ScenarioSnippet.png
+:100644 100644 ed6bc7f d468dc5 M	specification/figures/graphsnippets/ScopeSnippet.png
+:100644 100644 928bc3a 0701adc M	specification/figures/graphsnippets/SectorofInterestSnippet.png
+:100644 100644 ba030f6 68aa396 M	specification/figures/graphsnippets/TheatreSnippet.png
+:100644 100644 ca9eabb 23b2a5a M	specification/figures/graphsnippets/VulnerabilityIdentifierSnippet.png
+:100644 100644 622441d ea66489 M	specification/figures/graphsnippets/VulnerabilitySnippet.png
+:100644 100644 9bcab09 85384c0 M	specification/figures/high-level-view.png
+:100644 100644 1651ded 598935c M	specification/figures/vulntology-graph.png
+:100644 100644 02d1a15 312b4de M	specification/figures/vulntology-graph.vsdx
+:100644 100644 9d16432 03c9a9a M	specification/introduction/03-explanation.md
+:100644 100644 6b1c5ca 00867c3 M	specification/objects/action.md
+:100644 100644 7cc7d12 2f1fb5e M	specification/objects/barrier.md
+:100644 100644 f15f793 730fed5 M	specification/objects/impact.md
+:100644 100644 7fda58d a9408d3 M	specification/objects/product.md
+:100644 000000 1f8fa9e 0000000 D	specification/objects/provenance.md
+:100644 100644 c3e23a1 feee7ad M	specification/objects/scenario.md
+:100644 100644 ada989c 7e90720 M	specification/objects/vulnerability-identifier.md
+:100644 100644 9d9375b e4c6842 M	specification/objects/vulnerability.md
+:100644 100644 a9bb58d 679a075 M	specification/values/entity-role.md
+:100644 100644 69bc303 668de5d M	specification/values/impact-method.md
+:100644 000000 cee5d30 0000000 D	specification/values/known-chain.md
+:100644 100644 0ababbd e7c3a8f M	specification/values/logical-impact.md
+:100644 100644 49da5f9 de699b6 M	specification/values/physical-impact.md
+:000000 100644 0000000 8e71106 A	specification/values/resource-reference.md
+:100644 100644 5a5088b 215564d M	specification/values/theater.md
+
+[33mcommit 358976ab19adb7f2bff0f5c7a17c80d705124596[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Mar 24 13:52:56 2021 -0400
+
+    Rename ReadMe.md to README.md
+
+:100644 100644 2fa4768 ab64eaf R099	schema/ReadMe.md	schema/README.md
+
+[33mcommit 5d115fc6dc0cda06e91193b5fa48349467848be2[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Wed Mar 24 13:46:41 2021 -0400
+
+    Adding ReadMe for JSON Style Guide
+
+:000000 100644 0000000 2fa4768 A	schema/ReadMe.md
+:000000 100644 0000000 d8d650c A	specification/figures/[DRAFT]_Vulntology_JSON_Instance_1.0.json
+:000000 100644 0000000 2a375ab A	specification/figures/[DRAFT]_Vulntology_JSON_Schema_1.0.json
+
+[33mcommit bda24f3af7d6bbe9c671340de27aa950dd8026f7[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Fri Mar 5 15:46:25 2021 -0500
+
+    Updated schema based on changes from a working session with @Chris-Turner-NIST
+
+:100644 100644 84cb015 348df9e M	examples/vulntology-example.json
+:100644 100644 6e2c4bf 07a1df8 M	schema/vulntology-json-schema-1.0-draft.json
+
+[33mcommit 6914f53722676a1796bd0dbc9153de17b7f53557[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Fri Feb 5 11:53:09 2021 -0500
+
+    ongoing work on getting the JSON schema and example to validate
+
+:000000 100644 0000000 84cb015 A	examples/vulntology-example.json
+:100644 100644 41f59ba 41f59ba R100	specification/figures/xss-example-human-text.md	examples/xss-example-human-text.md
+:100644 100644 9466bae 9466bae R100	specification/figures/xss-example.png	examples/xss-example.png
+:100644 100644 43a45ca 43a45ca R100	specification/figures/xss-example.vsdx	examples/xss-example.vsdx
+:000000 100644 0000000 6e2c4bf A	schema/vulntology-json-schema-1.0-draft.json
+:100644 000000 d8d650c 0000000 D	specification/figures/[DRAFT]_Vulntology_JSON_Instance_1.0.txt
+:100644 000000 2a375ab 0000000 D	specification/figures/[DRAFT]_Vulntology_JSON_Schema_1.0.txt
+
+[33mcommit e0b009888aa0685c4bf37a8260509834e18bf152[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Fri Oct 30 15:22:09 2020 -0400
+
+    Adding first draft of schema and example
+
+:000000 100644 0000000 d8d650c A	specification/figures/[DRAFT]_Vulntology_JSON_Instance_1.0.txt
+:000000 100644 0000000 2a375ab A	specification/figures/[DRAFT]_Vulntology_JSON_Schema_1.0.txt
+
+[33mcommit cd8d0c683d1b0e54bed25fa850feee4c43cbad2b[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Fri Oct 30 15:19:49 2020 -0400
+
+    Adding figure changes based on changes during schema creation
+
+:100644 100644 8703c30 1651ded M	specification/figures/vulntology-graph.png
+:100644 100644 29c8a30 02d1a15 M	specification/figures/vulntology-graph.vsdx
+:100644 100644 e9238d4 9466bae M	specification/figures/xss-example.png
+:100644 100644 450d6bc 43a45ca M	specification/figures/xss-example.vsdx
+
+[33mcommit 3c94658ac4dc6c97ea43db1464acc3dae4be4102[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Fri Jun 19 12:18:41 2020 -0400
+
+    Added descriptions and clarifications to unfinished barrier values and types
+
+:100644 100644 c99671e 7cc7d12 M	specification/objects/barrier.md
+
+[33mcommit a24cea401667753e18e459baf72a8518dda94540[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Wed Feb 12 14:59:56 2020 -0500
+
+    Adjusted approach to reflect relationship approach instead
+
+:100644 100644 ced073c 2f12ae9 M	specification/figures/graphsnippets/ActionSnippet.png
+:100644 100644 1ce3f37 2463b94 M	specification/figures/graphsnippets/ContextSnippet.png
+:100644 100644 224d24e d682e0a M	specification/figures/graphsnippets/CriticalitySnippet.png
+:100644 100644 f6ea888 cf50699 M	specification/figures/graphsnippets/EntityRoleSnippet.png
+:100644 100644 586f5c0 c50999e M	specification/figures/graphsnippets/ImpactMethodSnippet.png
+:100644 100644 e0711fb 46edc35 M	specification/figures/graphsnippets/ImpactSnippet.png
+:100644 100644 16c56ae 1983292 M	specification/figures/graphsnippets/LocationSnippet.png
+:100644 100644 d9f7291 3e0903f M	specification/figures/graphsnippets/LogicalImpactSnippet.png
+:100644 100644 0bf1858 8f76c31 M	specification/figures/graphsnippets/PhysicalImpactSnippet.png
+:100644 100644 c6740f7 ed6bc7f M	specification/figures/graphsnippets/ScopeSnippet.png
+:100644 100644 31d89df ca9eabb M	specification/figures/graphsnippets/VulnerabilityIdentifierSnippet.png
+:100644 100644 7fd67a4 8703c30 M	specification/figures/vulntology-graph.png
+:100644 100644 c7636f7 29c8a30 M	specification/figures/vulntology-graph.vsdx
+:100644 100644 93f5f7e 6b1c5ca M	specification/objects/action.md
+:100644 100644 683ef73 f15f793 M	specification/objects/impact.md
+
+[33mcommit 10e5ea3261db58333eb9645eea10df50e887955d[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Jan 29 16:56:47 2020 -0500
+
+    Added various elements to support capability described in #18 (#49)
+    
+    * Added various elements to vulntology to support capability described in #18
+    * Added relationship originatingProduct
+
+:100644 100644 d147a7f e784974 M	specification/figures/graphsnippets/ExploitedWeaknessSnippet.png
+:100644 100644 8863d18 f864b56 M	specification/figures/graphsnippets/ProductSnippet.png
+:100644 100644 af941dd a9c5e72 M	specification/figures/graphsnippets/ProvenanceSnippet.png
+:100644 100644 da776ff 342a693 M	specification/figures/graphsnippets/ScenarioSnippet.png
+:100644 100644 fa39d26 ba030f6 M	specification/figures/graphsnippets/TheatreSnippet.png
+:100644 100644 45d6bdf 622441d M	specification/figures/graphsnippets/VulnerabilitySnippet.png
+:100644 100644 7d910c5 7fd67a4 M	specification/figures/vulntology-graph.png
+:100644 100644 8ff8529 c7636f7 M	specification/figures/vulntology-graph.vsdx
+:100644 100644 0a4cbb3 41f59ba M	specification/figures/xss-example-human-text.md
+:100644 100644 cd089bc e9238d4 M	specification/figures/xss-example.png
+:100644 100644 821515c 450d6bc M	specification/figures/xss-example.vsdx
+:100644 100644 7fd7920 7fda58d M	specification/objects/product.md
+:100644 100644 7cfb2ab 9d9375b M	specification/objects/vulnerability.md
+
+[33mcommit 3ff39788fad9c0ae7d4fe0c5507552139072fc1a[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Wed Jan 15 17:58:41 2020 -0500
+
+    resolved minor issues with the xss-example page and fixed related data from the explanation page
+
+:100644 100644 1a7a4ea 0a4cbb3 M	specification/figures/xss-example-human-text.md
+:100644 100644 355043b 9d16432 M	specification/introduction/03-explanation.md
+
+[33mcommit b8df2ee53b9c426992527c7b974fb5a39d2fde16[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Fri Dec 20 14:19:03 2019 -0500
+
+    Resolved another bad link
+
+:100644 100644 9082c52 1a7a4ea M	specification/figures/xss-example-human-text.md
+
+[33mcommit 7e011ab3879546b490ecf7ff895634c2b49c4deb[m
+Author: Chris-Turner-NIST <christopher.turner@NIST.GOV>
+Date:   Fri Dec 20 14:06:24 2019 -0500
+
+    fixed bad link
+
+:100644 100644 64e618e 7cfb2ab M	specification/objects/vulnerability.md
+
+[33mcommit 41e034efdd01f4003277f5838d4ae0641f05b182[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Jan 15 13:43:11 2020 -0500
+
+    changed Property to evidencedBy (#48)
+
+:100644 100644 4f9e25d c3e23a1 M	specification/objects/scenario.md
+
+[33mcommit b7e8f99c99f550a806154faf51bfb2d238b1b944[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 23 13:57:22 2019 -0400
+
+    Updated content to be objects only, Changed to .png, made in-line of indroduction.md (#45)
+
+:100644 000000 52f6162 0000000 D	specification/figures/high-level-model.pdf
+:000000 100644 0000000 9bcab09 A	specification/figures/high-level-view.png
+:100644 100644 d24f772 9bb62da M	specification/introduction/02-introduction.md
+
+[33mcommit e233626ec7d1e3df320ddd584be01a245b438534[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 23 13:48:42 2019 -0400
+
+    Updating based on #20 (#42)
+
+:100644 100644 bd2adc7 7d910c5 M	specification/figures/vulntology-graph.png
+:100644 100644 8d4d12e 8ff8529 M	specification/figures/vulntology-graph.vsdx
+:100644 100644 6627abc a9bb58d M	specification/values/entity-role.md
+
+[33mcommit 5d299cfa3eec3cdd3d5f498789d03b1aac2dcff8[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 23 13:43:24 2019 -0400
+
+    Added graphsnippets and made them visible inline for each object/value (#44)
+    
+    * Added graphsnippets and made them visible inline for each object/value
+    * removed temp files
+
+:000000 100644 0000000 ced073c A	specification/figures/graphsnippets/ActionSnippet.png
+:000000 100644 0000000 0cb6457 A	specification/figures/graphsnippets/BarrierSnippet.png
+:000000 100644 0000000 1ce3f37 A	specification/figures/graphsnippets/ContextSnippet.png
+:000000 100644 0000000 224d24e A	specification/figures/graphsnippets/CriticalitySnippet.png
+:000000 100644 0000000 4db2ccd A	specification/figures/graphsnippets/EngineeringMethodSnippet.png
+:000000 100644 0000000 f6ea888 A	specification/figures/graphsnippets/EntityRoleSnippet.png
+:000000 100644 0000000 d147a7f A	specification/figures/graphsnippets/ExploitedWeaknessSnippet.png
+:000000 100644 0000000 586f5c0 A	specification/figures/graphsnippets/ImpactMethodSnippet.png
+:000000 100644 0000000 e0711fb A	specification/figures/graphsnippets/ImpactSnippet.png
+:000000 100644 0000000 16c56ae A	specification/figures/graphsnippets/LocationSnippet.png
+:000000 100644 0000000 d9f7291 A	specification/figures/graphsnippets/LogicalImpactSnippet.png
+:000000 100644 0000000 0bf1858 A	specification/figures/graphsnippets/PhysicalImpactSnippet.png
+:000000 100644 0000000 67f1aa4 A	specification/figures/graphsnippets/PrivilegeLevelSnippet1.png
+:000000 100644 0000000 11a8a00 A	specification/figures/graphsnippets/PrivilegeLevelSnippet2.png
+:000000 100644 0000000 8863d18 A	specification/figures/graphsnippets/ProductSnippet.png
+:000000 100644 0000000 af941dd A	specification/figures/graphsnippets/ProvenanceSnippet.png
+:000000 100644 0000000 dc93ed6 A	specification/figures/graphsnippets/RaceConditionSnippet.png
+:000000 100644 0000000 da776ff A	specification/figures/graphsnippets/ScenarioSnippet.png
+:000000 100644 0000000 c6740f7 A	specification/figures/graphsnippets/ScopeSnippet.png
+:000000 100644 0000000 928bc3a A	specification/figures/graphsnippets/SectorofInterestSnippet.png
+:000000 100644 0000000 fa39d26 A	specification/figures/graphsnippets/TheatreSnippet.png
+:000000 100644 0000000 31d89df A	specification/figures/graphsnippets/VulnerabilityIdentifierSnippet.png
+:000000 100644 0000000 45d6bdf A	specification/figures/graphsnippets/VulnerabilitySnippet.png
+:100644 000000 d7af867 0000000 D	specification/figures/~$$vulntology-graph.~vsdx
+:100644 000000 70675a4 0000000 D	specification/figures/~$$xss-example.~vsdx
+:100644 100644 0637f24 93f5f7e M	specification/objects/action.md
+:100644 100644 114d8de c99671e M	specification/objects/barrier.md
+:100644 100644 6de1b1d 683ef73 M	specification/objects/impact.md
+:100644 100644 b6bb3e6 7fd7920 M	specification/objects/product.md
+:100644 100644 f48048c 1f8fa9e M	specification/objects/provenance.md
+:100644 100644 3deda28 4f9e25d M	specification/objects/scenario.md
+:100644 100644 079c42b ada989c M	specification/objects/vulnerability-identifier.md
+:100644 100644 c4eecdf 64e618e M	specification/objects/vulnerability.md
+:100644 100644 53613a0 7fdc671 M	specification/values/context.md
+:100644 100644 544adfe 6e7b924 M	specification/values/criticality.md
+:100644 100644 04bbada cd78129 M	specification/values/engineering-method.md
+:100644 100644 e70a6c0 6627abc M	specification/values/entity-role.md
+:100644 100644 74ab4ec c7c02eb M	specification/values/exploited-weakness.md
+:100644 100644 43a7092 69bc303 M	specification/values/impact-method.md
+:100644 100644 c7a6e13 cee5d30 M	specification/values/known-chain.md
+:100644 100644 596c676 831da2e M	specification/values/location.md
+:100644 100644 01e5e0e 0ababbd M	specification/values/logical-impact.md
+:100644 100644 c3a6ddb 49da5f9 M	specification/values/physical-impact.md
+:100644 100644 a790ac7 59da3cb M	specification/values/privilege-level.md
+:100644 100644 60630d5 1f4b3f5 M	specification/values/race-condition.md
+:100644 100644 69e36d0 caa0a16 M	specification/values/scope.md
+:100644 100644 52a82f0 e3ab086 M	specification/values/sector-of-interest.md
+:100644 100644 890f64d 5a5088b M	specification/values/theater.md
+
+[33mcommit 64c8de7106fce4b558cc60e8898b70f26791031e[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 23 13:24:52 2019 -0400
+
+    Updating Examples and Figures to align (#43)
+    
+    * Updating Figures for #22
+    
+    * removed temp files and added gitignore
+
+:000000 100644 0000000 e97ea52 A	.gitignore
+
+[33mcommit 87b30172bb03d2ab1f5a49b5049ea5ae1f69a7f2[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Oct 9 16:07:45 2019 -0400
+
+    Added Badges (#41)
+
+:100644 100644 e82a60d 80cb41a M	README.md
+
+[33mcommit fa823265df00e774c3e9fb8de4384bae95159c36[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Oct 9 15:54:03 2019 -0400
+
+    Updated contributing and license (#40)
+
+:100644 100644 2f864aa 4fd608e M	CONTRIBUTING.md
+:100644 100644 063a95c 109af23 M	LICENSE.md
+
+[33mcommit 02b43981d982ba7ca13ae25a53fc2816217f1df9[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Oct 2 14:23:36 2019 -0400
+
+    Fixed typo (#36)
+
+:100644 100644 4e0ae3c 2f864aa M	CONTRIBUTING.md
+
+[33mcommit 1396c2a0cdefa36ca25a3d3e40fed3263f4a8789[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 2 13:24:36 2019 -0400
+
+    Updating Figures for #22 (#34)
+
+:100644 100644 d4e46a0 52f6162 M	specification/figures/high-level-model.pdf
+:100644 100644 3246f70 bd2adc7 M	specification/figures/vulntology-graph.png
+:100644 100644 b40c46d 8d4d12e M	specification/figures/vulntology-graph.vsdx
+:100644 000000 c54f81d 0000000 D	specification/figures/xss-example-human-text.docx
+:000000 100644 0000000 9082c52 A	specification/figures/xss-example-human-text.md
+:100644 000000 d6d2c54 0000000 D	specification/figures/xss-example.pdf
+:000000 100644 0000000 cd089bc A	specification/figures/xss-example.png
+:100644 100644 9b1038e 821515c M	specification/figures/xss-example.vsdx
+:000000 100644 0000000 d7af867 A	specification/figures/~$$vulntology-graph.~vsdx
+:000000 100644 0000000 70675a4 A	specification/figures/~$$xss-example.~vsdx
+
+[33mcommit 656a5f310f5e67e475fc38dd76259923aaa31d1a[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Oct 2 12:27:33 2019 -0400
+
+    inlined the culntology graphic (#35)
+
+:100644 100644 765f529 355043b M	specification/introduction/03-explanation.md
+
+[33mcommit d54ec4fde57f8958fc6ab982822adc1c34de1ed5[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Oct 2 12:14:37 2019 -0400
+
+    Updated to include Scope Statement (#33)
+
+:100644 100644 c5e73af e82a60d M	README.md
+
+[33mcommit 2fa2d6fd6d631b004f26d2a12aef3253dfc524ac[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Sep 4 11:09:00 2019 -0400
+
+    added Readme to main page with additional text. Updated the xss example after adjustments to bring in line with the rest of the figures. (#32)
+
+:100644 100644 faf4e63 c5e73af M	README.md
+:100644 100644 3df1552 9b1038e M	specification/figures/xss-example.vsdx
+
+[33mcommit 93736f26ddf0d2b7a000cb6521845257204aa6b6[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Tue Sep 3 16:19:58 2019 -0400
+
+    Update issue templates
+
+:000000 100644 0000000 61f1f04 A	.github/ISSUE_TEMPLATE/question.md
+
+[33mcommit f99ff45f4e21232cdcfc2d2b4b8d4dc6ba8a8138[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Tue Sep 3 16:17:11 2019 -0400
+
+    Update issue templates
+
+:000000 100644 0000000 0bceb32 A	.github/ISSUE_TEMPLATE/bug_report.md
+:000000 100644 0000000 7cd6bd2 A	.github/ISSUE_TEMPLATE/feature_request.md
+
+[33mcommit b452ac0062369d88684ab798477ee5583e4f73fd[m
+Author: david-waltermire-nist <david.waltermire@nist.gov>
+Date:   Tue Sep 3 15:44:20 2019 -0400
+
+    Changed remaining OSCAL references
+
+:100644 100644 0e000e8 5a94dc2 M	CODE_OF_CONDUCT.md
+:100644 100644 e65cf42 4e0ae3c M	CONTRIBUTING.md
+:100644 100644 c4e6388 a8671de M	USERS.md
+
+[33mcommit 00ccd8f652ae68892b50074d3e4f0e4f231068bb[m
+Author: david-waltermire-nist <david.waltermire@nist.gov>
+Date:   Tue Sep 3 14:07:52 2019 -0400
+
+    Initial project text
+
+:000000 100644 0000000 e65cf42 A	CONTRIBUTING.md
+:100644 100644 8d84eb5 063a95c M	LICENSE.md
+:000000 100644 0000000 c4e6388 A	USERS.md
+
+[33mcommit a845d08aa6dafbcedab6348bf32dfdc5cb4160e1[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 31 12:25:46 2018 -0400
+
+    Major modifications to the vuln graph to handle clearer representations of type/subtype/values/properties. Also added changes to handle issues #3, #15, #9, #16 and #14
+
+:100644 100644 8247247 b40c46d M	specification/figures/vulntology-graph.vsdx
+:100644 100644 f3c31dd 765f529 M	specification/introduction/03-explanation.md
+:000000 100644 0000000 079c42b A	specification/objects/vulnerability-identifier.md
+:100644 100644 9dccfef c4eecdf M	specification/objects/vulnerability.md
+
+[33mcommit 814c7157ac02c0434c285f117354c424c4d21d33[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 31 10:23:00 2018 -0400
+
+    Changes to Provenance and Product
+
+:100644 100644 f6f7c2c 8247247 M	specification/figures/vulntology-graph.vsdx
+
+[33mcommit ba20b488cea207a62b2e711a5918001b05702338[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 31 10:04:18 2018 -0400
+
+    Updated object to resolve concerns in #6
+
+:100644 100644 7af45e4 f48048c M	specification/objects/provenance.md
+
+[33mcommit 8f5808dd368a51351ba76790087d16c51acd6473[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 31 09:59:20 2018 -0400
+
+    Updated object to resolve concerns in #7
+
+:100644 100644 9621b2e b6bb3e6 M	specification/objects/product.md
+
+[33mcommit 3b12824fb31d8bf6d87a99b55320b91a2804cb71[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 24 14:13:39 2018 -0400
+
+    Resolving text issues mentioned in #12
+
+:100644 100644 8b5e0d0 0637f24 M	specification/objects/action.md
+
+[33mcommit 97529904caeacb3d3a744f881188ef97aeccfa44[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 24 14:05:12 2018 -0400
+
+    reworked vulnerability type to be specific to CWE. #5
+
+:100644 100644 6ef8725 3deda28 M	specification/objects/scenario.md
+:000000 100644 0000000 74ab4ec A	specification/values/exploited-weakness.md
+:100644 000000 9fd3993 0000000 D	specification/values/vulnerability-weakness.md
+
+[33mcommit b66ee9ee2addbbc86f9ddc218910ab31a1fd9415[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 24 13:04:22 2018 -0400
+
+    Addressed concerns from #4 #10 #16
+
+:100644 100644 4913535 f3c31dd M	specification/introduction/03-explanation.md
+:000000 100644 0000000 cfd6b2d A	specification/objects/README.md
+:100644 100644 64ef511 8b5e0d0 M	specification/objects/action.md
+:100644 100644 051ec6f 114d8de M	specification/objects/barrier.md
+:100644 100644 024fbc5 6de1b1d M	specification/objects/impact.md
+:100644 100644 0de6a33 6ef8725 M	specification/objects/scenario.md
+:100644 100644 1cecabb 9dccfef M	specification/objects/vulnerability.md
+:100644 100644 f19adf9 53613a0 R098	specification/values/context-type.md	specification/values/context.md
+:100644 100644 f705ac0 544adfe M	specification/values/criticality.md
+:100644 100644 5b18e54 04bbada R094	specification/values/engineering-method-type.md	specification/values/engineering-method.md
+:100644 100644 c5cf781 e70a6c0 R095	specification/values/entity-role-type.md	specification/values/entity-role.md
+:100644 100644 c220058 43a7092 R098	specification/values/impact-method-type.md	specification/values/impact-method.md
+:100644 100644 4bd844a 596c676 R093	specification/values/location-type.md	specification/values/location.md
+:100644 100644 01e5e0e 01e5e0e R100	specification/values/logical-impact-type.md	specification/values/logical-impact.md
+:100644 100644 c3a6ddb c3a6ddb R100	specification/values/physical-impact-type.md	specification/values/physical-impact.md
+:100644 100644 f9a47df a790ac7 R090	specification/values/privilege-level-type.md	specification/values/privilege-level.md
+:100644 100644 270b147 60630d5 R092	specification/values/race-condition-type.md	specification/values/race-condition.md
+:100644 100644 f092d03 69e36d0 M	specification/values/scope.md
+:100644 100644 69b9217 52a82f0 R096	specification/values/sector-of-interest-type.md	specification/values/sector-of-interest.md
+:100644 100644 ea0c46f 890f64d R091	specification/values/attack-theater-type.md	specification/values/theater.md
+:100644 100644 6a624fd 9fd3993 R070	specification/values/vulnerability-type.md	specification/values/vulnerability-weakness.md
+
+[33mcommit d6cd3dd44ee1493990d723b02df482820b1f224e[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Aug 24 08:58:57 2018 -0400
+
+    syncing misc
+
+:100644 100644 017a24d f6f7c2c M	specification/figures/vulntology-graph.vsdx
+:100644 100644 46fdf77 c7a6e13 M	specification/values/known-chain.md
+
+[33mcommit 37889eb0a5161520688cbb69e1cbeb1696107ed9[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Aug 24 08:32:37 2018 -0400
+
+    Fixed Links
+
+:100644 100644 4208dae c696b98 M	specification/README.md
+
+[33mcommit b42578c63ace7de575b783616276489079ffc717[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Wed Aug 8 14:44:15 2018 -0400
+
+    clerical update
+
+:100644 100644 d6f28da 4208dae M	specification/README.md
+
+[33mcommit 19438080e3c35a5f44379cd8bbc7143e196c1b11[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Wed Aug 8 14:39:45 2018 -0400
+
+    clerical update
+
+:100644 100644 3b30622 d6f28da M	specification/README.md
+
+[33mcommit e23a3275dba1ebb4d6ce8fcf912ada297af85989[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Wed Aug 8 14:35:56 2018 -0400
+
+    Adding README file for overall specification to provide an overview
+
+:000000 100644 0000000 3b30622 A	specification/README.md
+
+[33mcommit 06adf5056963ed77aace493395d74e8a2f25d713[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Aug 8 13:57:35 2018 -0400
+
+    Removing
+
+:100644 000000 7795a1d 0000000 D	specification/figures/vulntology-decision-chart.vsdx
+
+[33mcommit b0bed11715a96d30aee9f76fcb2b001165ae1e25[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Wed Aug 8 13:52:21 2018 -0400
+
+    Replacing the .pdf with a .png
+
+:100644 000000 76f86df 0000000 D	specification/figures/vulntology-graph.pdf
+
+[33mcommit 503f113e8372403e9aa45bdedb4886051947e924[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Wed Aug 1 16:07:10 2018 -0400
+
+    Updated the vulntology-graph.vsdx to fix the positioning of the "DRAFT" watermark.
+    Created a PNG of the vulntology-graph.vsdx.
+    Modified text in the scenario.md and vulnerability.md object descriptions to improve readability.
+
+:100644 100644 b53c8d3 76f86df M	specification/figures/vulntology-graph.pdf
+:000000 100644 0000000 3246f70 A	specification/figures/vulntology-graph.png
+:100644 100644 be5c6c0 017a24d M	specification/figures/vulntology-graph.vsdx
+:100644 100644 5d160fe 0de6a33 M	specification/objects/scenario.md
+:100644 100644 9c9a91b 1cecabb M	specification/objects/vulnerability.md
+
+[33mcommit 5e5b4d3caea37e393838b560caab165d02b64610[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 15:21:47 2018 -0400
+
+    Update 03-explanation.md
+
+:100644 100644 daefc2a 4913535 M	specification/introduction/03-explanation.md
+
+[33mcommit 88d9f1607e9da0b73be33a499e1d70780efed24e[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 15:20:12 2018 -0400
+
+    Delete introduction.md
+
+:100644 000000 d24f772 0000000 D	specification/introduction/introduction.md
+
+[33mcommit e84abfbd5a70d80bb697f20bab34dc226b2bc853[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 15:20:03 2018 -0400
+
+    Delete abstract.md
+
+:100644 000000 f5b23b3 0000000 D	specification/introduction/abstract.md
+
+[33mcommit 98a024a5a3940e38fcb5fc64e22e928bdacf7624[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Jul 13 15:17:39 2018 -0400
+
+    updated name
+
+:100644 100644 eb14a02 d24f772 M	specification/introduction/02-introduction.md
+
+[33mcommit e28464014f865d47e7f247dbffa769c53965dc3f[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Jul 13 15:13:40 2018 -0400
+
+    Updated visuals to reflect changes since Draft 1. Updated Introduction text to assist with new github format. Added missing Type and Subtypes.
+
+:100644 100644 4a49c3b d4e46a0 M	specification/figures/high-level-model.pdf
+:000000 100644 0000000 b53c8d3 A	specification/figures/vulntology-graph.pdf
+:100644 100644 9c2ff90 be5c6c0 M	specification/figures/vulntology-graph.vsdx
+:000000 100644 0000000 c54f81d A	specification/figures/xss-example-human-text.docx
+:000000 100644 0000000 d6d2c54 A	specification/figures/xss-example.pdf
+:000000 100644 0000000 3df1552 A	specification/figures/xss-example.vsdx
+:000000 100644 0000000 f5b23b3 A	specification/introduction/01-abstract.md
+:000000 100644 0000000 eb14a02 A	specification/introduction/02-introduction.md
+:000000 100644 0000000 daefc2a A	specification/introduction/03-explanation.md
+:100644 100644 544adfe f705ac0 M	specification/values/criticality.md
+:000000 100644 0000000 4bd844a A	specification/values/location-type.md
+:000000 100644 0000000 270b147 A	specification/values/race-condition-type.md
+:100644 100644 69e36d0 f092d03 M	specification/values/scope.md
+
+[33mcommit d3a19c44444588ac1a71c9a9cf28cf248c9c3d49[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 12:44:51 2018 -0400
+
+    Update introduction.md
+
+:100644 100644 c1c71eb d24f772 M	specification/introduction/introduction.md
+
+[33mcommit f72091cfbd542abf38083253a4ad0dc987d55dc2[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 11:19:31 2018 -0400
+
+    Refined text
+
+:100644 100644 eb14a02 c1c71eb M	specification/introduction/introduction.md
+
+[33mcommit b16e53495daaabae4084a2ab13f348f417c54925[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 09:29:38 2018 -0400
+
+    Updated link
+
+:100644 100644 a6fbde2 01e5e0e M	specification/values/logical-impact-type.md
+
+[33mcommit 8297d5a79c222353fd9af72e61e0ddcc2ecf2b81[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 09:29:05 2018 -0400
+
+    updated subproperty text
+
+:100644 100644 31e8971 a6fbde2 M	specification/values/logical-impact-type.md
+
+[33mcommit f5aa149e2f87db95a1d5a2cff4bcf2272a34ed38[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 09:26:13 2018 -0400
+
+    Updated Cardinality text
+
+:100644 100644 5480bfe 024fbc5 M	specification/objects/impact.md
+
+[33mcommit 3f20ed8141c2666a06043f9c941970c5469fd66f[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 09:06:42 2018 -0400
+
+    Updated Sub-property text
+
+:100644 100644 04db03d c220058 M	specification/values/impact-method-type.md
+
+[33mcommit 806beed050bfd081412adda8c4e2ef97844219a6[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 09:05:15 2018 -0400
+
+    Updated description
+
+:100644 100644 3c3dcc3 64ef511 M	specification/objects/action.md
+
+[33mcommit 53907f252f84b8d300c7a736e69ca7d460ef6024[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:59:36 2018 -0400
+
+    Added missing cardinality text to properties
+
+:100644 100644 86f96b5 051ec6f M	specification/objects/barrier.md
+
+[33mcommit b27e55b2af2087b3b08feba74906d21a16f8f291[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:38:21 2018 -0400
+
+    Updated Links
+
+:100644 100644 fb1cc01 3c3dcc3 M	specification/objects/action.md
+
+[33mcommit c9c5718a08cdb58580ba7fe3fcb54a4c9c303b61[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:29:14 2018 -0400
+
+    Privilege Context text and links to other .md
+
+:100644 100644 49cfc8a 86f96b5 M	specification/objects/barrier.md
+
+[33mcommit 4295a571f4000cb01a2c8950a3af95444a05e1be[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:22:21 2018 -0400
+
+    Removed repetitive description text, updated links
+
+:100644 100644 cba2d44 49cfc8a M	specification/objects/barrier.md
+
+[33mcommit fa8785191c584ec390336ff041a8d7af8be7ddc1[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:19:27 2018 -0400
+
+    Updated example values to display properly
+
+:100644 100644 644d4a1 9621b2e M	specification/objects/product.md
+
+[33mcommit 50169d8856564d9fc42ed79e82c8283ac852144d[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:17:26 2018 -0400
+
+    Updated links
+
+:100644 100644 512f176 5d160fe M	specification/objects/scenario.md
+
+[33mcommit f34d525d2788b72a967255f3cc9edc02f045b676[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:15:20 2018 -0400
+
+    updated links
+
+:100644 100644 4c0957c 9c9a91b M	specification/objects/vulnerability.md
+
+[33mcommit 379375023cf8a5f735043daf413dcd26a9b51f25[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:10:03 2018 -0400
+
+    updated description
+
+:100644 100644 495233c c3a6ddb M	specification/values/physical-impact-type.md
+
+[33mcommit a567ae72a6180e8dfb1e9c310f68ef9ca2c27449[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:09:23 2018 -0400
+
+    Updated hasPhysicalImpact text
+
+:100644 100644 462b2e7 5480bfe M	specification/objects/impact.md
+
+[33mcommit ff00d2a2c034a7e606ea011aa8d374f27b32bb81[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Fri Jul 13 08:04:24 2018 -0400
+
+    Updated description text for Scope and Criticality properties
+
+:100644 100644 faf9db0 462b2e7 M	specification/objects/impact.md
+
+[33mcommit c55f990896e8d54cd14d47e9d82f9f594af52072[m
+Author: Chris-Turner-NIST <40207468+Chris-Turner-NIST@users.noreply.github.com>
+Date:   Thu Jul 12 12:31:04 2018 -0400
+
+    clerical modifications to markdown
+
+:100644 100644 8193b3a cba2d44 M	specification/objects/barrier.md
+
+[33mcommit 596b7255aba2f7fa985cd665d29166bfe57b7439[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Thu Jul 12 12:26:16 2018 -0400
+
+    removing entities, they were replaced with objects and values folders
+
+:100644 000000 1430b97 0000000 D	specification/entities/attack-theater.md
+:100644 000000 32fccf2 0000000 D	specification/entities/barrier.md
+:100644 000000 c68db16 0000000 D	specification/entities/context.md
+:100644 000000 d68d388 0000000 D	specification/entities/engineering-method.md
+:100644 000000 5ef444a 0000000 D	specification/entities/entity-role.md
+:100644 000000 70aacb3 0000000 D	specification/entities/impact-method.md
+:100644 000000 ef08ef7 0000000 D	specification/entities/known-chain.md
+:100644 000000 000eacb 0000000 D	specification/entities/logical-impact.md
+:100644 000000 1a45dd2 0000000 D	specification/entities/mitigation.md
+:100644 000000 25d7318 0000000 D	specification/entities/physical-impact.md
+:100644 000000 dee51bd 0000000 D	specification/entities/privilege-level.md
+:100644 000000 4c6df25 0000000 D	specification/entities/product.md
+:100644 000000 b9efadc 0000000 D	specification/entities/provenance.md
+:100644 000000 3563016 0000000 D	specification/entities/scenario.md
+:100644 000000 6cf7b8d 0000000 D	specification/entities/scope.md
+:100644 000000 910d685 0000000 D	specification/entities/sector-of-interest.md
+:100644 000000 bb27b0b 0000000 D	specification/entities/victim-type.md
+:100644 000000 31468ee 0000000 D	specification/entities/vulnerability-type.md
+:100644 000000 4167a26 0000000 D	specification/entities/vulnerability.md
+
+[33mcommit 4e4e990631b64842463a57216d9d0d90e5016acd[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Thu Jul 12 12:24:38 2018 -0400
+
+    updated entities and markdown format to align with new understanding of objects and values based on rdf/s/owl background work
+
+:000000 100644 0000000 fb1cc01 A	specification/objects/action.md
+:000000 100644 0000000 8193b3a A	specification/objects/barrier.md
+:000000 100644 0000000 faf9db0 A	specification/objects/impact.md
+:000000 100644 0000000 644d4a1 A	specification/objects/product.md
+:000000 100644 0000000 7af45e4 A	specification/objects/provenance.md
+:000000 100644 0000000 512f176 A	specification/objects/scenario.md
+:000000 100644 0000000 4c0957c A	specification/objects/vulnerability.md
+:000000 100644 0000000 ea0c46f A	specification/values/attack-theater-type.md
+:000000 100644 0000000 f19adf9 A	specification/values/context-type.md
+:000000 100644 0000000 544adfe A	specification/values/criticality.md
+:000000 100644 0000000 5b18e54 A	specification/values/engineering-method-type.md
+:000000 100644 0000000 c5cf781 A	specification/values/entity-role-type.md
+:000000 100644 0000000 04db03d A	specification/values/impact-method-type.md
+:000000 100644 0000000 46fdf77 A	specification/values/known-chain.md
+:000000 100644 0000000 31e8971 A	specification/values/logical-impact-type.md
+:000000 100644 0000000 495233c A	specification/values/physical-impact-type.md
+:000000 100644 0000000 f9a47df A	specification/values/privilege-level-type.md
+:000000 100644 0000000 69e36d0 A	specification/values/scope.md
+:000000 100644 0000000 69b9217 A	specification/values/sector-of-interest-type.md
+:000000 100644 0000000 6a624fd A	specification/values/vulnerability-type.md
+
+[33mcommit 5df7f08cad9a18220d47335003100bff39403e04[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Tue Jun 19 15:54:47 2018 -0400
+
+    fixed clerical mistake
+
+:100644 100644 cc704e8 eb14a02 M	specification/introduction/introduction.md
+
+[33mcommit 1f362b4bc3f8b9c49da886aa16121dd8857a2c2e[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Tue Jun 19 12:33:35 2018 -0400
+
+    added introductory materials
+
+:000000 100644 0000000 f5b23b3 A	specification/introduction/abstract.md
+:000000 100644 0000000 cc704e8 A	specification/introduction/introduction.md
+
+[33mcommit 68bf2871c2daaf8b5432784ad2891fa7e7fc2e37[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Tue Jun 19 11:01:04 2018 -0400
+
+    added initial figures for vulntology documentation
+
+:000000 100644 0000000 4a49c3b A	specification/figures/high-level-model.pdf
+:000000 100644 0000000 7795a1d A	specification/figures/vulntology-decision-chart.vsdx
+:000000 100644 0000000 9c2ff90 A	specification/figures/vulntology-graph.vsdx
+
+[33mcommit 029c6dd2b394317696154fb9abb7f2ed065d7ac4[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Jun 15 13:29:44 2018 -0400
+
+    resolved more clerical errors
+
+:100644 100644 a07f1f5 32fccf2 M	specification/entities/barrier.md
+:100644 100644 6d0402c c68db16 M	specification/entities/context.md
+:100644 100644 97fc67d d68d388 M	specification/entities/engineering-method.md
+:000000 100644 0000000 5ef444a A	specification/entities/entity-role.md
+:100644 100644 582a363 70aacb3 M	specification/entities/impact-method.md
+:100644 100644 23cd014 dee51bd M	specification/entities/privilege-level.md
+
+[33mcommit e53ea5589b9ab3e3edfdaaaa6665ea2e941ac623[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Fri Jun 15 10:53:13 2018 -0400
+
+    Added final items for Section 3 markdown conversion
+
+:100644 100644 80976dd a07f1f5 M	specification/entities/barrier.md
+:000000 100644 0000000 582a363 A	specification/entities/impact-method.md
+:000000 100644 0000000 000eacb A	specification/entities/logical-impact.md
+:000000 100644 0000000 25d7318 A	specification/entities/physical-impact.md
+:000000 100644 0000000 6cf7b8d A	specification/entities/scope.md
+
+[33mcommit 1649c8936a56c567281170a3129dc0074b00a4ea[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Thu Jun 14 14:48:35 2018 -0400
+
+    updated a few more clerical errors
+
+:100644 100644 faf5dca 1430b97 M	specification/entities/attack-theater.md
+:100644 100644 498b61c 80976dd M	specification/entities/barrier.md
+:100644 100644 0b2238b 6d0402c M	specification/entities/context.md
+:100644 100644 6d99564 97fc67d M	specification/entities/engineering-method.md
+:100644 100644 c727800 ef08ef7 M	specification/entities/known-chain.md
+:100644 100644 a7aa9d8 1a45dd2 M	specification/entities/mitigation.md
+:100644 100644 e82602f 23cd014 M	specification/entities/privilege-level.md
+:100644 100644 7eca0da 4c6df25 M	specification/entities/product.md
+:100644 100644 69e40a8 b9efadc M	specification/entities/provenance.md
+:100644 100644 1351978 3563016 M	specification/entities/scenario.md
+:100644 100644 7dca4f8 910d685 M	specification/entities/sector-of-interest.md
+:100644 100644 b689247 bb27b0b M	specification/entities/victim-type.md
+:100644 100644 7dd1066 31468ee M	specification/entities/vulnerability-type.md
+:100644 100644 4e29536 4167a26 M	specification/entities/vulnerability.md
+
+[33mcommit 0bab24560bf7f5a28a42c728f9c487ff7f6d1d70[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Thu Jun 14 14:46:42 2018 -0400
+
+    Added more entities in markdown format, conformed formats, resolved some clerical errors
+
+:000000 100644 0000000 498b61c A	specification/entities/barrier.md
+:000000 100644 0000000 0b2238b A	specification/entities/context.md
+:000000 100644 0000000 6d99564 A	specification/entities/engineering-method.md
+:100644 100644 2ce5b16 c727800 M	specification/entities/known-chain.md
+:000000 100644 0000000 a7aa9d8 A	specification/entities/mitigation.md
+:000000 100644 0000000 e82602f A	specification/entities/privilege-level.md
+:000000 100644 0000000 7eca0da A	specification/entities/product.md
+:100644 100644 4e232c6 69e40a8 M	specification/entities/provenance.md
+:100644 100644 d6e6c75 1351978 M	specification/entities/scenario.md
+:000000 100644 0000000 7dca4f8 A	specification/entities/sector-of-interest.md
+:000000 100644 0000000 b689247 A	specification/entities/victim-type.md
+:100644 100644 a76ffc9 7dd1066 M	specification/entities/vulnerability-type.md
+
+[33mcommit 1c91018223ae379b9ed26ef20cf5bce809f8bf9e[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Tue Jun 12 14:58:50 2018 -0400
+
+    Added multiple entity records for transitioning vulntology to markdown
+
+:000000 100644 0000000 2ce5b16 A	specification/entities/known-chain.md
+:000000 100644 0000000 4e232c6 A	specification/entities/provenance.md
+:000000 100644 0000000 d6e6c75 A	specification/entities/scenario.md
+:000000 100644 0000000 a76ffc9 A	specification/entities/vulnerability-type.md
+
+[33mcommit 411e3b6ee78e4676837464989f53f7edc41946c9[m
+Author: Turner <cat3@NIST.GOV>
+Date:   Tue Jun 12 13:03:53 2018 -0400
+
+    Added additional text to the attack-theatre entity and cleaned up some unwanted text
+
+:100644 100644 57b07d5 faf5dca M	specification/entities/attack-theater.md
+
+[33mcommit 73d2b22f37fe893ac21069b27db0458f3055c297[m
+Author: david-waltermire-nist <david.waltermire@nist.gov>
+Date:   Tue Jun 12 11:34:20 2018 -0400
+
+    Initial WIP attack-theather content.
+
+:000000 100644 0000000 57b07d5 A	specification/entities/attack-theater.md
+
+[33mcommit 0647454141f7d65d032b02983d699375d54f21e6[m
+Author: David Waltermire <david.waltermire@nist.gov>
+Date:   Tue Jun 12 10:59:44 2018 -0400
+
+    Made a bunch of formatting changes.
+
+:100644 100644 427030e 4e29536 M	specification/entities/vulnerability.md
+
+[33mcommit dc49ef7d986663e1b42314a327f85d4171bd2876[m
+Author: david-waltermire-nist <david.waltermire@nist.gov>
+Date:   Tue Jun 12 10:43:04 2018 -0400
+
+    Added content for the core vulnerability entity. Removed redundant text from the license.
+
+:100644 100644 09da2f8 8d84eb5 M	LICENSE.md
+:000000 100644 0000000 427030e A	specification/entities/vulnerability.md
+
+[33mcommit 497494a0619ef4b3d0002f0ceac8999ce1a6d560[m
+Author: david-waltermire-nist <david.waltermire@nist.gov>
+Date:   Tue Jun 12 10:26:59 2018 -0400
+
+    Added basic text content to the repo
+
+:000000 100644 0000000 0e000e8 A	CODE_OF_CONDUCT.md
+:000000 100644 0000000 09da2f8 A	LICENSE.md
+:000000 100644 0000000 faf4e63 A	README.md
