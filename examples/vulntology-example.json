@@ -111,14 +111,14 @@
                 "blockedByBarrier": [
                     {
                         "id": "S1B1",
-                        "barrierType": "Authentication/Authorization::Impersonation::Social Engineering",
+                        "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
                         "hasEngineeringMethod": ["MaliciousLink"],
                         "neededPrivileges": "User",
                         "relatesToContext": "Application"
                     },
                     {
                         "id": "S1B2",
-                        "barrierType": "Authentication/Authorization::Privileges Required",
+                        "hasBarrierType": "Authentication/Authorization::Privileges Required",
                         "neededPrivileges": "User",
                         "relatesToContext": "Application"
                     }

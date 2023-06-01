@@ -289,19 +289,19 @@
                 {
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
-                        "barrierType": {"const": "Authentication/Authorization::Privileges Required"},
+                        "hasBarrierType": {"const": "Authentication/Authorization::Privileges Required"},
                         "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
                     },
                     "required": [
                         "id",
-                        "barrierType",
+                        "hasBarrierType",
                         "neededPrivileges"
                     ]
                 },
                 {
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
-                        "barrierType": {"const": "Authentication/Authorization::Impersonation::Social Engineering"},
+                        "hasBarrierType": {"const": "Authentication/Authorization::Impersonation::Social Engineering"},
                         "hasEngineeringMethod": {
                             "type": "array",
                             "items": {"$ref": "#/definitions/EngineeringMethod"}
@@ -311,14 +311,14 @@
                     },
                     "required": [
                         "id",
-                        "barrierType",
+                        "hasBarrierType",
                         "hasEngineeringMethod"
                     ]
                 },
                 {
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
-                        "barrierType": {
+                        "hasBarrierType": {
                             "oneOf": [
                                 {"const": "Boundary Protections"},
                                 {"const": "Boundary Protections::Container"},
@@ -329,14 +329,14 @@
                     },
                     "required": [
                         "id",
-                        "barrierType",
+                        "hasBarrierType",
                         "relatesToContext"
                     ]
                 },
                 {
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
-                        "barrierType": {
+                        "hasBarrierType": {
                             "type": "string",
                             "enum": [
                                 "Obfuscation",
@@ -359,7 +359,7 @@
                     },
                     "required": [
                         "id",
-                        "barrierType"
+                        "hasBarrierType"
                     ]
                 }
             ]
