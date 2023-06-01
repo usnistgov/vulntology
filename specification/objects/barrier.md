@@ -34,5 +34,8 @@ There are multiple types of Barriers and each type has one or more subtypes whic
     - **Sandbox**:  The product is deployed within a sandbox that must be broken out from to recognize impacts
     - **Container**:  The product is deployed within a type of container that must be broken out from to recognize impacts.
 
+## Example Use
+https://github.com/Chris-Turner-NIST/vulntology/blob/396796b06fda903f8bc3961cbcbbb0dda52e257a/examples/vulntology-example.json#L111-L125
 
+## Graph View
  ![Barrier Graph](../figures/graphsnippets/BarrierSnippet.png "Barrier Graph")
