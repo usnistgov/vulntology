@@ -149,7 +149,7 @@
                     "type": "object",
                     "properties": {
                         "hasImpactMethodType": {"const": "Context Escape"},
-                        "hasEscapeContext": {"$ref": "#/definitions/EscapeContext"}
+                        "hasEscapeContext": {"$ref": "#/definitions/Context"}
                     },
                     "required": [
                         "hasImpactMethodType",
