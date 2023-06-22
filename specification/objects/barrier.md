@@ -34,5 +34,23 @@ There are multiple types of Barriers and each type has one or more subtypes whic
     - **Sandbox**:  The product is deployed within a sandbox that must be broken out from to recognize impacts
     - **Container**:  The product is deployed within a type of container that must be broken out from to recognize impacts.
 
-
+## Example Use
+```json
+"blockedByBarrier": [
+    {
+        "id": "S1B1",
+        "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
+        "hasEngineeringMethod": ["MaliciousLink"],
+        "neededPrivileges": "User",
+        "relatesToContext": "Application"
+    },
+    {
+        "id": "S1B2",
+        "hasBarrierType": "Authentication/Authorization::Privileges Required",
+        "neededPrivileges": "User",
+        "relatesToContext": "Application"
+    }
+]
+```
+## Graph View
  ![Barrier Graph](../figures/graphsnippets/BarrierSnippet.png "Barrier Graph")

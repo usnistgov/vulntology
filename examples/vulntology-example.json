@@ -108,17 +108,17 @@
                         }
                     ]
                 },
-                "barrier": [
+                "blockedByBarrier": [
                     {
                         "id": "S1B1",
-                        "blockedByBarrier": "SocialEngineering",
+                        "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
                         "hasEngineeringMethod": ["MaliciousLink"],
                         "neededPrivileges": "User",
                         "relatesToContext": "Application"
                     },
                     {
                         "id": "S1B2",
-                        "blockedByBarrier": "PrivilegesRequired",
+                        "hasBarrierType": "Authentication/Authorization::Privileges Required",
                         "neededPrivileges": "User",
                         "relatesToContext": "Application"
                     }
