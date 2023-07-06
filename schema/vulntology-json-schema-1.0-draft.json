@@ -54,6 +54,7 @@
                 "hasEnumeration": {
                     "$comment": "This is intended to be used for simple enumerations such as generic free text or common formats that identify explicit instances of products such as CPE or SWID.",
                     "type": "array",
+                    "minItems": 1,
                     "items": {
                         "$ref": "#/definitions/ProductEnumeration"
                     }
