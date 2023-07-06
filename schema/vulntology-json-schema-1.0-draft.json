@@ -389,12 +389,14 @@
                 "id": {"$ref": "#/definitions/UUID"},
                 "hasImpactMethod": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/ImpactMethod"}
                 },
                 "affectsContext": {"$ref": "#/definitions/Context"},
                 "hasEntityRole": {"$ref": "#/definitions/EntityRole"},
                 "resultsInImpact": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Impact"}
                 },
                 "doesNotResultInImpact": {
@@ -450,6 +452,7 @@
                 },
                 "hasAction": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Action"}
                 },
                 "hasName": {
@@ -480,11 +483,13 @@
                 "hasIdentity": {
                     "type": "array",
                     "uniqueItems": true,
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
                 },
                 "hasScenario": {
                     "type": "array",
                     "uniqueItems": true,
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Scenario"}
                 }
             },
