@@ -44,24 +44,36 @@
                     "required": ["hasEnumeration"]
                 },
                 {
-                    "required": ["hasCPEApplicabilityStatement"]
+                    "required": ["hasNvdCpeApplicabilityStatement"]
+                },
+                {
+                    "required": ["hasCve5Product"]
                 }
             ],
             "properties": {
                 "hasEnumeration": {
+                    "$comment": "This is intended to be used for simple enumerations such as generic free text or common formats that identify explicit instances of products such as CPE or SWID.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/ProductEnumeration"
                     }
                 },
-                "hasCPEApplicabilityStatement": {"$ref": "#/definitions/CPEApplicabilityStatement"}
+                "hasNvdCpeApplicabilityStatement": {"$ref": "#/definitions/NvdCpeApplicabilityStatement"},
+                "hasCve5Product": {"$ref": "#/definitions/Cve5Product"}
             }
         },
-        "CPEApplicabilityStatement": {
+        "NvdCpeApplicabilityStatement": {
             "type": "array",
             "items": {
                 "$comment": "This is to reference the NVD configurations section, which requires much more complex JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way.",
-                "$ref": "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema#/definitions/def_node"
+                "$ref": "https://csrc.nist.gov/schema/nvd/api/2.0/cve_api_json_2.0.schema#/definitions/config"
+            }
+        },
+        "Cve5Product": {
+            "type": "array",
+            "items": {
+                "$comment": "This is to reference the CVE Program CVE 5.0 JSON Schema's Product section which can communicate vulnerable product information in various complicated ways.",
+                "$ref": "https://raw.githubusercontent.com/CVEProject/cve-schema/v5.0.0/schema/v5.0/CVE_JSON_5.0_schema.json#/definitions/product"
             }
         },
         "ProductEnumeration": {
