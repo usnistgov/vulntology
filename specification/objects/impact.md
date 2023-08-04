@@ -4,8 +4,8 @@ An Impact is a recognized result of an Action for a given Vulnerability Scenario
 
 ## Properties
 - **id** (one): A globally unique identifier for the impact that distinguishes it from other impacts related to the same vulnerability.
-- **hasScope** (one): A coarse measure of the level of impact an exploit could have on a target. (See [Scope](../values/scope.md)) <br />
-- **hasCriticality** (one): A measure of the relative importance of the associated Scope. (See [Criticality](../values/criticality.md)) <br />
+- **hasScope** (one): A coarse measure of the level of impact an exploit could have on a target. (See [Scope](../values/scope.md))
+- **hasCriticality** (one): A measure of the relative importance of the associated Scope. (See [Criticality](../values/criticality.md))
 
 ## Types of Impact
 

@@ -41,7 +41,7 @@
             "type": "object",
             "anyOf": [
                 {
-                    "required": ["hasEnumeration"]
+                    "required": ["hasProductEnumeration"]
                 },
                 {
                     "required": ["hasNvdCpeApplicabilityStatement"]
@@ -51,7 +51,7 @@
                 }
             ],
             "properties": {
-                "hasEnumeration": {
+                "hasProductEnumeration": {
                     "$comment": "This is intended to be used for simple enumerations such as generic free text or common formats that identify explicit instances of products such as CPE or SWID.",
                     "type": "array",
                     "minItems": 1,
@@ -72,6 +72,7 @@
         },
         "Cve5Product": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "$comment": "This is to reference the CVE Program CVE 5.0 JSON Schema's Product section which can communicate vulnerable product information in various complicated ways.",
                 "$ref": "https://raw.githubusercontent.com/CVEProject/cve-schema/v5.0.0/schema/v5.0/CVE_JSON_5.0_schema.json#/definitions/product"
@@ -82,6 +83,7 @@
                 "scheme": {"$ref": "#/definitions/SimpleScheme"},
                 "values": {
                     "type": "array",
+                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {"type": "string"}
                 }
@@ -366,7 +368,7 @@
                                 "Authentication/Authorization",
                                 "Authentication/Authorization::Impersonation",
                                 "Authentication/Authorization::Encryption",
-                                "Authentication/Authorization::Impersonation::Meddler-in-the-Middle"
+                                "Authentication/Authorization::Impersonation::On Path"
                             ]
                         }
                     },

@@ -7,7 +7,7 @@ A scenario describes the conditions surrounding the possible use of a vulnerabil
 - **hasName** (zero or one): A name or label to assist in identifying a given scenario in the context of the containing Vulnerability. This name should be unique across all sibling scenarios.
 - **requiresAttackTheater** (one): Attack Theater is the area or place from which an attack must occur. Each separate theater represents varying levels of implied trust and attack surface. (See [Theater](../values/theater.md))
 - **evidencedBySource** (one or many):  [Resource Reference](../values/resource-reference.md) will assist in proving a Vulnerability Scenario is legitimate. 
-- **hasExploitedWeakness** (one): The weakness causing the Vulnerability. When choosing a value, the most applicable weaknesse should be selected. (See [Exploited Weakness](../values/exploited-weakness.md))
+- **hasExploitedWeakness** (one): The weakness causing the Vulnerability. When choosing a value, the most applicable weakness should be selected. (See [Exploited Weakness](../values/exploited-weakness.md))
 
 
 ## Relationships
