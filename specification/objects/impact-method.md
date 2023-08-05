@@ -6,7 +6,7 @@ A description of the method used to exploit a vulnerability providing some addit
 
 - **hasImpactMethodType** (one): The nature of impact.  See [Impact Method Types](../values/impact-method-type.md).
 
-- **hasGainedPrivilege** (one - see notes): Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](privilege-level-type.md)
+- **hasGainedPrivilege** (one - see notes): Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](../values/privilege-level.md)
 
    Notes:
    - *Applies only when the **hasImpactMethodType**=`Privilege Escalation`*
