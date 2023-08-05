@@ -10,6 +10,6 @@ The software and/or hardware configurations that are known to be vulnerable to e
 
 ## Relationships
 
-N/A
+None.
 
 ![Product Graph](../figures/graphsnippets/ProductSnippet.png "Product Graph")

@@ -12,10 +12,10 @@ A scenario describes the conditions surrounding the possible use of a vulnerabil
 
 ## Relationships
 
-* affectsProduct (one): [Products](product.md) identify the set of products affected within a Scenario.
+- **affectsProduct** (one): [Products](product.md) identify the set of products affected within a Scenario.
 
-* blockedByBarrier (zero or many): [Barriers](barrier.md) may increase the difficulty of a Scenario.
+- **blockedByBarrier** (zero or many): [Barriers](barrier.md) may increase the difficulty of a Scenario.
 
-* hasAction (one or many): [Actions](action.md) will occur within a Scenario
+- **hasAction** (one or many): [Actions](action.md) will occur within a Scenario
 
 ![Scenario Graph](../figures/graphsnippets/ScenarioSnippet.png "Scenario Graph")
