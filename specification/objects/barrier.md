@@ -5,7 +5,7 @@ This could be any characteristic inherent in the vulnerability that could impede
 ## Properties
 
 - **id** (one): A globally unique identifier for the impact that distinguishes it from other impacts related to the same vulnerability.
-- **hasBarrierType** (one): Identifies the kind of barrier. Based on the barrier's type, [additional properties](#additional-properties) may be required.
+- **hasBarrierType** (one): Identifies the kind of barrier. Based on the barrier's type, [additional properties](#additional-properties) may be required. (See [Barrier Types](../values/barrier-type.md))
 
 ## Additional Properties
 
