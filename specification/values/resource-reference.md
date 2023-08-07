@@ -6,8 +6,8 @@ Representation of a source of information. The source which provided the informa
 
 A URL that assists in identification, explanation, or origin of the Vulnerability
 
-
 ### Example Value:
+
 - https://nvd.nist.gov/
 
 ![Resource Reference Graph](../figures/graphsnippets/ResourceReferenceSnippet.png "Resource Reference Graph")

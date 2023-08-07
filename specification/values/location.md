@@ -1,6 +1,6 @@
 # Location Values
 
-Designates the specific area or location impacted. Serves as supplemental information..
+Designates the specific area or location impacted. Serves as supplemental information.
 
 ## Values
 

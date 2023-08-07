@@ -6,7 +6,6 @@ Used when exploitation of the Vulnerability could result in a tangible impact to
 
 Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing "Critical" as a value would imply "Human Injury" as well.
 
-- **Property Damage**:  An exploit of the Vulnerability could result in physical damage to the device or surrounding environment.
 - **Human Injury**:  An exploit of the Vulnerability could result in injury to users or nearby individuals. Descriptions below are based on Table D.3 in [ISO/IEC 14971:2007].
   - **Negligible**:  Inconvenience or temporary discomfort
   - **Minor**:  Temporary injury or impairment not requiring professional medical intervention
@@ -17,5 +16,6 @@ Items that are indented represent more specific values that can be used to descr
   - **Assets**:  Exploitation of the Vulnerability enables excessive use of an asset. The excessive use could decrease the usable lifetime of the asset or unnecessarily consume fuel.
   - **Electricity**:  Exploitation of the Vulnerability enables excessive electricity usage
   - **Water**:  Exploitation of the Vulnerability enables excessive water usage
+- **Property Damage**:  An exploit of the Vulnerability could result in physical damage to the device or surrounding environment.
 
 ![Physical Impact Values Graph](../figures/graphsnippets/PhysicalImpactValuesSnippet.png "Physical Impact Values Graph")

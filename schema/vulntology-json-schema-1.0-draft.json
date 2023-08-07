@@ -41,7 +41,7 @@
             "type": "object",
             "anyOf": [
                 {
-                    "required": ["hasEnumeration"]
+                    "required": ["hasProductEnumeration"]
                 },
                 {
                     "required": ["hasNvdCpeApplicabilityStatement"]
@@ -51,9 +51,10 @@
                 }
             ],
             "properties": {
-                "hasEnumeration": {
+                "hasProductEnumeration": {
                     "$comment": "This is intended to be used for simple enumerations such as generic free text or common formats that identify explicit instances of products such as CPE or SWID.",
                     "type": "array",
+                    "minItems": 1,
                     "items": {
                         "$ref": "#/definitions/ProductEnumeration"
                     }
@@ -64,6 +65,7 @@
         },
         "NvdCpeApplicabilityStatement": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "$comment": "This is to reference the NVD configurations section, which requires much more complex JSON than simple strings. We could expand to other references or a broader structure to allow other schemas to be referenced in a generally applicable way.",
                 "$ref": "https://csrc.nist.gov/schema/nvd/api/2.0/cve_api_json_2.0.schema#/definitions/config"
@@ -71,6 +73,7 @@
         },
         "Cve5Product": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "$comment": "This is to reference the CVE Program CVE 5.0 JSON Schema's Product section which can communicate vulnerable product information in various complicated ways.",
                 "$ref": "https://raw.githubusercontent.com/CVEProject/cve-schema/v5.0.0/schema/v5.0/CVE_JSON_5.0_schema.json#/definitions/product"
@@ -81,6 +84,7 @@
                 "scheme": {"$ref": "#/definitions/SimpleScheme"},
                 "values": {
                     "type": "array",
+                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {"type": "string"}
                 }
@@ -99,10 +103,10 @@
         "EngineeringMethod": {
             "type": "string",
             "enum": [
-                "Malicious Link",
+                "Malicious Application",
                 "Malicious File",
-                "Malicious Website Content",
-                "Malicious Application"
+                "Malicious Link",
+                "Malicious Website Content"
             ]
         },
         "PrivilegeLevel": {
@@ -118,16 +122,16 @@
         "Context": {
             "type": "string",
             "enum": [
-                "Hypervisor",
-                "Firmware",
-                "Host OS",
-                "Guest OS",
                 "Application",
-                "Application::Web Server",
+                "Application::Container",
                 "Application::Database",
                 "Application::Module",
-                "Application::Container",
+                "Application::Web Server",
                 "Channel",
+                "Firmware",
+                "Hypervisor",
+                "Host OS",
+                "Guest OS",
                 "Physical Hardware"
             ]
         },
@@ -149,11 +153,11 @@
                     "type": "object",
                     "properties": {
                         "hasImpactMethodType": {"const": "Privilege Escalation"},
-                        "gainedPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
+                        "hasGainedPrivilege": {"$ref": "#/definitions/PrivilegeLevel"}
                     },
                     "required": [
                         "hasImpactMethodType",
-                        "gainedPrivileges"
+                        "hasGainedPrivilege"
                     ],
                     "additionalProperties": false
                 },
@@ -205,36 +209,34 @@
             ]
         },
         "LogicalImpact": {
-            "$comment": "Why is this not a standalone type definition?",
             "type": "string",
             "enum": [
-                "Write-Direct",
-                "Read-Direct",
+                "Indirect Disclosure",
+                "Read Direct",
                 "Resource Removal",
                 "Service Interrupt",
-                "Service Interrupt::Shutdown",
-                "Service Interrupt::Reboot",
                 "Service Interrupt::Hang",
                 "Service Interrupt::Panic",
+                "Service Interrupt::Reboot",
+                "Service Interrupt::Shutdown",
                 "Service Interrupt::Unrecoverable",
-                "Indirect Discloure",
-                "Privilege Escalation"
+                "Write Direct"
             ]
         },
         "PhysicalImpact": {
             "type": "string",
             "enum": [
-                "Physical Resource Consumption",
-                "Physical Resource Consumption::Electricity",
-                "Physical Resource Consumption::Water",
-                "Physical Resource Consumption::Assets",
-                "Property Damage",
                 "Human Injury",
                 "Human Injury::Negligible",
                 "Human Injury::Minor",
                 "Human Injury::Serious",
                 "Human Injury::Critical",
-                "Human Injury::Catastrophic"
+                "Human Injury::Catastrophic",
+                "Physical Resource Consumption",
+                "Physical Resource Consumption::Assets",
+                "Physical Resource Consumption::Electricity",
+                "Physical Resource Consumption::Water",
+                "Property Damage"
             ]
         },
         "LogicalImpactLocation": {
@@ -253,21 +255,7 @@
                         "id": {"$ref": "#/definitions/UUID"},
                         "hasCriticality": {"$ref": "#/definitions/Criticality"},
                         "hasScope": {"$ref": "#/definitions/Scope"},
-                        "hasLogicalImpact": {
-                            "type": "string",
-                            "enum": [
-                                "Write-Direct",
-                                "Read-Direct",
-                                "Resource Removal",
-                                "Service Interrupt",
-                                "Service Interrupt::Shutdown",
-                                "Service Interrupt::Reboot",
-                                "Service Interrupt::Hang",
-                                "Service Interrupt::Panic",
-                                "Service Interrupt::Unrecoverable",
-                                "Indirect Discloure"
-                            ]
-                        },
+                        "hasLogicalImpact": {"$ref": "#/definitions/LogicalImpact"},
                         "hasLocation": {"$ref": "#/definitions/LogicalImpactLocation"}
                     },
                     "required": [
@@ -288,8 +276,8 @@
                     "required": [
                         "id",
                         "hasPhysicalImpact",
-                        "hasCriticality",
-                        "hasScope"
+                        "hasScope",
+                        "hasCriticality"
                     ],
                     "additionalProperties": false
                 }
@@ -302,12 +290,12 @@
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
                         "hasBarrierType": {"const": "Authentication/Authorization::Privileges Required"},
-                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
+                        "hasNeededPrivilege": {"$ref": "#/definitions/PrivilegeLevel"}
                     },
                     "required": [
                         "id",
                         "hasBarrierType",
-                        "neededPrivileges"
+                        "hasNeededPrivilege"
                     ]
                 },
                 {
@@ -316,10 +304,11 @@
                         "hasBarrierType": {"const": "Authentication/Authorization::Impersonation::Social Engineering"},
                         "hasEngineeringMethod": {
                             "type": "array",
+                            "minItems": 1,
                             "items": {"$ref": "#/definitions/EngineeringMethod"}
                         },
-                        "relatesToContext": {"$ref": "#/definitions/Context"},
-                        "neededPrivileges": {"$ref": "#/definitions/PrivilegeLevel"}
+                        "hasNeededPrivilege": {"$ref": "#/definitions/PrivilegeLevel"},
+                        "relatesToContext": {"$ref": "#/definitions/Context"}
                     },
                     "required": [
                         "id",
@@ -365,7 +354,7 @@
                                 "Authentication/Authorization",
                                 "Authentication/Authorization::Impersonation",
                                 "Authentication/Authorization::Encryption",
-                                "Authentication/Authorization::Impersonation::Meddler-in-the-Middle"
+                                "Authentication/Authorization::Impersonation::On Path"
                             ]
                         }
                     },
@@ -389,16 +378,20 @@
                 "id": {"$ref": "#/definitions/UUID"},
                 "hasImpactMethod": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/ImpactMethod"}
                 },
                 "affectsContext": {"$ref": "#/definitions/Context"},
                 "hasEntityRole": {"$ref": "#/definitions/EntityRole"},
                 "resultsInImpact": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Impact"}
                 },
                 "doesNotResultInImpact": {
+                    "$comment": "While minItems=1, this property is not required, so the minItems only apply when declared.",
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Impact"}
                 },
                 "hasName": {
@@ -437,19 +430,23 @@
                 },
                 "hasExploitedWeakness": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/ExploitedWeakness"}
                 },
                 "evidencedBySource": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/ResourceReference"}
                 },
                 "affectsProduct": {"$ref": "#/definitions/Product"},
                 "blockedByBarrier": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Barrier"}
                 },
                 "hasAction": {
                     "type": "array",
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Action"}
                 },
                 "hasName": {
@@ -468,23 +465,27 @@
             "properties": {
                 "hasSectorOfInterest": {
                     "type": "array",
+                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {"$ref": "#/definitions/SectorOfInterest"}
                 },
                 "hasOriginatingProduct": {"$ref": "#/definitions/Product"},
                 "hasKnownChain": {
                     "type": "array",
+                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
                 },
                 "hasIdentity": {
                     "type": "array",
                     "uniqueItems": true,
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/VulnerabilityIdentifier"}
                 },
                 "hasScenario": {
                     "type": "array",
                     "uniqueItems": true,
+                    "minItems": 1,
                     "items": {"$ref": "#/definitions/Scenario"}
                 }
             },

@@ -7,5 +7,4 @@ A coarse measure of the level of impact an exploit could have on a target. In so
 - **Limited**:  There are restrictions to the associated impact. Limited Scope impacts shall always be associated a subvalue of it's criticality. Criticality must be considered in concert with the Context to which it is associated. That is, for a given Context (such as Guest OS or Application), the Criticality should reflect how significant an associated impact could be for the specific Context. An impact in a 'Guest OS' Context may be of lower significance than the same impact in a 'Host OS' Context and should be reflected accordingly by its associated Criticality.
 - **Unlimited**:  There are no restrictions to the associated impact. This is inherently considered to be similar in severity to a limited scope, but high criticality.
 
-
 ![Scope Graph](../figures/graphsnippets/ScopeSnippet.png "Scope Graph")
