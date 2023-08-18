@@ -48,6 +48,9 @@
                 },
                 {
                     "required": ["hasCve5Product"]
+                },
+                {
+                    "required": ["hasCve4Product"]
                 }
             ],
             "properties": {
@@ -60,7 +63,8 @@
                     }
                 },
                 "hasNvdCpeApplicabilityStatement": {"$ref": "#/definitions/NvdCpeApplicabilityStatement"},
-                "hasCve5Product": {"$ref": "#/definitions/Cve5Product"}
+                "hasCve5Product": {"$ref": "#/definitions/Cve5Product"},
+                "hasCve4Product": {"$ref": "#/definitions/Cve4Product"}
             }
         },
         "NvdCpeApplicabilityStatement": {
@@ -75,8 +79,16 @@
             "type": "array",
             "minItems": 1,
             "items": {
-                "$comment": "This is to reference the CVE Program CVE 5.0 JSON Schema's Product section which can communicate vulnerable product information in various complicated ways.",
+                "$comment": "This is to reference the CVE Program CVE 5.0 JSON Schema's product section which can communicate vulnerable product information in various complicated ways.",
                 "$ref": "https://raw.githubusercontent.com/CVEProject/cve-schema/v5.0.0/schema/v5.0/CVE_JSON_5.0_schema.json#/definitions/product"
+            }
+        },
+        "Cve4Product": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$comment": "This is to reference the CVE Program CVE 4.0 JSON Schema's affects section which can communicate vulnerable product information.",
+                "$ref": "https://raw.githubusercontent.com/CVEProject/cve-schema/master/schema/v4.0/CVE_JSON_4.0_min_public.schema#definitions/affects"
             }
         },
         "ProductEnumeration": {
