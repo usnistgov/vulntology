@@ -1,0 +1,12 @@
+[
+    { "name": "bug", "color":"d73a4a", "description":"The issue is a bug report."},
+    { "name": "documentation", "color":"0075ca", "description":"The issue relates to improvements of additions to documentation."},
+    { "name": "duplicate", "color":"cfd3d7", "description":"The issue duplicates another issue."},
+    { "name": "enhancement", "color":"a2eeef", "description":"The issue adds a new feature, capability, or artifact to the repository."},
+    { "name": "good first issue", "color":"7057ff", "description":"Good issue for newcomers to work on."},
+    { "name": "help wanted", "color":"008672", "description":"Help from the community is needed with this issue."},
+    { "name": "invalid", "color":"e4e669", "description":"The issue is not resolvable in any way."},
+    { "name": "question", "color":"d876e3", "description":"The issue contains a question that needs to be answered."},
+    { "name": "user story", "color":"73b3e7", "description":"The issue is a user story for a development task."},
+    { "name": "wontfix", "color":"ffffff", "description":"The issue will not be addressed."}
+]
