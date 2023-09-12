@@ -1,3 +1,0 @@
-# Vulntology Abstract
-
-The Vulntology aims to describe a more effective and efficient methodology for characterizing vulnerabilities found in various forms of software and hardware implementations including but not limited to information technology systems, industrial control systems or medical devices to assist in the vulnerability management process. The primary goal of the described methodology is to enable automated analysis using metrics such as the Common Vulnerability Scoring System (CVSS). Additional goals include establishing a baseline of the minimum information needed to properly inform the vulnerability management process, and facilitating the sharing of vulnerability information across language barriers.

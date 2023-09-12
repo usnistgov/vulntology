@@ -1,1 +1,7 @@
 *.~vsdx
+/node_modules
+/website/.hugo_build.lock
+/website/public
+/website/resources
+/website/_vendor
+

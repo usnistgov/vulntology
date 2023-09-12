@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an idea for this project
+labels: ["user story", "enhancement"]
+projects: ["usnistgov/49"]
+body:
+- type: textarea
+  id: user-story
+  attributes:
+    label: User Story
+    description: Describe why the new feature is needed.
+    placeholder: |
+      As a Vulntology *stakeholder*, I *provide a clear and concise description of what the problem is.* Ex. I need to be able to do
+  validations:
+    required: true
+- type: textarea
+  id: goals
+  attributes:
+    label: Goals
+    description: Describe what needs to be accomplished to address the User Story.
+    placeholder: |
+      A clear and concise description of what you want to happen. This should be outcome focused. Include concise description of any alternative solutions or features you've considered. Feel free to include screenshots or examples about the feature request here.
+  validations:
+    required: true
+- type: textarea
+  id: dependencies
+  attributes:
+    label: Dependencies
+    description: Describe any previous issues or related work that must be completed to start or complete this issue.
+    placeholder: |
+      Describe any previous issues or related work that must be completed to start or complete this issue.
+  validations:
+    required: false
+- type: textarea
+  id: acceptance-criteria
+  attributes:
+    label: Acceptance Criteria
+    description: Describe the artifacts and additional work that must be completed to resolve this issue.
+    placeholder: |
+      Describe anything else that must be completed for this issue to be considered resolved.
+  validations:
+    required: false
