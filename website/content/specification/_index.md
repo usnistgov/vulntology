@@ -20,7 +20,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 The Vulntology framework is composed of simple components described below:
 
-- **Objects**: A Conceptual entity; Objects can be related to other objects, have types, relationships, and properties. A list of Objects defined by the Vulntology framework is located under the [objects](objects) directory. Each object, such as [Vulnerability](objects/vulnerability), can have multiple properties and/or relationships with other components.
+- **Objects**: A Conceptual entity; Objects can be related to other objects, have types, relationships, and properties. Each object, such as [Vulnerability](objects/vulnerability), can have multiple properties and/or relationships with other components.
 
     - **Relationships**: A connection relating one object to another. Relationships retain an expected cardinality, i.e. or `one to many` or `zero to many`.
 

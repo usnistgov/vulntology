@@ -8,7 +8,7 @@ A coarse measure of the level of impact an exploit could have on a target. In so
 
 ## Values
 
-- **Limited**:  There are restrictions to the associated [impact](../../impact).
+- **Limited**:  There are restrictions to the associated [impact](../../objects/impact).
 - **Unlimited**:  There are no restrictions to the associated impact.
 
 ## Graph View

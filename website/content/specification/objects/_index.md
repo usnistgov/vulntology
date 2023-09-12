@@ -7,7 +7,7 @@ sidenav:
 
 A Conceptual entity in the vulntology.
 
-Objects can be related to other objects, have types, and properties.  Each object, such as [vulnerability](objects/vulnerability), can have multiple properties and/or relationships with other components. 
+Objects can be related to other objects, have types, and properties.  Each object, such as [vulnerability](vulnerability), can have multiple properties and/or relationships with other components. 
 
 ## Object Types
 

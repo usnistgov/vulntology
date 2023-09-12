@@ -23,9 +23,9 @@ For more information on the project's current needs and priorities, see the proj
 ## Issue reporting and handling
 
 All requests for changes and enhancements to the repository are initiated through the project's [GitHub issue tracker](https://github.com/usnistgov/vulntology/issues). To initiate a request, please [create a new issue](https://help.github.com/articles/creating-an-issue/). The following issue templates exist for creating a new issue:
-* [User Story](https://github.com/usnistgov/vulntology/issues/new?template=feature_request.md&labels=enhancement%2C+User+Story): Use to describe a new feature or capability to be added to the project.
-* [Defect Report](https://github.com/usnistgov/vulntology/issues/new?template=bug_report.md&labels=bug): Use to report a problem with an existing feature or capability.
-* [Question](https://github.com/usnistgov/vulntology/issues/new?labels=question&template=question.md): Use to ask a question about the project or the contents of the repository.
+* [User Story](https://github.com/usnistgov/vulntology/issues/new?template=feature_request.yaml&labels=enhancement%2C+user+story): Use to describe a new feature or capability to be added to the project.
+* [Defect Report](https://github.com/usnistgov/vulntology/issues/new?template=bug_report.yaml&labels=bug): Use to report a problem with an existing feature or capability.
+* [Question](https://github.com/usnistgov/vulntology/issues/new?labels=question&template=question.yaml): Use to ask a question about the project or the contents of the repository.
 
 The project team regularly reviews the open issues, prioritizes their handling, and updates the issue statuses, proving comments on the current status as needed.
 
@@ -45,7 +45,8 @@ This project uses a typical GitHub fork and pull request [workflow](https://guid
 This repository consists of the following directories and files pertaining to the Vulntology project:
 
 - [.github](.github): Contains GitHub issue and pull request templates for the project.
-- [specification](specification): The current Vulntology specification, described in a collection of Markdown pages.- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): This file contains a code of conduct for the Vulntology project contributors.
+- [website](website): The current Vulntology specification website, described as a collection of Markdown pages to be generated as HTML.
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): This file contains a code of conduct for the Vulntology project contributors.
 - [CONTRIBUTING.md](CONTRIBUTING.md): This file is for potential contributors to the project. It provides basic information on the project, describes the main ways people can make contributions, explains how to report issues, and lists pointers to additional sources of information. It also has instructions on establishing a development environment for contributing to the project and using GitHub project cards to track development sprints.
 - [LICENSE.md](LICENSE.md): This file contains license information for the files in this GitHub repository.
 - [USERS.md](USERS.md): This file explains which types of users are most likely to benefit from use of this project and its artifacts.
