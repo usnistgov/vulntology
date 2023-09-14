@@ -8,19 +8,38 @@ A description of the method used to exploit a vulnerability providing some addit
 
 ## Properties
 
-- **hasImpactMethodType** (one): The nature of impact.  See [Impact Method Types](../../values/impact-method-type).
+An *impact method* has the following properties.
 
-- **hasGainedPrivilege** (one - see notes): Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](../../values/privilege-level)
+### Type
+
+{{%usa-tag%}}Name{{%/usa-tag%}} `hasImpactMethodType`
+{{%usa-tag%}}Cardinality{{%/usa-tag%}} one
+{{%usa-tag%}}Description{{%/usa-tag%}} The nature of impact.  See [Impact Method Types](../../values/impact-method-type).
+
+### Gained Privilege
+
+{{%usa-tag%}}Name{{%/usa-tag%}} `hasGainedPrivilege`
+{{%usa-tag%}}Cardinality{{%/usa-tag%}} one - see notes
+{{%usa-tag%}}Description{{%/usa-tag%}} Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](../../values/privilege-level)
 
    Notes:
    - *Applies only when the **hasImpactMethodType**=`Privilege Escalation`*
    - *Each `hasGainedPrivilege` relates to one privilege level*.
 
-- **hasEscapeContext** (one - see notes): The association denotes where a sandbox breakout originated. See [Context Types](../../values/context).
+### Escape Context
+
+{{%usa-tag%}}Name{{%/usa-tag%}} `hasEscapeContext`
+{{%usa-tag%}}Cardinality{{%/usa-tag%}} one - see notes
+{{%usa-tag%}}Description{{%/usa-tag%}} The association denotes where a sandbox breakout originated. See [Context Types](../../values/context).
 
    Notes:
    - *Applies only when the **hasImpactMethodType**=`Context Escape`*
    - *Each Context Escape relates to one context.*
-  
+
+## Relationships
+
+None
+
 ## Graph View
+
 ![Impact Method Graph](/figures/graphsnippets/ImpactMethodSnippet.png "Impact Method Graph")

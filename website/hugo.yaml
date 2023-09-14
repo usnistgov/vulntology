@@ -4,13 +4,6 @@ languageCode: en-us
 title: Vulntology
 googleAnalytics: UA-66610693-1
 enableRobotsTXT: true
-params:
-  header:
-    project_name: NIST Vulnerability Data Ontology
-    project_shortname: Vulntology
-  contentRepoPath: https://github.com/usnistgov/vulntology/tree/master/website/content
-  searchAffiliate: metaschema
-  usabanner: true
 menu:
   secondary:
     - name: Get involved

@@ -19,10 +19,10 @@ An impact is either *logical* or *physical*.
 - A *physical impact* is an effect, resulting from an action, that affects something tangible, such as a physical device, machinery, the surrounding environment, or person.
 
     Common examples include damage to assets, people or loss of resources.
-    
+
     Physical impacts are defined using the [`hasPhysicalImpact`](#physical-impact) property.
 
-Given that an impact is associated with an [action](../action), the impact is considered to be relative to the action's [*context*](../action#context). Thus, the impact's [*criticality*](#criticality) needs to be considered relative to the action's context. For a given context, such as `Guest OS` or `Application`, the criticality should reflect how significant an associated impact could be for the specific context.
+Given that an impact is associated with an [action](../action), the impact is considered to be relative to the action's [*context*](../action#affected-context). Thus, the impact's [*criticality*](#criticality) needs to be considered relative to the action's context. For a given context, such as `Guest OS` or `Application`, the criticality should reflect how significant an associated impact could be for the specific context.
 
 For example, an impact in a `Guest OS` context may be of lower significance than the same impact in a `Host OS` context, which should be reflected accordingly by the impact's criticality.
 
