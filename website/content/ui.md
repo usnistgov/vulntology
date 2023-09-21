@@ -18,8 +18,8 @@ The following tool supports editing Vulntology-based vulnerability information. 
 <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript>
 
 <div class="surface-ground">
-<app-root></app-root>
-<script src="runtime.js" type="module"></script>
-<script src="polyfills.js" type="module"></script>
-<script src="main.js" type="module"></script>
+  <app-root></app-root>
+  <script src="runtime.js" type="module"></script>
+  <script src="polyfills.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </div>
