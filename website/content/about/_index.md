@@ -38,10 +38,8 @@ A high level illustration that depicts the core differences between what is gene
 
 The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
 
-- Green represents new data points typically not captured.
-- Blue represents data points captured in both models that have little difference.
-- Yellow, Orange, Red and Purple all represent information relative to their respective boxes within the current model.
+* Green represents new data points typically not captured.
+* Blue represents data points captured in both models that have little difference.
+* Yellow, Orange, Red and Purple all represent information relative to their respective boxes within the current model.
 
 ![high-level-view](/figures/high-level-view.png "High Level View")
-
-

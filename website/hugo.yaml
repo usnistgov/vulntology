@@ -1,10 +1,8 @@
 baseURL: https://pages.nist.gov/vulntology/
-relativeURLs: true
 canonifyURLs: true
 languageCode: en-us
 title: Vulntology
 googleAnalytics: UA-66610693-1
-enableGitInfo: true
 enableRobotsTXT: true
 params:
   header:
@@ -21,12 +19,25 @@ menu:
       url: /contribute/#contact-us
     - name: Github
       url: https://github.com/usnistgov/vulntology
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  highlight:
-    guessSyntax: true
+#
+# Configuration for hugo-uswds
+#
 module:
   imports:
-  - path: github.com/usnistgov/hugo-uswds
+  - path: github.com/usnistgov/hugo-uswds-nist
+relativeURLs: true # rewrites URLs to a relative form supporting link offline checking
+enableGitInfo: true # enable to get page modification dates for a site stored in Git
+params:
+  header:
+    project_name: NIST Vulnerability Data Ontology
+    project_shortname: Vulntology
+  contentRepoPath: https://github.com/usnistgov/vulntology/tree/master/website/content
+  searchAffiliate: metaschema
+  usabanner: true
+markup:
+  goldmark: # Markdown Rendering
+    renderer:
+      unsafe: true # required for the Hugo USWDS theme
+  highlight: # Code Highlighting
+    guessSyntax: true
+    noClasses: false # enables USWDS styled syntax highlighting

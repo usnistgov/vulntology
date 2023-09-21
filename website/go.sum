@@ -4,3 +4,5 @@ github.com/usnistgov/hugo-uswds v1.0.1-0.20230907132321-3e1389f75de0 h1:+Pvpssgg
 github.com/usnistgov/hugo-uswds v1.0.1-0.20230907132321-3e1389f75de0/go.mod h1:MkgH5fvt5GIZo70VkBav+wP6br+MzrD/+OMZ9EqDkHM=
 github.com/usnistgov/hugo-uswds v1.0.1-0.20230911165631-874ffd724f52 h1:7obFQhMxDzuwLYEOTTxK3f7j0IOTBlkfKQj7AmKQSSo=
 github.com/usnistgov/hugo-uswds v1.0.1-0.20230911165631-874ffd724f52/go.mod h1:MkgH5fvt5GIZo70VkBav+wP6br+MzrD/+OMZ9EqDkHM=
+github.com/usnistgov/hugo-uswds-nist v0.0.0-20230921153341-18c1c10c7937 h1:7x3CC1J//DemVljmwR9SQaUx04TNlqtoZ4PZOtuMIcY=
+github.com/usnistgov/hugo-uswds-nist v0.0.0-20230921153341-18c1c10c7937/go.mod h1:fwcNpVQB77XeIgA+zPi2Mpf8zbVVn+extW5nYJen7mY=

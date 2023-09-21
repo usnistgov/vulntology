@@ -1,0 +1,149 @@
+{
+  "$schema": "../schema/vulntology-json-schema-1.0-draft.json",
+  "Vulnerability": {
+      "hasIdentity": [
+          {
+              "scheme": "http://cve.mitre.org",
+              "value": "CVE-2050-1234"
+          }
+      ],
+      "hasSectorOfInterest": [
+          "Industrial Control System",
+          "Health Care"
+      ],
+      "hasOriginatingProduct": {
+          "hasProductEnumeration": [
+              {
+                  "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
+                  "values": [
+                      "cpe:2.3:a:acme:acmeproductX:1.0.0",
+                      "cpe:2.3:a:acme:acmeproductY:1.0.0"
+                  ]
+              },
+              {
+                  "scheme": "https://nist.gov/cpe/2.2",
+                  "values": ["cpe:/a:blah"]
+              }
+          ],
+          "hasCPEApplicabilityStatement": [
+              {
+                  "operator": "AND",
+                  "children": [
+                      {
+                          "operator": "OR",
+                          "cpe_match": [
+                              {
+                                  "vulnerable": true,
+                                  "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                  "versionEndIncluding": "32.0.0.114"
+                              },
+                              {
+                                  "vulnerable": true,
+                                  "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                  "versionEndIncluding": "32.0.0.114"
+                              }
+                          ]
+                      },
+                      {
+                          "operator": "OR",
+                          "cpe_match": [
+                              {
+                                  "vulnerable": false,
+                                  "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                              },
+                              {
+                                  "vulnerable": false,
+                                  "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+      "hasScenario": [
+          {
+              "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f3",
+              "requiresAttackTheatre": "Remote::Internet",
+              "hasExploitedWeakness": ["CWE-79"],
+              "evidencedBySource": ["https://www.acme.com"],
+              "affectsProduct": {
+                  "hasProductEnumeration": [{
+                      "scheme": "https://nist.gov/cpe/2.3",
+                      "values": ["cpe:2.3:a:acme:acmeproduct:1.0.0"]
+                      }],
+                  "hasCPEApplicabilityStatement": [
+                      {
+                          "operator": "AND",
+                          "children": [
+                              {
+                                  "operator": "OR",
+                                  "cpe_match": [
+                                      {
+                                          "vulnerable": true,
+                                          "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                          "versionEndIncluding": "32.0.0.114"
+                                      },
+                                      {
+                                          "vulnerable": true,
+                                          "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                          "versionEndIncluding": "32.0.0.114"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "operator": "OR",
+                                  "cpe_match": [
+                                      {
+                                          "vulnerable": false,
+                                          "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                                      },
+                                      {
+                                          "vulnerable": false,
+                                          "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "blockedByBarrier": [
+                  {
+                      "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f4",
+                      "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
+                      "hasEngineeringMethod": ["MaliciousLink"],
+                      "hasNeededPrivilege": "User",
+                      "relatesToContext": "Application"
+                  },
+                  {
+                      "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f5",
+                      "hasBarrierType": "Authentication/Authorization::Privileges Required",
+                      "hasNeededPrivilege": "User",
+                      "relatesToContext": "Application"
+                  }
+              ],
+              "hasAction": [
+                  {
+                      "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f6",
+                      "hasEntityRole": "Security Authority::Primary",
+                      "affectsContext": "Application::Web Server",
+                              "hasImpactMethod": [
+            {
+              "hasImpactMethodType": "Authentication Bypass"
+            }],
+                                  "resultsInImpact": [
+            {
+              "id": "67ea9a13-06c9-4820-a7d5-07f5aac97519",
+              "hasCriticality": "Low",
+              "hasScope": "Limited",
+              "hasLogicalImpact": "Resource Removal",
+              "hasLocation": "File System"
+            }
+          ]
+                  }
+              ]
+          }
+      ]
+  }
+}
