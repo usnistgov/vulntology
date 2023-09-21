@@ -1,0 +1,181 @@
+{
+  "$schema": "../schema/vulntology-json-schema-1.0-draft.json",
+  "Vulnerability": {
+      "hasIdentity": [
+          {
+              "scheme": "http://cve.mitre.org",
+              "value": "CVE-2050-1234"
+          }
+      ],
+      "hasSectorOfInterest": [
+          "Industrial Control System",
+          "Health Care"
+      ],
+      "hasOriginatingProduct": {
+          "hasEnumeration": [
+              {
+                  "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
+                  "values": [
+                      "cpe:2.3:a:acme:acmeproductX:1.0.0",
+                      "cpe:2.3:a:acme:acmeproductY:1.0.0"
+                  ]
+              },
+              {
+                  "scheme": "https://nist.gov/cpe/2.2",
+                  "values": ["cpe:/a:blah"]
+              }
+          ],
+          "hasCPEApplicabilityStatement": [
+              {
+                  "operator": "AND",
+                  "children": [
+                      {
+                          "operator": "OR",
+                          "cpe_match": [
+                              {
+                                  "vulnerable": true,
+                                  "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                  "versionEndIncluding": "32.0.0.114"
+                              },
+                              {
+                                  "vulnerable": true,
+                                  "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                  "versionEndIncluding": "32.0.0.114"
+                              }
+                          ]
+                      },
+                      {
+                          "operator": "OR",
+                          "cpe_match": [
+                              {
+                                  "vulnerable": false,
+                                  "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                              },
+                              {
+                                  "vulnerable": false,
+                                  "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+      "hasScenario": [
+          {
+              "id": "S1",
+              "requiresAttackTheatre": "Remote::Internet",
+              "hasExploitedWeakness": ["CWE-79"],
+              "evidencedBySource": ["https://www.acme.com"],
+              "affectsProduct": {
+                  "hasEnumeration": [{
+                      "scheme": "https://nist.gov/cpe/2.3",
+                      "values": ["cpe:2.3:a:acme:acmeproduct:1.0.0"]
+                      }],
+                  "hasCPEApplicabilityStatement": [
+                      {
+                          "operator": "AND",
+                          "children": [
+                              {
+                                  "operator": "OR",
+                                  "cpe_match": [
+                                      {
+                                          "vulnerable": true,
+                                          "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                          "versionEndIncluding": "32.0.0.114"
+                                      },
+                                      {
+                                          "vulnerable": true,
+                                          "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                          "versionEndIncluding": "32.0.0.114"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "operator": "OR",
+                                  "cpe_match": [
+                                      {
+                                          "vulnerable": false,
+                                          "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                                      },
+                                      {
+                                          "vulnerable": false,
+                                          "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "blockedByBarrier": [
+                  {
+                      "id": "S1B1",
+                      "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
+                      "hasEngineeringMethod": ["MaliciousLink"],
+                      "neededPrivileges": "User",
+                      "relatesToContext": "Application"
+                  },
+                  {
+                      "id": "S1B2",
+                      "hasBarrierType": "Authentication/Authorization::Privileges Required",
+                      "neededPrivileges": "User",
+                      "relatesToContext": "Application"
+                  }
+              ],
+              "hasAction": [
+                  {
+                      "id": "S1A1",
+                      "hasEntityRole": "Security Authority::Primary",
+                      "affectsContext": "Application::Web Server",
+                      "hasImpactMethod": ["Code Execution"],
+                      "resultsInImpact": [
+                          {
+                              "id": "S1A1I1",
+                              "hasLogicalImpact": "Write-Direct",
+                              "hasScope": "Limited",
+                              "hasCriticality": "Low"
+                          }
+                      ]
+                  },
+                  {
+                      "id": "S1A2",
+                      "hasEntityRole": "Security Authority::Secondary",
+                      "affectsContext": "Application",
+                      "hasImpactMethod": ["Code Execution"],
+                      "resultsInImpact": [
+                          {
+                              "id": "S1A2I1",
+                              "hasLogicalImpact": "Write-Direct",
+                              "hasScope": "Limited",
+                              "hasCriticality": "Low"
+                          },
+                          {
+                              "id": "S1A2I2",
+                              "hasLogicalImpact": "Read-Direct",
+                              "hasScope": "Limited",
+                              "hasCriticality": "Low",
+                              "hasLocation": "Memory"
+                          },
+                          {
+                              "$comment": "This is for testing constraints, and is not for cross-site scripting",
+                              "id": "S1A2I3",
+                              "hasLogicalImpact": "Privilege Escalation",
+                              "hasScope": "Limited",
+                              "hasCriticality": "Low",
+                              "gainedPrivileges": "Administrator"
+                          },
+                          {
+                              "$comment": "This is for testing constraints, and is not for cross-site scripting",
+                              "id": "S1A2I4",
+                              "hasPhysicalImpact": "Physical Resource Consumption",
+                              "hasScope": "Limited",
+                              "hasCriticality": "Low"
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+}
