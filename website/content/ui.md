@@ -12,16 +12,14 @@ sidenav:
 
 The following tool supports editing Vulntology-based vulnerability information. This tool is currently experimental and we would appreciate your [feedback](/contribute/#contact-us) on its usability and function.
 
-<script>
-  document.write(`<base href="${location.pathname}${location.pathname.endsWith('/') ? '' : '/'}"/>`);
-</script>
-<link id="app-theme" rel="stylesheet" type="text/css" href="/editor/saga-blue.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="/editor/saga-blue.css"></noscript>
+<base href="."/>
+<link id="app-theme" rel="stylesheet" type="text/css" href="saga-blue.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="saga-blue.css"></noscript>
 <style>.surface-ground{background-color:var(--surface-ground)!important}</style>
-<link rel="stylesheet" href="/editor/styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="/editor/styles.css"></noscript>
+<link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript>
 
 <div class="surface-ground">
 <app-root></app-root>
-<script src="/editor/runtime.js" type="module"></script>
-<script src="/editor/polyfills.js" type="module"></script>
-<script src="/editor/main.js" type="module"></script>
+<script src="runtime.js" type="module"></script>
+<script src="polyfills.js" type="module"></script>
+<script src="main.js" type="module"></script>
 </div>
