@@ -1,0 +1,15 @@
+{
+  "Vulnerability": {
+    "hasIdentity": [
+      {
+        "scheme": "http://cve.mitre.org",
+        "value": ""
+      }
+    ],
+    "hasOriginatingProduct": {
+      "hasProductEnumeration": [],
+      "hasCPEApplicabilityStatement": []
+    },
+    "hasScenario": []
+  }
+}
