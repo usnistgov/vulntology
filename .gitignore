@@ -4,3 +4,6 @@
 /website/public
 /website/resources
 /website/_vendor
+# Using a generated version from /content
+/website/static/ui/index.html
+
