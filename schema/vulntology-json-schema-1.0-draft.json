@@ -302,7 +302,8 @@
                     "properties": {
                         "id": {"$ref": "#/definitions/UUID"},
                         "hasBarrierType": {"const": "Authentication/Authorization::Privileges Required"},
-                        "hasNeededPrivilege": {"$ref": "#/definitions/PrivilegeLevel"}
+                        "hasNeededPrivilege": {"$ref": "#/definitions/PrivilegeLevel"},
+                        "relatesToContext": {"$ref": "#/definitions/Context"}
                     },
                     "required": [
                         "id",
