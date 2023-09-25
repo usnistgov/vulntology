@@ -38,7 +38,7 @@ The value of `hasBarrierType` MUST be a value from the [barrier type value list]
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or one
 {{%usa-tag%}}Description{{%/usa-tag%}} The privileges that are needed relative to the type of barrier being overcome.
 
-Each `hasNeededPrivilege` relates to one privilege level. Multiple barriers need to be defined to describe multiple needed privileges.
+Each `hasNeededPrivilege` relates to one privilege level. Multiple *barriers* need to be defined to describe multiple needed privileges.
 
 The property `hasNeededPrivilege` MAY be used when the property `hasBarrierType` has the value `Authentication/Authorization::Impersonation::Social Engineering`. Use in this scenario is optional.
 
@@ -66,7 +66,7 @@ If provided, the value of `hasEngineeringMethod` MUST be a value from the [engin
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or one
 {{%usa-tag%}}Description{{%/usa-tag%}} The context to which the privileges are related.
 
-Each `relatesToContext` relates to one context. Multiple barriers need to be defined to describe multiple context relations.
+Each `relatesToContext` relates to one context. Multiple *barriers* need to be defined to describe multiple context relations.
 
 The property `relatesToContext` MUST only be used when the property `hasBarrierType` has the values:
 
