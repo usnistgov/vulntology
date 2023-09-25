@@ -18,7 +18,7 @@ Items that are indented represent more specific values that can be used to descr
   - **Failure to Verify Content**:  The Context failed to ensure the content supplied is the expected content, is properly formatted and/or sanitized.
   - **Failure to Verify Receiver**:  The Context failed to ensure the entity on the receiving end of the communication is the intended entity.
   - **Failure to Verify Transmitter**:  The Context failed to ensure the entity on the transmitting end of the communication is the intended entity.
-- **Privilege Escalation**:  The Vulnerability allows an adversary to gain a level of privilege that was not intended. 
+- **Privilege Escalation**:  The Vulnerability allows an adversary to gain a level of privilege that was not intended.
   
 ## Graph View
 

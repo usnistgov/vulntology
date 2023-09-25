@@ -14,7 +14,11 @@ An *scenario* has the following properties.
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `id`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
-{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the scenario that distinguishes it from other scenarios related to the same vulnerability.
+{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the *scenario*.
+
+The action identifier distinguishes the *scenario* from other *scenarios* related to the same *vulnerability*.
+
+This identifier MUST be a version 4 (random) or 5 (SHA-1 based) Universally Unique Identifier (UUID) as defined by [RFC 4122](https://www.rfc-editor.org/rfc/inline-errata/rfc4122.html).
 
 ### Name
 
@@ -41,7 +45,6 @@ An *scenario* has the following properties.
 {{%usa-tag%}}Description{{%/usa-tag%}} The weakness causing the Vulnerability. When choosing a value, the most applicable weakness should be selected. (See [Exploited Weakness](../../values/exploited-weakness))
 
 ## Relationships
-
 
 A *scenario* has the following relationships.
 

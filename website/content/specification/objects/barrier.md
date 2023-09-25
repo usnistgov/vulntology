@@ -12,7 +12,11 @@ This could be any characteristic inherent in the vulnerability that could impede
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `id`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
-{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the impact that distinguishes it from other impacts related to the same vulnerability.
+{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the *barrier*.
+
+The action identifier distinguishes the *barrier* from other *barriers* related to the same *vulnerability*.
+
+This identifier MUST be a version 4 (random) or 5 (SHA-1 based) Universally Unique Identifier (UUID) as defined by [RFC 4122](https://www.rfc-editor.org/rfc/inline-errata/rfc4122.html).
 
 ### Type
 
@@ -30,20 +34,22 @@ Each subtype can require type specific properties in addition to those inherited
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or one - see notes
 {{%usa-tag%}}Description{{%/usa-tag%}} The privileges that are needed relative to the type of barrier being overcome. (See [Privilege Levels](../../values/privilege-level))
 
-   Notes:
-   - *Applies only when the **hasBarrierType**=`Authentication/Authorization::Privileges Required` or **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`*
-   - Required when **hasBarrierType**=`Authentication/Authorization::Privileges Required`, optional otherwise
-   - *Each `hasNeededPrivilege` relates to one privilege level*.
+Notes:
+
+* Applies only when the **hasBarrierType**=`Authentication/Authorization::Privileges Required` or **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`.
+* Required when **hasBarrierType**=`Authentication/Authorization::Privileges Required`, optional otherwise.
+* Each `hasNeededPrivilege` relates to one privilege level.
 
 ### Engineering Method
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `hasEngineeringMethod`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one or many - see notes
-{{%usa-tag%}}Description{{%/usa-tag%}} The method or mechanism used to manipulate a user into interacting with a malicious resource. (See [Engineering Method](../../values/engineering-method)). 
+{{%usa-tag%}}Description{{%/usa-tag%}} The method or mechanism used to manipulate a user into interacting with a malicious resource. (See [Engineering Method](../../values/engineering-method)).
 
-   Notes:
-   - *Applies only when the **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`*
-   - *Each `hasEngineeringMethod` relates to one engineering method*.
+Notes:
+
+* Applies only when the **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`.
+* Each `hasEngineeringMethod` relates to one engineering method.
 
 ### Related Context
 
@@ -51,9 +57,10 @@ Each subtype can require type specific properties in addition to those inherited
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or one - see notes
 {{%usa-tag%}}Description{{%/usa-tag%}} The context to which the privileges are related (See [Context](../../values/context))
 
-   Notes:
-   - *Applies only when the **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`, **hasBarrierType**=`Boundary Protections`, **hasBarrierType**=`Boundary Protections::Container`, or , **hasBarrierType**=`Boundary Protections::Sandbox`
-   - *Each `hasEngineeringMethod` relates to one context*.
+Notes:
+
+* Applies only when the **hasBarrierType**=`Authentication/Authorization::Impersonation::Social Engineering`, **hasBarrierType**=`Boundary Protections`, **hasBarrierType**=`Boundary Protections::Container`, or , **hasBarrierType**=`Boundary Protections::Sandbox`.
+* Each `hasEngineeringMethod` relates to one context.
 
 ## Relationships
 

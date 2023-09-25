@@ -4,12 +4,11 @@ title: "Product"
 
 # Product Object
 
-The software and/or hardware configurations that are known to be vulnerable to exploitation of the vulnerability [Scenario](../scenario).  Different Product configurations can be associated with different Scenarios to allow for description of varying impacts and exploitation mechanisms. 
+The software and/or hardware configurations that are known to be vulnerable to exploitation of the vulnerability [Scenario](../scenario).  Different Product configurations can be associated with different Scenarios to allow for description of varying impacts and exploitation mechanisms.
 
 ## Properties
 
-
-An *product* has the following relationships.
+A *product* has the following relationships.
 
 ### Product Enumeration
 

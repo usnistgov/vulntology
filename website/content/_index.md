@@ -19,7 +19,7 @@ The Vulntology supports the expression of characterization details about:
 
 These details are provided in the context of a given attack scenario, which may differ in characteristics from other scenarios for the same vulnerability.
 
-The vulntology is not intended to be a general purpose format for describing vulnerability information. Instead, the Vulntology is intended to be a drop-in replacement for a vulnerability description. The Vulntology project will avoid duplicating work in other formats to the greatest extent possible.  Due to the relational approach used, the Vulntology may provide some overlapping details as a means to define a given scenario, such as affected product information.
+The Vulntology is not intended to be a general purpose format for describing vulnerability information. Instead, the Vulntology is intended to be a drop-in replacement for a vulnerability description. The Vulntology project will avoid duplicating work in other formats to the greatest extent possible.  Due to the relational approach used, the Vulntology may provide some overlapping details as a means to define a given scenario, such as affected product information.
 
 ## Goals
 

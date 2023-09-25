@@ -4,7 +4,7 @@ title: "Action"
 
 # Action Object
 
-An *action* is an activity resulting in an impact to an [*affected context*](#context), that occurs within a given [*scenario](../scenario).
+An *action* is an activity resulting in an impact to an [*affected context*](../../values/context), that occurs within a given [*scenario](../scenario).
 
 ## Semantics
 
@@ -18,7 +18,7 @@ An *action* has the following properties.
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `id`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
-{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the action.
+{{%usa-tag%}}Description{{%/usa-tag%}} A globally unique identifier for the *action*.
 
 The action identifier distinguishes the *action* from other actions related to the same *vulnerability*.
 

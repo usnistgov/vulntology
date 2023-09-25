@@ -10,9 +10,9 @@ Representation of a source of information. The source which provided the informa
 
 A URL that assists in identification, explanation, or origin of the Vulnerability
 
-### Example Value:
+### Example
 
-- https://nvd.nist.gov/
+- `https://nvd.nist.gov/`
 
 ## Graph View
 

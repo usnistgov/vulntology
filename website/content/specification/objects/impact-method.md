@@ -22,9 +22,10 @@ An *impact method* has the following properties.
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one - see notes
 {{%usa-tag%}}Description{{%/usa-tag%}} Abstraction to assist in capturing relative privilege levels. The abstraction is only for the sake of discussing the vulnerability and is not intended to communicate the actual granular privileges that exist in most information system environments. See [Privilege Level](../../values/privilege-level)
 
-   Notes:
-   - *Applies only when the **hasImpactMethodType**=`Privilege Escalation`*
-   - *Each `hasGainedPrivilege` relates to one privilege level*.
+Notes:
+
+* Applies only when the **hasImpactMethodType**=`Privilege Escalation`.
+* Each `hasGainedPrivilege` relates to one privilege level.
 
 ### Escape Context
 
@@ -32,9 +33,10 @@ An *impact method* has the following properties.
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one - see notes
 {{%usa-tag%}}Description{{%/usa-tag%}} The association denotes where a sandbox breakout originated. See [Context Types](../../values/context).
 
-   Notes:
-   - *Applies only when the **hasImpactMethodType**=`Context Escape`*
-   - *Each Context Escape relates to one context.*
+Notes:
+
+* Applies only when the **hasImpactMethodType**=`Context Escape`.
+* Each Context Escape relates to one context.
 
 ## Relationships
 
