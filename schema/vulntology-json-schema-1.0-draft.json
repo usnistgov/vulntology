@@ -507,7 +507,7 @@
         "SimpleScheme": {
             "type": "string",
             "format": "uri",
-            "$comment": "Identifies the identification namespace, qualifying the values. For example, the if you are providing a CPE 2.3 identifer you would use 'https://csrc.nist.gov/ns/cpe/2.3' as the scheme.",
+            "$comment": "Identifies the identification namespace, qualifying the values. For example, the if you are providing a CPE 2.3 identifier you would use 'https://csrc.nist.gov/ns/cpe/2.3' as the scheme.",
             "examples": [
                 "https://csrc.nist.gov/ns/cpe/2.3",
                 "http://example.org/my-scheme",

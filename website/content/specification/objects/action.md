@@ -30,15 +30,15 @@ This identifier MUST be a version 4 (random) or 5 (SHA-1 based) Universally Uniq
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or one
 {{%usa-tag%}}Description{{%/usa-tag%}} A name or label to assist in identifying a given action in the context of the containing Vulnerability.
 
-A given action name MUST be unique across all sibling actions.
+A given *action* name MUST be unique across all sibling *actions*.
 
 ### Affected Context
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `affectsContext`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
-{{%usa-tag%}}Description{{%/usa-tag%}} The conceptual entity where the impacts are realized from successful completion of an action.
+{{%usa-tag%}}Description{{%/usa-tag%}} The conceptual entity where the impacts are realized from successful completion of an *action*.
 
-By associating actions with an affected context for a given scenario, different impacts can be defined for the same context across different scenarios.
+By associating *actions* with an affected context for a given *scenario*, different impacts can be defined for the same context across different *scenarios*.
 
 The value of `affectsContext` MUST be a value from the [context value list](../../values/context).
 
@@ -66,7 +66,7 @@ The object value of the `hasImpactMethod` relationship MUST be an [impact method
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `resultsInImpact`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one or many
-{{%usa-tag%}}Description{{%/usa-tag%}} An [*impact*](../impact) that will occur due to an Action.
+{{%usa-tag%}}Description{{%/usa-tag%}} An [*impact*](../impact) that will occur due to an *action*.
 
 The object value of the `resultsInImpact` relationship MUST be an [impact](../impact) object.
 
@@ -74,9 +74,9 @@ The object value of the `resultsInImpact` relationship MUST be an [impact](../im
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `doesNotResultInImpact`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} zero or many
-{{%usa-tag%}}Description{{%/usa-tag%}} An [*impact*](../impact) that will not occur due to an Action.
+{{%usa-tag%}}Description{{%/usa-tag%}} An [*impact*](../impact) that will not occur due to an *action*.
 
-Can be used to indicate that a specific impact is not accomplished by the *action*.
+Can be used to indicate that a specific *impact* is not accomplished by the *action*.
 
 The object value of the `doesNotResultInImpact` relationship MUST be an [impact](../impact) object.
 

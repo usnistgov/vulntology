@@ -11,16 +11,16 @@ Objects can be related to other objects, have types, and properties.  Each objec
 
 ## Object Types
 
-The following objects are defined by the Vulntology.
+The following objects are defined by the Vulntology. These objects are presented below in a rough hierarchical organization to illustrate how they relate to each other.
 
-- [action](action)
-- [barrier](barrier)
-- [impact](impact)
-- [impact method](impact-method)
-- [product](product)
-- [scenario](scenario)
-- [vulnerability identifier](vulnerability-identifier)
 - [vulnerability](vulnerability)
+  - [vulnerability identifier](vulnerability-identifier)
+  - [scenario](scenario)
+    - [action](action)
+    - [impact method](impact-method)
+    - [impact](impact)
+    - [barrier](barrier)
+  - [product](product)
 
 ## Object Notation
 
