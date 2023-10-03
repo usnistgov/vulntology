@@ -4,7 +4,7 @@ title: "Product"
 
 # Product Object
 
-The software and/or hardware configurations that are known to be vulnerable to exploitation of the vulnerability [Scenario](../scenario).  Different Product configurations can be associated with different *scenarios* to allow for description of varying impacts and exploitation mechanisms.
+The software and/or hardware configurations that are known to be vulnerable to exploitation of the vulnerability [*scenario*](../scenario).  Different Product configurations can be associated with different *scenarios* to allow for description of varying impacts and exploitation mechanisms.
 
 ## Properties
 
@@ -40,7 +40,7 @@ The `value` MUST be based on the lexical space of a string as defined by [ECMA-4
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `hasNvdCpeApplicabilityStatement`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
-{{%usa-tag%}}Description{{%/usa-tag%}} This is to reference the NVD configurations section, which requires much more complex JSON than simple strings.
+{{%usa-tag%}}Description{{%/usa-tag%}} This is to reference the NVD [configurations](https://csrc.nist.gov/schema/nvd/api/2.0/cve_api_json_2.0.schema) section, which requires much more complex JSON than simple strings.
 
 ### CVE v5 Product
 

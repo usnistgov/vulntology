@@ -35,7 +35,7 @@ If provided, the value of `hasGainedPrivilege` MUST be a value from the [privile
 ### Escape Context
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `hasEscapeContext`
-{{%usa-tag%}}Cardinality{{%/usa-tag%}} one - see notes
+{{%usa-tag%}}Cardinality{{%/usa-tag%}} one
 {{%usa-tag%}}Description{{%/usa-tag%}} The association denotes where a sandbox breakout originated.
 
 Each `hasEscapeContext` relates to one context. Multiple *impact methods* need to be defined to describe multiple context relations.

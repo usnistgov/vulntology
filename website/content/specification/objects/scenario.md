@@ -30,7 +30,7 @@ A given *scenario* name MUST be unique across all sibling *scenarios*.
 
 The `value` MUST be based on the lexical space of a string as defined by [ECMA-404 2nd edition, section 9](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf).
 
-### Required Attack Theater
+### Attack Theater
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `requiresAttackTheater`
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one

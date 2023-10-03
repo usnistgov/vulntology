@@ -17,8 +17,8 @@ The following objects are defined by the Vulntology. These objects are presented
   - [vulnerability identifier](vulnerability-identifier)
   - [scenario](scenario)
     - [action](action)
-    - [impact method](impact-method)
-    - [impact](impact)
+      - [impact method](impact-method)
+      - [impact](impact)
     - [barrier](barrier)
   - [product](product)
 

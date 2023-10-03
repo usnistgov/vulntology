@@ -4,7 +4,7 @@ title: "Action"
 
 # Action Object
 
-An *action* is an activity resulting in an impact to an [*affected context*](../../values/context), that occurs within a given [*scenario](../scenario).
+An *action* is an activity resulting in an impact to an [*affected context*](../../values/context), that occurs within a given [*scenario*](../scenario).
 
 ## Semantics
 
