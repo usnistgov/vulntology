@@ -22,15 +22,15 @@ The Vulntology framework is composed of simple components described below:
 
 - **Objects**: A Conceptual entity; Objects can be related to other objects, have types, relationships, and properties. Each object, such as [Vulnerability](objects/vulnerability), can have multiple properties and/or relationships with other components.
 
-    - **Relationships**: A connection relating one object to another. Relationships retain an expected cardinality, i.e. or `one to many` or `zero to many`.
+  - **Relationships**: A connection relating one object to another. Relationships retain an expected cardinality, i.e. or `one to many` or `zero to many`.
 
-    - **Properties**: A connection between an object and a value. Some properties and associated values relate to or drive the use of other properties.
+  - **Properties**: A connection between an object and a value. Some properties and associated values relate to or drive the use of other properties.
 
     The top level object to begin with when reviewing the components is the [Vulnerability](objects/vulnerability) object.
 
 - **Values**: An explicit characteristic used to describe a detail of a Type or SubType. A list of value sets defined by the Vulntology framework is located under the [values](values) directory. Values are contained within Type and SubType groups such as [Theatre](values/theater).
 
-    - **Type/SubType**: Types and subtypes are categorizations and/or groupings of values. Subtypes are applicable to a specific value within a parent Type.
+  - **Type/SubType**: Types and subtypes are categorizations and/or groupings of values. Subtypes are applicable to a specific value within a parent Type.
 
 ## Visuals and Examples
 
@@ -38,7 +38,7 @@ The Vulntology framework is composed of simple components described below:
 
 To see at a very high level how the Vulntology framework builds on the current methodology of describing vulnerabilities. Refer to the [High Level Model](/about/#high-level-view).
 
-![vulntology-graph](/figures/vulntology-graph.png "Vultology Graph")
+![Vulntology Graph](/figures/vulntology-graph.png "Vultology Graph")
 
 The graph above illustrates how all of the components defined in the Vulntology relate to each other.
 
