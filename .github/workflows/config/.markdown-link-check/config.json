@@ -16,19 +16,19 @@
   "replacementPatterns": [
         {
             "pattern": "^../../issues",
-            "replacement": "https://github.com/usnistgov/metaschema/issues"
+            "replacement": "https://github.com/usnistgov/vulntology/issues"
         },
         {
             "pattern": "^../../projects",
-            "replacement": "https://github.com/usnistgov/metaschema/projects"
+            "replacement": "https://github.com/usnistgov/vulntology/projects"
         },
         {
             "pattern": "^../../releases",
-            "replacement": "https://github.com/usnistgov/metaschema/releases"
+            "replacement": "https://github.com/usnistgov/vulntology/releases"
         },
         {
             "pattern": "^../../tree",
-            "replacement": "https://github.com/usnistgov/metaschema/tree"
+            "replacement": "https://github.com/usnistgov/vulntology/tree"
         }
     ]
 }

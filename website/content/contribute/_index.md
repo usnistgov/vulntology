@@ -22,4 +22,4 @@ We use GitHub as a collaboration platform for the development of the Metaschema 
 
 Please email the [project team](mailto:vulntology@nist.gov) with any questions you have about this project or if you are interested in getting involved.
 
-A [Gitter chat room](https://matrix.to/#/#vulntology_community:gitter.im) is available for Metaschema discussions. This is a great place to discuss issues with the NIST developers and ask for assistance with building Metaschema-enabled tools. This room is also setup with GitHub integration, which provides a good summary of recent Metaschema GitHub repo activities within the chat room.
+A [Gitter chat room](https://matrix.to/#/#vulntology_community:gitter.im) is available for discussions. This is a great place to discuss issues with the NIST developers. This room is also setup with GitHub integration, which provides a good summary of recent project GitHub repository activities within the chat room.

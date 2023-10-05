@@ -22,13 +22,13 @@ This document defines a framework that improves upon this manual process by supp
 
 In addition to those responsible for an organization’s vulnerability management function, other stakeholders include:
 
-* Security Researchers: who need to share and disclose vulnerability information to vendors
+- Security Researchers: who need to share and disclose vulnerability information to vendors
 
-* Software Publishers: who need to share and disclose vulnerability information to their customers
+- Software Publishers: who need to share and disclose vulnerability information to their customers
 
-* Vulnerability Coordinators: who need to share and disclose vulnerability information to software publishers and to users of the affected software
+- Vulnerability Coordinators: who need to share and disclose vulnerability information to software publishers and to users of the affected software
 
-* Vulnerability Information Services: that need to provide vulnerability information to the consumers of their data, often performing additional analysis which can assist in the prioritization of vulnerabilities for organizations
+- Vulnerability Information Services: that need to provide vulnerability information to the consumers of their data, often performing additional analysis which can assist in the prioritization of vulnerabilities for organizations
 
 All of these stakeholders need a common language to describe and characterize vulnerabilities as well as a way to express what information is needed to perform their activities. The framework in this document intends to provide this common language and to provide a way for stakeholders to describe required information.
 
@@ -38,8 +38,8 @@ A high level illustration that depicts the core differences between what is gene
 
 The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
 
-* Green represents new data points typically not captured.
-* Blue represents data points captured in both models that have little difference.
-* Yellow, Orange, Red and Purple all represent information relative to their respective boxes within the current model.
+- Green represents new data points typically not captured.
+- Blue represents data points captured in both models that have little difference.
+- Yellow, Orange, Red and Purple all represent information relative to their respective boxes within the current model.
 
 ![high-level-view](/figures/high-level-view.png "High Level View")
