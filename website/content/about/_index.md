@@ -10,7 +10,7 @@ toc:
 
 # The Vulntology
 
-The Vulntology aims to describe a more effective and efficient methodology for characterizing vulnerabilities found in various forms of software and hardware implementations including but not limited to information technology systems, industrial control systems or medical devices to assist in the vulnerability management process. The primary goals of the described methodology are to standardize the description of vulnerabilities through structured characterization formatting, enable automation of derived data points such as the Common Vulnerability Scoring System (CVSS), establish a baseline of the minimum information needed to properly inform the vulnerability management process, and facilitate the sharing of vulnerability information across language barriers.
+The Vulntology aims to describe a more effective and efficient methodology for characterizing vulnerabilities found in various forms of software and hardware implementations. Improving vulnerability management process support across the board, including but not limited to information technology systems, industrial control systems or medical devices. The primary goals of the described methodology are to standardize the description of vulnerabilities through structured characterization formatting, enable automation of derived data points such as the Common Vulnerability Scoring System (CVSS), establish a baseline of the minimum information needed to properly inform the vulnerability management process, and facilitate the sharing of vulnerability information across language barriers.
 
 ## Introduction
 
@@ -30,11 +30,11 @@ In addition to those responsible for an organization’s vulnerability managemen
 
 - Vulnerability Information Services: that need to provide vulnerability information to the consumers of their data, often performing additional analysis which can assist in the prioritization of vulnerabilities for organizations
 
-All of these stakeholders need a common language to describe and characterize vulnerabilities as well as a way to express what information is needed to perform their activities. The framework in this project provides this common language and to provide a way for stakeholders to describe required information.
+All of these stakeholders need a common language to describe and characterize vulnerabilities as well as a way to express what information is needed to perform their activities. The framework in this project provides this common language, structure, and facilitates a way for stakeholders to identify desirable information.
 
 ## High Level View
 
-A high level illustration that depicts the core differences between what is generally understood as the current model for a vulnerability and what this project proposes as enhancements to that model. While at first glance it may appear that we are taking a relatively simple system and proposing one that is far more complex, we believe that the complexity exists within both systems, but the consumer of the information is responsible for digesting the complexity in the current model where the Vulntology model displays the complexity up front in a structured manner.
+A high level illustration that depicts the core differences between what is generally understood as the current model for a vulnerability and what this project proposes as enhancements to that model. While at first glance it may appear that we are taking a relatively simple system and proposing one that is far more complex, we believe that the complexity exists within both systems. However, the consumer of the information is responsible for digesting the complexity in the current model. Whilst the Vulntology model displays the complexity up front in a structured manner for provisioning of information by those closest to the source information.
 
 The color coding associated to each box is intended to display how each of the previous concepts intertwine with the enhanced representation the Vulntology model represents.
 

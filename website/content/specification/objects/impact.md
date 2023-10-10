@@ -98,6 +98,23 @@ The value of `hasPhysicalImpact` MUST be a value from the [physical impact value
 
 None
 
+## Example
+```json
+{
+ "id": "S1A2I3",
+ "hasLogicalImpact": "Privilege Escalation",
+ "hasScope": "Limited",
+ "hasCriticality": "Low",
+ "gainedPrivileges": "Administrator"
+}
+{
+ "id": "S1A2I4",
+ "hasPhysicalImpact": "Physical Resource Consumption",
+ "hasScope": "Limited",
+ "hasCriticality": "Low"
+}
+```
+
 ## Graph View
 
 ![Impact Graph](/figures/graphsnippets/ImpactSnippet.png "Impact Graph")

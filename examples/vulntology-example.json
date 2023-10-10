@@ -1,6 +1,6 @@
 {
     "$schema": "../schema/vulntology-json-schema-1.0-draft.json",
-    "Vulnerability": {
+    "vulnerability": {
         "hasIdentity": [
             {
                 "scheme": "http://cve.mitre.org",
@@ -16,13 +16,13 @@
                 {
                     "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
                     "values": [
-                        "cpe:2.3:a:acme:acmeproductX:1.0.0",
-                        "cpe:2.3:a:acme:acmeproductY:1.0.0"
+                        "cpe:2.3:a:fake:fakeproductX:1.0.0",
+                        "cpe:2.3:a:fake:fakeproductY:1.0.0"
                     ]
                 },
                 {
                     "scheme": "https://nist.gov/cpe/2.2",
-                    "values": ["cpe:/a:blah"]
+                    "values": ["cpe:/a:fake"]
                 }
             ],
             "hasCPEApplicabilityStatement": [
@@ -34,12 +34,12 @@
                             "cpe_match": [
                                 {
                                     "vulnerable": true,
-                                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                    "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
                                     "versionEndIncluding": "32.0.0.114"
                                 },
                                 {
                                     "vulnerable": true,
-                                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                    "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
                                     "versionEndIncluding": "32.0.0.114"
                                 }
                             ]
@@ -49,11 +49,11 @@
                             "cpe_match": [
                                 {
                                     "vulnerable": false,
-                                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                                    "cpe23Uri": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*"
                                 },
                                 {
                                     "vulnerable": false,
-                                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                                    "cpe23Uri": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
                                 }
                             ]
                         }
@@ -70,7 +70,7 @@
                 "affectsProduct": {
                     "hasEnumeration": [{
                         "scheme": "https://nist.gov/cpe/2.3",
-                        "values": ["cpe:2.3:a:acme:acmeproduct:1.0.0"]
+                        "values": ["cpe:2.3:a:fake:fakeproduct:1.0.0"]
                         }],
                     "hasCPEApplicabilityStatement": [
                         {
@@ -81,12 +81,12 @@
                                     "cpe_match": [
                                         {
                                             "vulnerable": true,
-                                            "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                                            "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
                                             "versionEndIncluding": "32.0.0.114"
                                         },
                                         {
                                             "vulnerable": true,
-                                            "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                                            "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
                                             "versionEndIncluding": "32.0.0.114"
                                         }
                                     ]
@@ -96,11 +96,11 @@
                                     "cpe_match": [
                                         {
                                             "vulnerable": false,
-                                            "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                                            "cpe23Uri": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*"
                                         },
                                         {
                                             "vulnerable": false,
-                                            "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                                            "cpe23Uri": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
                                         }
                                     ]
                                 }
