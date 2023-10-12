@@ -1,14 +1,14 @@
 ---
-title: "Privilege Level"
+title: "Physical Impact"
 ---
 
-# Privilege Level Values
+# Physical Impact Values
 
 Used when exploitation of the Vulnerability could result in a tangible impact to a physical device, machinery, the surrounding environment, or people.
 
 ## Values
 
-Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing "Critical" as a value would imply "Human Injury" as well.
+Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing `Critical` as a value would imply `Human Injury` as well.
 
 - **Human Injury**:  An exploit of the Vulnerability could result in injury to users or nearby individuals. Descriptions below are based on Table D.3 in [ISO/IEC 14971:2007].
   - **Negligible**:  Inconvenience or temporary discomfort
