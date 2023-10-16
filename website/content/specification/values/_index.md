@@ -14,7 +14,7 @@ Each value set is listed below in the rough order they appear when generating a 
 
 - [sector of interest](sector-of-interest)
 - [theater](theater)
-- [resource reference](resourece-reference)
+- [resource reference](resource-reference)
 - [exploited weakness](exploited-weakness)
 - [barrier type](barrier-type)
 - [engineering method](engineering-method)

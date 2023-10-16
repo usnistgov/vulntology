@@ -37,3 +37,11 @@ A connection between an object and a value. Properties are inherited by SubTypes
 ### Relationships
 
 A connection relating one object to another. relationships retain an expected cardinality of `one to many` or `zero to many`.
+
+### Example
+
+A snippet of JSON relevant to the object being referenced. These may have unrelated data stripped out for simplicity.
+
+### Graph View
+
+A visual representation of the object and its relationship connections based on ![Vulntology Graph](/figures/vulntology-graph.png "Vultology Graph").
