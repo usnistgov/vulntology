@@ -32,6 +32,8 @@ This identifier MUST be a version 4 (random) or 5 (SHA-1 based) Universally Uniq
 
 A given *action* name MUST be unique across all sibling *actions*.
 
+The value of `hasName` MUST be based on the lexical space of a string as defined by [ECMA-404 2nd edition, section 9](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf).
+
 ### Affected Context
 
 {{%usa-tag%}}Name{{%/usa-tag%}} `affectsContext`
@@ -80,6 +82,30 @@ Can be used to indicate that a specific *impact* is not accomplished by the *act
 
 The object value of the `doesNotResultInImpact` relationship MUST be an [impact](../impact) object.
 
+## Example
+
+```json
+{
+ "hasAction": [
+   {
+    "id": "S1A1",
+    "hasEntityRole": "Security Authority::Primary",
+    "affectsContext": "Application::Web Server",
+    "hasImpactMethod": ["Code Execution"],
+    "resultsInImpact": [
+      {
+       "id": "S1A1I1",
+       "hasLogicalImpact": "Write-Direct",
+       "hasScope": "Limited",
+       "hasCriticality": "Low"
+      }
+    ]
+   }
+ ]
+}
+```
+
 ## Graph View
 
 ![Action Graph](/figures/graphsnippets/ActionSnippet.png "Action Graph")
+

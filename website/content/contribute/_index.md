@@ -8,11 +8,11 @@ menu:
 
 # Welcome to the Vulntology Community
 
-We are excited that you want to contribute to the Metaschema project. We are striving to provide a collaborative environment for professionals and hobbyists alike to contribute to the project's goals and objectives.
+We are excited that you want to contribute to the Vulntology project. We are striving to provide a collaborative environment for professionals and hobbyists alike to contribute to the project's goals and objectives.
 
 ## Contributing
 
-We use GitHub as a collaboration platform for the development of the Metaschema framework. Within the project's GitHub repository you will find:
+We use GitHub as a collaboration platform for the development of the Vulntology. Within the project's GitHub repository you will find:
 
 - A [set of issues](https://github.com/usnistgov/vulntology/issues?q=is%3Aopen+is%3Aissue) for which we need your help. Feel free to pick from this list, or [reach out to us](#contact-us) about any other ideas you might have.
 - [Guidelines](https://github.com/usnistgov/vulntology/blob/master/CONTRIBUTING.md) on contributing to this project.

@@ -8,7 +8,7 @@ A description of the possible impacts to a Context that a successful exploitatio
 
 ## Values
 
-Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing "Hang" as a value would imply "Service Interrupt" as well.
+Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing `Hang` as a value would imply `Service Interrupt` as well.
 
 - **Indirect Disclosure**:  The Vulnerability allows an adversary to learn information about the Context, but the knowledge gained is not from a direct read operation. Examples include but are not limited to discovering memory locations protected by address space layout randomization (ASLR), information from side-channel attacks, or information gained from traffic analysis.
 - **Read Direct**:  The Vulnerability allows an adversary to cause a breach of confidentiality by gaining unauthorized access to data in the Context.  

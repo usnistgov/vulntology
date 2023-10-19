@@ -8,7 +8,7 @@ The Theatre or Attack Theater is the area or place from which an attack must occ
 
 ## Values
 
-Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing "Internet" as a value would imply "Remote" as well.
+Items that are indented represent more specific values that can be used to describe the parent value. For instance, choosing `Internet` as a value would imply `Remote` as well.
 
 - **Remote**:  The exploit scenario requires that the attack occurs over the network stack; normally external to the target’s internal network such as from the Internet. Common targets in the remote theater are public websites, Domain Name System (DNS) services, or web-browsers.
   - **Internet**:  An attack is able to originate over the internet.

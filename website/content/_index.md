@@ -1,5 +1,5 @@
 ---
-title: "NIST Vulnerability Data Ontology"
+title: "NIST Vulntology"
 cascade:
   suppresstopiclist: true
   toc:
@@ -13,8 +13,8 @@ to describe a vulnerability
 {{< usa-tagline caption="Standardize your vulnerability descriptions." >}}
 The Vulntology supports the expression of characterization details about:
 
-- How a vulnerability can be exploited?
-- What the impact of that exploit will be?
+- How can a vulnerability be exploited?
+- What will the impact of that exploit be?
 - What mitigating factors can make exploitation difficult?
 
 These details are provided in the context of a given attack scenario, which may differ in characteristics from other scenarios for the same vulnerability.
@@ -26,5 +26,6 @@ The Vulntology is not intended to be a general purpose format for describing vul
 - To standardize the description of vulnerabilities through structured characterization formatting.
 - To enable automated scoring agnostic of any particular system.
 - To improve the level of detail in provided information for the purpose of assisting with defense while minimizing increased risk from attacks.
+- To assist in establishing a baseline of the minimum information needed to properly inform downstream vulnerability management processes.
 - To allow for easier vulnerability information sharing across language barriers
 {{< /usa-tagline >}}

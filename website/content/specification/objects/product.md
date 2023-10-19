@@ -48,6 +48,40 @@ The `value` MUST be based on the lexical space of a string as defined by [ECMA-4
 {{%usa-tag%}}Cardinality{{%/usa-tag%}} one
 {{%usa-tag%}}Description{{%/usa-tag%}} This is to reference the CVE 5 JSON format's [product](https://github.com/CVEProject/cve-schema/blob/f8f54d50eb22d94447687823c3ef1cbb518e6d86/schema/v5.0/CVE_JSON_5.0_schema.json#L93) section, which can communicate many complicated methods of string based product applicability.
 
+## Example
+```json
+{
+ "affectsProduct": {
+   "hasEnumeration": [{
+     "scheme": "https://nist.gov/cpe/2.3",
+     "values": ["cpe:2.3:a:fake:fakeproduct:1.0.0"]
+    }],
+    "hasCPEApplicabilityStatement": [
+      {
+        "operator": "AND",
+        "children": [
+          {
+            "operator": "OR",
+            "cpe_match": [
+             {
+              "vulnerable": true,
+              "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
+              "versionEndIncluding": "32.0.0.114"
+             },
+             {
+              "vulnerable": true,
+              "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
+              "versionEndIncluding": "32.0.0.114"
+             }
+            ]
+          }
+        ]
+      },
+    ]
+ }
+}
+```
+
 ## Graph View
 
 ![Product Graph](/figures/graphsnippets/ProductSnippet.png "Product Graph")

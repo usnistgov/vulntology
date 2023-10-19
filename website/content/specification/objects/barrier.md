@@ -40,7 +40,7 @@ The value of `hasBarrierType` MUST be a value from the [barrier type value list]
 
 Each `hasNeededPrivilege` relates to one privilege level. Multiple *barriers* need to be defined to describe multiple needed privileges.
 
-The property `hasNeededPrivilege` MAY be used when the property `hasBarrierType` has the value `Authentication/Authorization::Impersonation::Social Engineering`. Use in this scenario is optional.
+The property `hasNeededPrivilege` MAY be used when the property `hasBarrierType` has the value `Authentication/Authorization::Impersonation::Social Engineering`. Use in this case is optional.
 
 The property `hasNeededPrivilege` MUST be used when the property `hasBarrierType` has the value `Authentication/Authorization::Privileges Required`.
 

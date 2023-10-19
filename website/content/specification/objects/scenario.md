@@ -28,7 +28,7 @@ This identifier MUST be a version 4 (random) or 5 (SHA-1 based) Universally Uniq
 
 A given *scenario* name MUST be unique across all sibling *scenarios*.
 
-The `value` MUST be based on the lexical space of a string as defined by [ECMA-404 2nd edition, section 9](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf).
+The value of `hasName` MUST be based on the lexical space of a string as defined by [ECMA-404 2nd edition, section 9](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf).
 
 ### Attack Theater
 
@@ -85,6 +85,26 @@ The object value of the `blockedByBarrier` relationship MUST be a [*barrier*](..
 {{%usa-tag%}}Description{{%/usa-tag%}} [Actions](../action) will occur within a Scenario
 
 The object value of the `hasAction` relationship MUST be a [*action*](../action) object.
+
+## Example
+```json
+{
+ "hasScenario": [
+    {
+     "id": "S1",
+     "requiresAttackTheatre": "Remote::Internet",
+     "hasExploitedWeakness": ["CWE-79"],
+     "evidencedBySource": ["https://www.acme.com"],
+     "affectsProduct": {
+        },
+     "blockedByBarrier": [
+        ],
+     "hasAction": [
+        ]
+    },
+ ]
+}
+```
 
 ## Graph View
 
