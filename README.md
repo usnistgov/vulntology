@@ -16,7 +16,7 @@ The Vulntology is not intended to be a general purpose format for describing vul
 - To standardize the description of vulnerabilities through structured characterization formatting.
 - To enable automated scoring agnostic of any particular system.
 - To improve the level of detail in provided information for the purpose of assisting with defense while minimizing increased risk from attacks.
-- To allow for easier vulnerability information sharing across language barriers
+- To allow for easier vulnerability information sharing across language barriers.
 
 
 ## How to Help
