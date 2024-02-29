@@ -109,7 +109,7 @@ jobs:
         zip ${{ runner.temp }}/metaschema-website.zip -r public/
       working-directory: ${{ github.workspace }}/website
     - name: Upload generated site
-      uses: actions/upload-artifact@694cdabd8bdb0f10b2cea11669e1bf5453eed0a6
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3
       with:
         name: website
         path: |
@@ -128,7 +128,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       continue-on-error: true
     - name: Upload link check report
-      uses: actions/upload-artifact@694cdabd8bdb0f10b2cea11669e1bf5453eed0a6
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3
       with:
         name: html-link-report
         path: html-link-report.md
