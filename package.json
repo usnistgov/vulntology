@@ -8,7 +8,7 @@
         "autoprefixer": "^10.4.16",
         "markdown-link-check": "^3.11.2",
         "postcss": "^8.4.31",
-        "postcss-cli": "^10.1.0",
+        "postcss-cli": "^11.0.0",
         "sass": "^1.69.4",
         "yaml-convert": "^1.0.x"
     },
