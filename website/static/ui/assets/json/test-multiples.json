@@ -1,0 +1,309 @@
+
+
+{
+    "Vulnerability": {
+      "hasIdentity": [
+        {
+          "scheme": "http://cve.mitre.org",
+          "value": "CVE-2050-1234"
+        }
+      ],
+      "hasSectorOfInterest": [
+        "Industrial Control System",
+        "Health Care"
+      ],
+      "hasOriginatingProduct": {
+        "hasProductEnumeration": [
+          {
+            "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
+            "values": [
+              "cpe:2.3:a:acme:acmeproductX:1.0.0",
+              "cpe:2.3:a:acme:acmeproductY:1.0.0"
+            ]
+          },
+          {
+            "scheme": "https://nist.gov/cpe/2.2",
+            "values": [
+              "cpe:/a:blah"
+            ]
+          }
+        ],
+        "hasCPEApplicabilityStatement": [
+          {
+            "operator": "AND",
+            "children": [
+              {
+                "operator": "OR",
+                "cpe_match": [
+                  {
+                    "vulnerable": true,
+                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                    "versionEndIncluding": "32.0.0.114"
+                  },
+                  {
+                    "vulnerable": true,
+                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                    "versionEndIncluding": "32.0.0.114"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "cpe_match": [
+                  {
+                    "vulnerable": false,
+                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": false,
+                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasScenario": [
+        {
+          "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f3",
+          "requiresAttackTheatre": "Remote::Internet",
+          "hasExploitedWeakness": [
+            "CWE-79"
+          ],
+          "evidencedBySource": [
+            "https://www.acme.com"
+          ],
+          "affectsProduct": {
+            "hasProductEnumeration": [
+              {
+                "scheme": "https://nist.gov/cpe/2.3",
+                "values": [
+                  "cpe:2.3:a:acme:acmeproduct:1.0.0"
+                ]
+              }
+            ],
+            "hasCPEApplicabilityStatement": [
+              {
+                "operator": "AND",
+                "children": [
+                  {
+                    "operator": "OR",
+                    "cpe_match": [
+                      {
+                        "vulnerable": true,
+                        "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                        "versionEndIncluding": "32.0.0.114"
+                      },
+                      {
+                        "vulnerable": true,
+                        "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                        "versionEndIncluding": "32.0.0.114"
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "OR",
+                    "cpe_match": [
+                      {
+                        "vulnerable": false,
+                        "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                      },
+                      {
+                        "vulnerable": false,
+                        "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "blockedByBarrier": [
+            {
+              "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f4",
+              "hasBarrierType": "Obfuscation",
+              "hasEngineeringMethod": [
+                "MaliciousLink"
+              ],
+              "hasNeededPrivilege": "User",
+              "relatesToContext": "Application"
+            },
+            {
+              "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f5",
+              "hasBarrierType": "Authentication/Authorization::Privileges Required",
+              "hasNeededPrivilege": "User",
+              "relatesToContext": "Application"
+            }
+          ],
+          "hasAction": [
+            {
+              "id": "cf8589b6-4366-401a-aa9c-3e98bddd93f6",
+              "hasEntityRole": "Security Authority::Primary",
+              "affectsContext": "Application::Web Server",
+              "hasImpactMethod": [
+                {
+                  "hasImpactMethodType": "Authentication Bypass"
+                }
+              ],
+              "resultsInImpact": [
+                {
+                  "id": "67ea9a13-06c9-4820-a7d5-07f5aac97519",
+                  "hasCriticality": "Low",
+                  "hasScope": "Limited",
+                  "hasLogicalImpact": "Resource Removal",
+                  "hasLocation": "File System"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3ba289e8-7619-457a-8f3b-de649a215c04",
+          "requiresAttackTheatre": "Remote::Internet",
+          "hasExploitedWeakness": [
+            "CWE-1111"
+          ],
+          "evidencedBySource": [
+            "http://sdfsdsdf.com"
+          ],
+          "affectsProduct": {
+            "hasProductEnumeration": [
+              {
+                "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
+                "values": [
+                  "dffd"
+                ]
+              }
+            ],
+            "hasCPEApplicabilityStatement": []
+          },
+          "hasAction": [
+            {
+              "id": "d9f0d2f3-4e31-4a7a-92ea-7d0eb2c45b01",
+              "hasImpactMethod": [
+                {
+                  "hasImpactMethodType": "Code Execution"
+                }
+              ],
+              "affectsContext": "Application",
+              "hasEntityRole": "Security Authority::Primary",
+              "resultsInImpact": [
+                {
+                  "id": "6e08cc3e-0783-431f-bd87-e70e44b94749",
+                  "hasCriticality": "Low",
+                  "hasScope": "Limited",
+                  "hasLogicalImpact": "Indirect Disclosure",
+                  "hasLocation": "Network Traffic"
+                }
+              ]
+            }
+          ],
+          "blockedByBarrier": [
+            {
+              "id": "29e0f87c-97bb-4288-adad-b0727d894a59",
+              "hasBarrierType": "Authentication/Authorization"
+            }
+          ],
+          "name": "scene two"
+        },
+        {
+          "id": "8f63bc51-1520-4867-9558-a8a2425b4886",
+          "requiresAttackTheatre": "Remote::Internet",
+          "hasExploitedWeakness": [
+            "CWE-4444"
+          ],
+          "evidencedBySource": [
+            "http://qwwww"
+          ],
+          "affectsProduct": {
+            "hasProductEnumeration": [
+              {
+                "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
+                "values": [
+                  "sdfsdfds"
+                ]
+              }
+            ],
+            "hasCPEApplicabilityStatement": []
+          },
+          "hasAction": [
+            {
+              "id": "11fe57a9-f16d-45d8-9224-8a176927c5be",
+              "hasImpactMethod": [
+                {
+                  "hasImpactMethodType": "Code Execution"
+                }
+              ],
+              "affectsContext": "Application",
+              "hasEntityRole": "Security Authority::Secondary",
+              "resultsInImpact": [
+                {
+                  "id": "71ddcd91-080d-4c66-afb2-4cee00c42b6d",
+                  "hasCriticality": "High",
+                  "hasScope": "Limited",
+                  "hasLogicalImpact": "Service Interrupt::Hang",
+                  "hasLocation": "File System"
+                },
+                {
+                  "id": "cecb2d04-7a61-459e-b49c-c9a8df1f2a5e",
+                  "hasCriticality": "High",
+                  "hasScope": "Unlimited",
+                  "hasPhysicalImpact": "Human Injury::Critical"
+                }
+              ]
+            },
+            {
+              "id": "11df4dc1-e9f1-45e0-81ad-6f21f9b5677e",
+              "hasImpactMethod": [
+                {
+                  "hasImpactMethodType": "Authentication Bypass"
+                },
+                {
+                  "hasImpactMethodType": "Code Execution"
+                }
+              ],
+              "affectsContext": "Application",
+              "hasEntityRole": "Security Authority::Primary",
+              "resultsInImpact": [
+                {
+                  "id": "f63a8a50-1611-41f6-8090-29f293dce3ca",
+                  "hasCriticality": "Low",
+                  "hasScope": "Limited",
+                  "hasLogicalImpact": "Service Interrupt::Hang",
+                  "hasLocation": "File System"
+                }
+              ],
+              "name": "dfgdf"
+            },
+            {
+              "id": "002d15f4-a50f-4264-b43d-81a0cbd0cbd9",
+              "hasImpactMethod": [
+                {
+                  "hasImpactMethodType": "Authentication Bypass"
+                }
+              ],
+              "affectsContext": "Application",
+              "hasEntityRole": "Component::Vulnerable",
+              "resultsInImpact": [
+                {
+                  "id": "19aac1e7-1a3e-4c06-a961-09c47da45aa1",
+                  "hasCriticality": "Low",
+                  "hasScope": "Limited",
+                  "hasLogicalImpact": "Read Direct",
+                  "hasLocation": "File System"
+                }
+              ]
+            }
+          ],
+          "blockedByBarrier": [
+            {
+              "id": "892e99a4-f316-42e4-8377-47b19e39d3ba",
+              "hasBarrierType": "Authentication/Authorization"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
