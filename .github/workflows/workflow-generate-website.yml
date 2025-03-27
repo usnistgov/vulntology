@@ -73,7 +73,7 @@ jobs:
         hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
         extended: true
     - name: Set up NodeJS
-      uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d
+      uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
       with:
         node-version-file: '.github/workflows/config/.nvmrc'
         cache: 'npm'
@@ -117,7 +117,7 @@ jobs:
         retention-days: 5
     - id: linkchecker
       name: Link Checker
-      uses: lycheeverse/lychee-action@ec3ed119d4f44ad2673a7232460dc7dff59d2421
+      uses: lycheeverse/lychee-action@c3089c702fbb949e3f7a8122be0c33c017904f9b
       with:
         args: --exclude-file .github/workflows/config/.lycheeignore --verbose --no-progress --accept 200,206,429 './website/public/**/*.html' --remap "https://pages.nist.gov/vulntology/ file://${GITHUB_WORKSPACE}/website/public/" --exclude-mail
         format: markdown
@@ -144,7 +144,7 @@ jobs:
           documentation
     - name: Fail on link check error
       if: ${{ !cancelled() && env.lychee_exit_code != 0 && (github.event.inputs.linkcheck_fail_on_error == 'true' || inputs.linkcheck_fail_on_error == true) }}
-      uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+      uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
       with:
         script: |
           core.setFailed('Link checker detected broken or invalid links, read attached report.')
