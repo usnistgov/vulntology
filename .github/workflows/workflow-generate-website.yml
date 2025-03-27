@@ -109,7 +109,7 @@ jobs:
         zip ${{ runner.temp }}/metaschema-website.zip -r public/
       working-directory: ${{ github.workspace }}/website
     - name: Upload generated site
-      uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32
+      uses: actions/upload-artifact@v4
       with:
         name: website
         path: |
