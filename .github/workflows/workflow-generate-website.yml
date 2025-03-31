@@ -68,12 +68,12 @@ jobs:
         . .github/workflows/config/.env
         echo "HUGO_VERSION=${HUGO_VERSION}" >> "${GITHUB_OUTPUT}"
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v3
       with:
         hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
         extended: true
     - name: Set up NodeJS
-      uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
+      uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
       with:
         node-version-file: '.github/workflows/config/.nvmrc'
         cache: 'npm'
@@ -117,7 +117,7 @@ jobs:
         retention-days: 5
     - id: linkchecker
       name: Link Checker
-      uses: lycheeverse/lychee-action@c3089c702fbb949e3f7a8122be0c33c017904f9b
+      uses: lycheeverse/lychee-action@f613c4a64e50d792e0b31ec34bbcbba12263c6a6
       with:
         args: --exclude-file .github/workflows/config/.lycheeignore --verbose --no-progress --accept 200,206,429 './website/public/**/*.html' --remap "https://pages.nist.gov/vulntology/ file://${GITHUB_WORKSPACE}/website/public/" --exclude-mail
         format: markdown
@@ -135,7 +135,7 @@ jobs:
         retention-days: 5
     - name: Create issue if bad links detected
       if: ${{ !cancelled() && env.lychee_exit_code != 0 && inputs.linkcheck_create_issue }}
-      uses: peter-evans/create-issue-from-file@433e51abf769039ee20ba1293a088ca19d573b7f
+      uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd
       with:
         title: Scheduled Check of Website Content Found Bad Hyperlinks
         content-filepath: ./lychee/out.md
@@ -149,7 +149,7 @@ jobs:
         script: |
           core.setFailed('Link checker detected broken or invalid links, read attached report.')
     - name: Deploy Website
-      uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
+      uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
       if: github.ref_name == 'main' && ((github.event_name == 'push' && inputs.commit_resources == true) || (github.event_name == 'workflow_dispatch' && github.event.inputs.commit_resources == 'true'))
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
