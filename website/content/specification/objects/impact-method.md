@@ -48,13 +48,19 @@ If provided, the value of `hasEscapeContext` MUST be a value from the [context v
 
 None
 
-## Example
+## Example 
 ```json
 {
- "hasImpactMethod": ["Code Execution"]
+  "id": "bd095f8b-b83b-49dc-a2f0-79fd47927147",
+  "hasImpactMethod": [
+    {
+      "hasImpactMethodType": "Code Execution"
+    }
+  ]
 }
 
 ```
+
 
 ## Graph View
 

@@ -101,17 +101,17 @@ None
 ## Example
 ```json
 {
- "id": "S1A2I3",
- "hasLogicalImpact": "Privilege Escalation",
- "hasScope": "Limited",
- "hasCriticality": "Low",
- "gainedPrivileges": "Administrator"
+  "id": "2adbe7e4-3313-4fe7-86a0-fbd60578ca19",
+  "hasCriticality": "Low",
+  "hasScope": "Limited",
+  "hasLogicalImpact": "Service Interrupt",
+  "hasLocation": "Network Traffic"
 }
 {
- "id": "S1A2I4",
- "hasPhysicalImpact": "Physical Resource Consumption",
- "hasScope": "Limited",
- "hasCriticality": "Low"
+  "id": "cf998e9c-69f1-418f-9a5c-236e4f4b5b3b",
+  "hasCriticality": "Low",
+  "hasScope": "Limited",
+  "hasPhysicalImpact": "Physical Resource Consumption"
 }
 ```
 
