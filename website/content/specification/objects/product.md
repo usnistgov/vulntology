@@ -67,7 +67,23 @@ The `value` MUST be based on the lexical space of a string as defined by [ECMA-4
           ]
         }
       ],
-      "hasNvdCpeApplicabilityStatement": []
+      "hasNvdCpeApplicabilityStatement": [
+        {
+          "nodes": [
+            {
+              "operator": "OR",
+              "negate": false,
+              "cpeMatch": [
+                {
+                  "vulnerable": true,
+                  "criteria": "cpe:2.3:a:fake:fakeproductX:1.0.0:*:*:*:*:*:*:*",
+                  "matchCriteriaId": "a8928b04-f6c5-46d1-b72a-6c16a4614179"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "hasScenario": [
       {
@@ -91,7 +107,23 @@ The `value` MUST be based on the lexical space of a string as defined by [ECMA-4
               ]
             }
           ],
-          "hasNvdCpeApplicabilityStatement": []
+          "hasNvdCpeApplicabilityStatement": [
+            {
+              "nodes": [
+                {
+                  "operator": "OR",
+                  "negate": false,
+                  "cpeMatch": [
+                    {
+                      "vulnerable": true,
+                      "criteria": "cpe:2.3:a:fake:fakeproductX:1.0.0:*:*:*:*:*:*:*",
+                      "matchCriteriaId": "a8928b04-f6c5-46d1-b72a-6c16a4614179"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         "hasAction": [
           {

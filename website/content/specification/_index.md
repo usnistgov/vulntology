@@ -89,8 +89,10 @@ The [**second**] **impact** of the [**second**] **action** is a [*low*] *critica
                 {
                     "scheme": "https://csrc.nist.gov/ns/cpe/2.3",
                     "values": [
-                        "cpe:2.3:a:fake:fakeproductX:1.0.0",
-                        "cpe:2.3:a:fake:fakeproductY:1.0.0"
+                        "cpe:2.3:a:fakevendor:fakeproductX:*:*:*:*:*:fake_TSW:*:*",
+                        "cpe:2.3:a:fakevendor:fakeproductY:*:*:*:*:*:fake_TSW:*:*",
+                        "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*",
+                        "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
                     ]
                 },
                 {
@@ -98,35 +100,40 @@ The [**second**] **impact** of the [**second**] **action** is a [*low*] *critica
                     "values": ["cpe:/a:fake"]
                 }
             ],
-            "hasCPEApplicabilityStatement": [
+            "hasNvdCpeApplicabilityStatement": [
                 {
                     "operator": "AND",
                     "children": [
                         {
                             "operator": "OR",
-                            "cpe_match": [
+                            "cpeMatch": [
                                 {
                                     "vulnerable": true,
-                                    "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
-                                    "versionEndIncluding": "32.0.0.114"
+                                    "criteria": "cpe:2.3:a:fakevendor:fakeproductX:*:*:*:*:*:fake_TSW:*:*",
+                                    "versionEndIncluding": "32.0.0.114",
+                                    "matchCriteriaId": "d22a5760-813e-4ea2-986d-80234227dd93"
                                 },
                                 {
                                     "vulnerable": true,
-                                    "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
-                                    "versionEndIncluding": "32.0.0.114"
+                                    "criteria": "cpe:2.3:a:fakevendor:fakeproductY:*:*:*:*:*:fake_TSW:*:*",
+                                    "versionEndIncluding": "32.0.0.114",
+                                    "matchCriteriaId": "417f5c20-3160-4a41-9957-4af5d25a4bbf"
                                 }
                             ]
                         },
                         {
                             "operator": "OR",
-                            "cpe_match": [
+                            "cpeMatch": [
                                 {
                                     "vulnerable": false,
-                                    "cpe23Uri": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*"
+                                    "criteria": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "87024610-691d-48d7-975e-e0b00abc7475"
+
                                 },
                                 {
                                     "vulnerable": false,
-                                    "cpe23Uri": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
+                                    "criteria": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "f71d34c2-2226-433e-8cf9-fd17ad823cc4"
                                 }
                             ]
                         }
@@ -143,37 +150,46 @@ The [**second**] **impact** of the [**second**] **action** is a [*low*] *critica
                 "affectsProduct": {
                     "hasEnumeration": [{
                         "scheme": "https://nist.gov/cpe/2.3",
-                        "values": ["cpe:2.3:a:fake:fakeproduct:1.0.0"]
+                        "values": [
+                            "cpe:2.3:a:fakevendor:fakeproductX:*:*:*:*:*:fake_TSW:*:*",
+                            "cpe:2.3:a:fakevendor:fakeproductY:*:*:*:*:*:fake_TSW:*:*",
+                            "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*",
+                            "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
+                        ]
                         }],
-                    "hasCPEApplicabilityStatement": [
+                    "hasNvdCpeApplicabilityStatement": [
                         {
                             "operator": "AND",
                             "children": [
                                 {
                                     "operator": "OR",
-                                    "cpe_match": [
+                                    "cpeMatch": [
                                         {
                                             "vulnerable": true,
-                                            "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
-                                            "versionEndIncluding": "32.0.0.114"
+                                            "criteria": "cpe:2.3:a:fakevendor:fakeproductX:*:*:*:*:*:fake_TSW:*:*",
+                                            "versionEndIncluding": "32.0.0.114",
+                                            "matchCriteriaId": "d22a5760-813e-4ea2-986d-80234227dd93"
                                         },
                                         {
                                             "vulnerable": true,
-                                            "cpe23Uri": "cpe:2.3:a:fakevendor:fakeproduct:*:*:*:*:*:fake_TSW:*:*",
-                                            "versionEndIncluding": "32.0.0.114"
+                                            "criteria": "cpe:2.3:a:fakevendor:fakeproductY:*:*:*:*:*:fake_TSW:*:*",
+                                            "versionEndIncluding": "32.0.0.114",
+                                            "matchCriteriaId": "417f5c20-3160-4a41-9957-4af5d25a4bbf"
                                         }
                                     ]
                                 },
                                 {
                                     "operator": "OR",
-                                    "cpe_match": [
+                                    "cpeMatch": [
                                         {
                                             "vulnerable": false,
-                                            "cpe23Uri": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*"
+                                            "criteria": "cpe:2.3:o:anotherfakevendor:anotherfakeproduct:*:*:*:*:*:*:*:*",
+                                            "matchCriteriaId": "e88a7971-3eb3-4777-be28-a14f69b4e3f9"
                                         },
                                         {
                                             "vulnerable": false,
-                                            "cpe23Uri": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*"
+                                            "criteria": "cpe:2.3:o:anotherfakevendor:yetanotherfakeproduct:*:*:*:*:*:*:*:*",
+                                            "matchCriteriaId": "417f5c20-3160-4a41-9957-4af5d25a4bbf"
                                         }
                                     ]
                                 }
