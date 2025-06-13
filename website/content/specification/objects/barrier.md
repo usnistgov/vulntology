@@ -88,14 +88,16 @@ None
 {
   "blockedByBarrier": [
     {
-      "id": "S1B1",
+      "id": "11741bd2-c5ee-47e8-bd46-ffaf908a5f1c",
       "hasBarrierType": "Authentication/Authorization::Impersonation::Social Engineering",
-      "hasEngineeringMethod": ["MaliciousLink"],
+      "hasEngineeringMethod": [
+        "Malicious Link"
+      ],
       "hasNeededPrivilege": "User",
       "relatesToContext": "Application"
     },
     {
-      "id": "S1B2",
+      "id": "945f3876-10da-45f1-b6ab-fea4cf449e38",
       "hasBarrierType": "Authentication/Authorization::Privileges Required",
       "hasNeededPrivilege": "User",
       "relatesToContext": "Application"

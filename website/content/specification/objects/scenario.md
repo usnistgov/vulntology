@@ -91,7 +91,7 @@ The object value of the `hasAction` relationship MUST be a [*action*](../action)
 {
  "hasScenario": [
     {
-     "id": "S1",
+     "id": "b4c3887f-28dd-4226-9872-6f44803f1c4b",
      "requiresAttackTheatre": "Remote::Internet",
      "hasExploitedWeakness": ["CWE-79"],
      "evidencedBySource": ["https://www.acme.com"],

@@ -88,16 +88,23 @@ The object value of the `doesNotResultInImpact` relationship MUST be an [impact]
 {
  "hasAction": [
    {
-    "id": "S1A1",
+    "id": "bd095f8b-b83b-49dc-a2f0-79fd47927147",
     "hasEntityRole": "Security Authority::Primary",
     "affectsContext": "Application::Web Server",
     "hasImpactMethod": ["Code Execution"],
     "resultsInImpact": [
       {
-       "id": "S1A1I1",
-       "hasLogicalImpact": "Write-Direct",
-       "hasScope": "Limited",
-       "hasCriticality": "Low"
+        "id": "ceb33a58-68cc-4edd-9a5d-0f3c3009ed32",
+        "hasCriticality": "Low",
+        "hasScope": "Limited",
+        "hasPhysicalImpact": "Physical Resource Consumption"
+      },
+      {
+        "id": "17238185-e8ca-4ec7-9db3-bea8b9a2dcde",
+        "hasCriticality": "Low",
+        "hasScope": "Limited",
+        "hasLogicalImpact": "Write Direct",
+        "hasLocation": "File System"
       }
     ]
    }

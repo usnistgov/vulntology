@@ -28,35 +28,35 @@
             ]
           }
         ],
-        "hasCPEApplicabilityStatement": [
+        "hasNvdCpeApplicabilityStatement": [
           {
             "operator": "AND",
             "children": [
               {
                 "operator": "OR",
-                "cpe_match": [
+                "cpeMatch": [
                   {
                     "vulnerable": true,
-                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                    "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
                     "versionEndIncluding": "32.0.0.114"
                   },
                   {
                     "vulnerable": true,
-                    "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                    "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
                     "versionEndIncluding": "32.0.0.114"
                   }
                 ]
               },
               {
                 "operator": "OR",
-                "cpe_match": [
+                "cpeMatch": [
                   {
                     "vulnerable": false,
-                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
                   },
                   {
                     "vulnerable": false,
-                    "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                    "criteria": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
                   }
                 ]
               }
@@ -83,35 +83,35 @@
                 ]
               }
             ],
-            "hasCPEApplicabilityStatement": [
+            "hasNvdCpeApplicabilityStatement": [
               {
                 "operator": "AND",
                 "children": [
                   {
                     "operator": "OR",
-                    "cpe_match": [
+                    "cpeMatch": [
                       {
                         "vulnerable": true,
-                        "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                        "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
                         "versionEndIncluding": "32.0.0.114"
                       },
                       {
                         "vulnerable": true,
-                        "cpe23Uri": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
+                        "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer_11:*:*",
                         "versionEndIncluding": "32.0.0.114"
                       }
                     ]
                   },
                   {
                     "operator": "OR",
-                    "cpe_match": [
+                    "cpeMatch": [
                       {
                         "vulnerable": false,
-                        "cpe23Uri": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
+                        "criteria": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*"
                       },
                       {
                         "vulnerable": false,
-                        "cpe23Uri": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
+                        "criteria": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*"
                       }
                     ]
                   }
