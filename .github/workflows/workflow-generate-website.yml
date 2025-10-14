@@ -73,7 +73,7 @@ jobs:
         hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
         extended: true
     - name: Set up NodeJS
-      uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e
+      uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
       with:
         node-version-file: '.github/workflows/config/.nvmrc'
         cache: 'npm'
